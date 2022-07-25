@@ -157,7 +157,7 @@ input:focus-within {
   width: 90vw;
   margin-top: 10vh;
   background-color: rgba(255, 255, 255, 1);
-  padding: 2rem;
+  padding: 3rem;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: var(--padding-regular-1);
