@@ -138,7 +138,8 @@ input:focus-within {
   background: linear-gradient(
     -45deg,
     var(--ternary-color) 10%,
-    var(--secondary-color) 90%
+    var(--primary-color) 10%,
+    var(--secondary-color) 10%
   );
 }
 
