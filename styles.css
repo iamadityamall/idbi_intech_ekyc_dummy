@@ -1,0 +1,254 @@
+/* mobile version css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #01684f;
+  --ternary-color: #f58220;
+  --transition: all 300ms ease-in;
+  --font-heading: "Montserrat", sans-serif;
+  --font-text: "Calibri", arial;
+  --font-primary: "Poppins", sans-serif;
+  --padding-regular-1: 2rem;
+  --padding-regular-2: 1rem;
+  --padding-regular-3: 0.75rem;
+  --padding-regular-4: 0.25rem;
+}
+
+body {
+  background-color: #01684f;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: var(--padding-regular-3);
+  font-size: 1rem;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  transition: var(--transition);
+  margin-left: 2px;
+}
+
+input[type="text"]::placeholder {
+  letter-spacing: 1px;
+  color: gray;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  border-radius: 0;
+  margin-right: 5px;
+}
+
+input:focus {
+  border-bottom: 3px solid var(--secondary-color);
+}
+
+input:focus-within {
+  outline: none;
+  background-color: var(--primary-color);
+}
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  padding: 1rem;
+  border-radius: 10px;
+  letter-spacing: 0.15rem;
+  background-color: rgb(245, 130, 32);
+  font-weight: bold;
+  border: none;
+  color: var(--primary-color);
+  font-family: var(--font-primary);
+  width: 100%;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.hero__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: var(--padding-regular-3);
+  background: transparent;
+  z-index: 3;
+}
+
+.hero__header__logo {
+  width: 14rem;
+}
+
+.hero__container {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.hero-left__container {
+  z-index: 10;
+  display: none;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.hero-right__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  height: 100vh;
+}
+.hero-form__container__heading {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-form__container {
+  width: 90vw;
+  margin-top: 5rem;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: var(--padding-regular-1);
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 1);
+  animation: popup 300ms ease-in-out;
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+  }
+  /* 25% {
+    transform: translateX(-15%);
+  } 50% {
+    transform: translateX(30%);
+  } */
+  100% {
+    opacity: 100%;
+  }
+}
+
+.hero-form__container__input {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: var(--padding-regular-1);
+  position: relative;
+}
+
+.input__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0.5rem;
+  background: rgba(245, 130, 32, 0.1);
+}
+
+.fail-username {
+  font-size: 14px;
+  display: none;
+  align-items: center;
+  color: red;
+  position: absolute;
+  top: -12%;
+  right: 10%;
+  /* background-color: white; */
+  z-index: 1000;
+}
+
+.fail-username p {
+  margin-left: 5px;
+}
+
+.fail-password {
+  font-size: 14px;
+  display: none;
+  align-items: center;
+  color: red;
+  position: absolute;
+  top: 45%;
+  right: 10%;
+}
+
+.fail-password p {
+  margin-left: 5px;
+}
+
+.fail-active {
+  border: 2px solid red;
+}
+
+.icon {
+  width: 50px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon img {
+  width: 60%;
+  height: 50%;
+  object-fit: contain;
+  color: var(--secondary-color);
+}
+
+.hero-form__container__checkbox-forgot-password {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.hero-form__container__checkbox-forgot-password a {
+  font-weight: bold;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.hero-form__container__checkbox-forgot-password .checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-form__container__checkbox-forgot-password a {
+  font-size: 14px;
+  text-transform: capitalize;
+  color: var(--secondary-color);
+  font-weight: bold;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.hero-form__container__button button:hover {
+  background-color: rgba(245, 130, 32);
+}
+
+.hero-form__container__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.hero-form__container__footer a {
+  margin-left: 10px;
+  color: var(--ternary-color);
+}

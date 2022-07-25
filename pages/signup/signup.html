@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>signup</title>
+    <link rel="stylesheet" href="signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      .container {
+        background-color: rgba(1, 104, 79, 0.05);
+        width: 500px;
+        height: 400px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        margin-left: 5rem;
+        margin-bottom: 3rem;
+        animation: fade 4s ease-in-out;
+      }
+      .rotating-element {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        background: #000;
+        animation: rotate 100s linear infinite;
+        background-color: rgba(1, 104, 79, 0.05);
+      }
+      .element-1 {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        background-color: #f58220;
+        top: -90%;
+        left: -90%;
+        animation: antirotate 100s linear infinite;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .element-2 {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        background-color: #f58220;
+        top: -90%;
+        right: -90%;
+        animation: antirotate 100s linear infinite;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .element-3 {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        background-color: #f58220;
+        bottom: -90%;
+        left: -90%;
+        animation: antirotate 100s linear infinite;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .element-4 {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        background-color: #f58220;
+        bottom: -90%;
+        right: -90%;
+        animation: antirotate 100s linear infinite;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .rotating-element img {
+        object-fit: cover;
+        border-radius: 100%;
+        padding: 4px;
+      }
+
+      .rotating-element p {
+        color: white;
+        padding-right: 5px;
+        padding-top: 5px;
+        font-weight: bold;
+      }
+
+      @keyframes rotate {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes antirotate {
+        100% {
+          transform: rotate(-360deg);
+        }
+      }
+      .info {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        z-index: 1000;
+        border-radius: 100%;
+        overflow: hidden;
+        animation: glow 2s ease infinite;
+      }
+
+      .info img {
+        object-fit: cover;
+        padding: 4px;
+        border-radius: 100%;
+      }
+      @keyframes glow {
+        0% {
+          box-shadow: 0px 0px 1px 0 white;
+        }
+        50% {
+          box-shadow: 0px 0px 3px 10px #01684f;
+        }
+        100% {
+          box-shadow: 0px 0px 1px 0px white;
+        }
+      }
+      @keyframes fade {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="hero__header">
+      <figure class="hero__header__logo">
+        <img src="../../assests/logo/idbi-bank-logo.svg" alt="idbi-bank-logo" />
+      </figure>
+    </header>
+
+    <!-- hero section -->
+    <section class="hero__container">
+      <div class="hero-left__container">
+        <div class="hero-left__container__header">
+          <h1>You are one step away</h1>
+          <!-- <p>We will make your process easy and smooth with</p> -->
+        </div>
+        <div class="container">
+          <div class="rotating-element">
+            <article class="element-1">
+              <img src="../../assests/logo/secure.png" alt="secure-img" />
+              <p>Secure</p>
+            </article>
+            <article class="element-2">
+              <img src="../../assests/logo/easy-to-use.png" alt="easy-to-use" />
+              <p>Simple</p>
+            </article>
+            <article class="element-3">
+              <img src="../../assests/logo/paperless.png" alt="secure-img" />
+              <p>Paperless</p>
+            </article>
+            <article class="element-4">
+              <img src="../../assests/logo/digital.png" alt="secure-img" />
+              <p>Digital</p>
+            </article>
+          </div>
+          <figure class="info">
+            <img src="../../assests/logo/female.png" alt="female-img" />
+          </figure>
+        </div>
+      </div>
+      <div class="hero-right__container">
+        <form class="hero-form__container">
+          <div class="hero-form__container__heading">
+            <h1>
+              Sign up to IDBI
+              <span
+                style="
+                  display: inline-block;
+                  text-align: center;
+                  font-size: 1rem;
+                  font-weight: bold;
+                  letter-spacing: 0.5px;
+                  color: #01684f;
+                  margin-left: 5px;
+                "
+                >eKYC Portal</span
+              >
+            </h1>
+          </div>
+
+          <div class="hero-form__container__input">
+            <div class="fail-username">
+              <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+              <p>username cannot be empty</p>
+            </div>
+            <div class="input__container">
+              <div class="icon">
+                <img src="../../assests/logo/user.svg" alt="" />
+              </div>
+              <input type="text" placeholder="username" id="username" />
+            </div>
+            <div class="fail-email">
+              <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+              <p>email cannot be empty</p>
+            </div>
+            <div class="fail-email-invalid-char">
+              <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+              <p>invalid characters not allowed</p>
+            </div>
+            <div class="input__container">
+              <div class="icon">
+                <img src="../../assests/logo/message.svg" alt="" />
+              </div>
+              <input type="email" placeholder="email" id="email" />
+            </div>
+            <div class="fail-phone">
+              <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+              <p>phone cannot be empty</p>
+            </div>
+            <div class="fail-phone-numbers">
+              <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+              <p>Mobile number must be of 10-digits</p>
+            </div>
+            <div class="input__container">
+              <div class="icon">
+                <img src="../../assests/logo/phone.svg" alt="" />
+              </div>
+              <input
+                type="tel"
+                placeholder="mobile number"
+                id="phone"
+                maxlength="10"
+              />
+            </div>
+
+            <div class="fail-password">
+              <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+              <p>password cannot be empty</p>
+            </div>
+            <div class="input__container">
+              <div class="icon">
+                <img src="../../assests/logo/lock.svg" alt="" />
+              </div>
+              <input type="password" placeholder="password" id="password" />
+            </div>
+            <div class="fail-retypepassword">
+              <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+              <p>password didnot match</p>
+            </div>
+            <div class="input__container">
+              <div class="icon">
+                <img src="../../assests/logo/lock.svg" alt="" />
+              </div>
+              <input
+                type="password"
+                placeholder="Re-type password"
+                id="retypepassword"
+              />
+            </div>
+          </div>
+          <!-- 
+          <div class="hero-form__container__checkbox-forgot-password">
+            <div class="checkbox">
+              <input type="checkbox" />
+              <p>Remember me</p>
+            </div>
+            <div style="display: flex; align-items: center">
+              <a href="#">forgot password ?</a>
+            </div>
+          </div> -->
+
+          <div class="hero-form__container__button">
+            <button id="create-button">Create an account</button>
+            <p>or</p>
+            <button
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <img
+                src="../../assests/logo/google-logo.webp"
+                style="
+                  width: 30px;
+                  height: 30px;
+                  object-fit: cover;
+                  padding: 1px;
+                  color: #d61c4e;
+                "
+              />Sign up with Google
+            </button>
+          </div>
+
+          <footer class="hero-form__container__footer">
+            <p>Already registered ?</p>
+            <a href="../login/login.html">sign in</a>
+          </footer>
+        </form>
+      </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      const failUsername = document.querySelector(".fail-username");
+      const failEmail = document.querySelector(".fail-email");
+      const failEmailInvalidChar = document.querySelector(
+        ".fail-email-invalid-char"
+      );
+      const failPhone = document.querySelector(".fail-phone");
+      const failPhoneNumbers = document.querySelector(".fail-phone-numbers");
+      const failPassword = document.querySelector(".fail-password");
+      const failReTypePassword = document.querySelector(".fail-retypepassword");
+
+      const usernameInput = document.getElementById("username");
+      const emailInput = document.getElementById("email");
+      const phoneInput = document.getElementById("phone");
+      const passwordInput = document.getElementById("password");
+      const retypepasswordInput = document.getElementById("retypepassword");
+
+      const createAccountButton = document.getElementById("create-button");
+
+      function checkDetails(e) {
+        if (!usernameInput.value) {
+          e.preventDefault();
+          failUsername.style.display = "flex";
+          usernameInput.style.border = "2px solid red";
+        }
+
+        if (!phoneInput.value) {
+          e.preventDefault();
+          failPhone.style.display = "flex";
+          phoneInput.style.border = "2px solid red";
+        }
+
+        if (!passwordInput.value) {
+          e.preventDefault();
+          failPassword.style.display = "flex";
+          passwordInput.style.border = "2px solid red";
+        }
+        if (passwordInput.value !== retypepasswordInput.value) {
+          e.preventDefault();
+          failReTypePassword.style.display = "flex";
+          retypepasswordInput.style.border = "2px solid red";
+        }
+
+        let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        if (emailInput.value.match(mailformat)) {
+          console.lg("valid email address");
+        } else {
+          if (!emailInput.value) {
+            e.preventDefault();
+            failEmail.style.display = "flex";
+            emailInput.style.border = "2px solid red";
+          } else {
+            e.preventDefault();
+            failEmailInvalidChar.style.display = "flex";
+          }
+        }
+      }
+
+      emailInput.addEventListener("click", () => {
+        failEmailInvalidChar.style.display = "none";
+        failEmail.style.display = "none";
+        failEmail.style.border = "none";
+      });
+
+      phoneInput.addEventListener("keypress", function (e) {
+        var char = String.fromCharCode(e.which);
+        if (!/[0-9]/.test(char)) {
+          e.preventDefault();
+        }
+        if (phoneInput.value.length < 9) {
+          failPhoneNumbers.style.display = "flex";
+          failPhoneNumbers.style.color = "green";
+          phoneInput.style.border = "2px solid red";
+        }
+      });
+
+      usernameInput.setAttribute(
+        "oninput",
+        "this.value = this.value.toUpperCase()"
+      );
+      createAccountButton.addEventListener("click", checkDetails);
+
+      usernameInput.addEventListener("keydown", () => {
+        failUsername.style.display = "none";
+        usernameInput.style.border = "none";
+      });
+
+      emailInput.addEventListener("keydown", () => {
+        failEmail.style.display = "none";
+        emailInput.style.border = "none";
+      });
+
+      phoneInput.addEventListener("keydown", () => {
+        failPhone.style.display = "none";
+        phoneInput.style.border = "none";
+        failPhoneNumbers.style.display = "none";
+      });
+
+      passwordInput.addEventListener("keydown", () => {
+        failPassword.style.display = "none";
+        passwordInput.style.border = "none";
+      });
+
+      retypepasswordInput.addEventListener("keydown", () => {
+        failReTypePassword.style.display = "none";
+        retypepasswordInput.style.border = "none";
+      });
+    </script>
+  </body>
+</html>

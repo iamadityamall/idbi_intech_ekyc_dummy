@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="hero__header">
+      <figure class="hero__header__logo">
+        <img src="../../assests/logo/idbi-bank-logo.svg" alt="idbi-bank-logo" />
+      </figure>
+    </header>
+
+    <!-- hero section -->
+    <section class="hero__container">
+      <div class="hero-left__container">
+        <div class="hero-left__container__step" id="left">
+          <div class="hero-left__container__step__header">
+            <h1>Update your KYC with ease.</h1>
+            <span> One stop solution to your digital problems. </span>
+            <span>Acess anywhere and everywhere with these easy steps.</span>
+          </div>
+          <div style="display: flex; flex-direction: column; margin-left: 1rem">
+            <div class="hero-left__container__steps step-one">
+              <img src="../../assests/logo/Aadhaar_Logo.svg.webp" alt="" />
+              <p>Enter your Aadhar Number</p>
+            </div>
+            <div class="hero-left__container__steps step-two" id="step-two">
+              <img src="../../assests/logo/message.svg" alt="" />
+              <p>Verify your OTP</p>
+            </div>
+            <div class="hero-left__container__steps step-three" id="step-three">
+              <img src="../../assests/logo/verified.webp" alt="" />
+              <p>eKYC done</p>
+            </div>
+          </div>
+        </div> 
+      </div>
+      </div>
+      <div class="hero-right__container">
+        <form class="hero-form__container">
+          <div class="hero-form__container__heading">
+            <h1>
+              Welcome to IDBI
+              <span
+                style="
+                  display: block;
+                  text-align: center;
+                  font-size: 1rem;
+                  font-weight: bold;
+                  letter-spacing: 0.5px;
+                  color: #01684f;
+                "
+                >eKYC Portal</span
+              >
+            </h1>
+          </div>
+
+          <div class="hero-form__container__input">
+            <div class="input__container">
+              <div class="icon">
+                <img src="../../assests/logo/user.svg" alt="" />
+              </div>
+              <input type="text" placeholder="username" id="username-input"/>
+            </div>
+            <div class="input__container">
+              <div class="icon">
+                <img src="../../assests/logo/lock.svg" alt="" />
+              </div>
+              <input type="password" placeholder="password" id="password-input"/>
+            </div>
+            <div class="fail-username">
+                <i class="fa fa-exclamation-circle" aria-hidden="true" ></i>
+                <p>username cannot be empty</p>
+            </div>
+            <div class="fail-password">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>password cannot be empty</p>
+            </div>
+          </div>
+
+          <div class="hero-form__container__checkbox-forgot-password">
+            <div class="checkbox">
+              <input type="checkbox" />
+              <p>Remember me</p>
+            </div>
+            <div style="display: flex; align-items: center">
+              <a href="#">forgot password ?</a>
+            </div>
+          </div>
+
+          <div class="hero-form__container__button">
+            <button id="login-button">Login</button>
+          </div>
+
+          <footer class="hero-form__container__footer">
+            <p>Not registered yet ?</p>
+            <a href="../signup/signup.html">signup</a>
+          </footer>
+        </form>
+      </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      // defining the variables
+      const loginButton = document.getElementById('login-button');
+      const failUsername = document.querySelector(".fail-username");
+      const failPassword = document.querySelector(".fail-password");
+      const usernameInput = document.getElementById("username-input");
+      const passwordInput = document.getElementById("password-input")
+
+
+      // functions for each event listners
+      function checkDetails(e) {
+        e.preventDefault();
+        if(!usernameInput.value){
+          failUsername.style.display = "flex";
+          usernameInput.style.border = "2px solid red"
+        }
+        if(!passwordInput.value) {
+          failPassword.style.display = "flex";
+          passwordInput.style.border = "2px solid red";
+        }
+      }
+
+
+      // Event Listerners
+      loginButton.addEventListener('click', checkDetails )
+      usernameInput.setAttribute(
+            "oninput",
+            "this.value = this.value.toUpperCase()"
+      )
+      usernameInput.addEventListener('keydown', () => {
+        failUsername.style.display = "none";
+        usernameInput.style.border = "none";
+        e.key.toUpperCase();
+      });
+
+      passwordInput.addEventListener('keydown', () => {
+        failPassword.style.display = "none";
+        passwordInput.style.border = "none";
+      })
+
+    </script>
+
+  </body>
+</html>
