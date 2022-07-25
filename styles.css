@@ -111,7 +111,7 @@ input:focus-within {
 .hero-container {
   width: 100vw;
   height: 100vh;
-  background: #01684f;
+  background: linear-gradient(red, blue);
 }
 
 .hero__header {
@@ -120,7 +120,7 @@ input:focus-within {
   top: 0;
   left: 0;
   height: 10vh;
-  background: #01684f;
+  /* background: #01684f; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -152,7 +152,7 @@ input:focus-within {
 
 .hero-form__container {
   margin-top: 10vh;
-  width: 95%;
+  width: 90%;
   background-color: rgba(255, 255, 255, 1);
   padding: 2rem;
   display: grid;
