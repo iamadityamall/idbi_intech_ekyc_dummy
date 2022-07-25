@@ -82,7 +82,7 @@ input[type="password"] {
   border: none;
   background: rgba(255, 255, 255, 0.5);
   transition: var(--transition);
-  margin-left: 2px;
+  margin-left: 0;
 }
 
 input[type="text"]::placeholder {
@@ -119,7 +119,7 @@ input:focus-within {
   top: 0;
   left: 0;
   height: 12vh;
-  background: #01684f;
+  /* background: #01684f; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -139,8 +139,7 @@ input:focus-within {
   background: linear-gradient(
     -45deg,
     var(--ternary-color) 50%,
-    /* var(--primary-color) 10%, */ 
-    var(--secondary-color) 50%
+    /* var(--primary-color) 10%, */ var(--secondary-color) 50%
   );
 }
 
@@ -288,4 +287,310 @@ input:focus-within {
 .hero-form__container__footer a {
   margin-left: 10px;
   color: var(--ternary-color);
+}
+
+@media screen and (min-width: 1024px) {
+  /* Login Page */
+.hero__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: var(--padding-regular-1);
+  background: transparent;
+  z-index: 3;
+}
+
+.hero__header__logo {
+  width: 14rem;
+}
+
+.hero__container {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 60vw 40vw;
+  background: none ;
+}
+
+.hero__container::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    45deg,
+    var(--secondary-color) 90%,
+    var(--primary-color) 5%,
+    var(--primary-color) 5%
+  );
+  width: 2000px;
+  height: 2000px;
+  border-radius: 50%;
+  top: -10%;
+  right: 48%;
+  transform: translate(10%, -50%);
+  outline: none;
+  z-index: 1;
+  border: 10px solid rgba(245, 130, 32, 1);
+  /* transform: translate(-50%, -50%); */
+}
+
+.hero__container::after {
+  content: "";
+  position: absolute;
+  /* background: linear-gradient(
+    45deg,
+    var(--secondary-color),
+    var(--secondary-color)
+  ); */
+  width: 1500px;
+  height: 1500px;
+  border-radius: 50%;
+  top: -5%;
+  right: 55%;
+  transform: translate(10%, -50%);
+  outline: none;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.05);
+  /* transform: translate(-50%, -50%); */
+}
+
+.hero-left__container {
+  z-index: 10;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.hero-left__container__step__header {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  animation: fade-out 2s ease-in-out;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero-left__container__step__header span {
+  font-size: 16px;
+  border-bottom: 2px solid #f58220;
+  margin-top: 5px;
+}
+
+.hero-left__container__step {
+  transition: var(--transition);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 5rem;
+  margin-left: 1rem;
+}
+
+.step-one {
+  animation: fade-right 2s ease-in-out;
+  transition: all 1s ease;
+}
+
+.step-two {
+  animation: fade-right 3s ease-in-out;
+  transition: all 1s ease;
+}
+
+.step-three {
+  animation: fade-right 4s ease-in-out;
+  transition: all 1s ease;
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.hero-left__container__steps {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.hero-left__container__steps p {
+  font-size: 1rem;
+  color: var(--primary-color);
+  margin-left: 2rem;
+  font-weight: bold;
+}
+
+.hero-left__container__steps h4 {
+  color: white;
+}
+
+.hero-left__container__steps img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5%;
+  object-fit: cover;
+  padding: 0.25rem;
+  background-color: #f2f2f2;
+}
+
+.hero-right__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+
+.hero-form__container__heading {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-form__container {
+  width: initial;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: var(--padding-regular-1);
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 2px 2px 30px 10px rgba(0, 0, 0, 0.1);
+  animation: fade-left 3s ease-in-out;
+}
+
+@keyframes fade-left {
+  0% {
+    transform: translateX(150%);
+  }
+  /* 25% {
+    transform: translateX(-15%);
+  } 50% {
+    transform: translateX(30%);
+  } */
+  100% {
+    transform: trans+lateX(0%);
+  }
+}
+
+.hero-form__container__input {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: var(--padding-regular-1);
+  position: relative;
+}
+
+.input__container {
+  grid-template-columns: 20% 80%;
+   background: rgba(255, 255, 255, 0.5);
+}
+
+.fail-username {
+  font-size: 8px;
+  display: none;
+  align-items: center;
+  color: red;
+  position: absolute;
+  top: -12%;
+  right: 10%;
+  /* background-color: white; */
+  z-index: 1000;
+}
+
+.fail-username p {
+  margin-left: 5px;
+}
+
+.fail-password {
+  font-size: 8px;
+  display: none;
+  align-items: center;
+  color: red;
+  position: absolute;
+  top: 45%;
+  right: 10%;
+}
+
+.fail-password p {
+  margin-left: 5px;
+}
+
+.fail-active {
+  border: 2px solid red;
+}
+
+.icon {
+  width: 50px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon img {
+  width: 60%;
+  height: 50%;
+  object-fit: contain;
+  color: var(--secondary-color);
+}
+
+.hero-form__container__checkbox-forgot-password {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.hero-form__container__checkbox-forgot-password a {
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.hero-form__container__checkbox-forgot-password .checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-form__container__checkbox-forgot-password a {
+  font-size: 12px;
+  text-transform: capitalize;
+  color: var(--secondary-color);
+  font-weight: bold;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.hero-form__container__button button:hover {
+  background-color: rgba(245, 130, 32);
+}
+
+.hero-form__container__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.hero-form__container__footer a {
+  margin-left: 10px;
+  color: var(--ternary-color);
+}
+
 }
