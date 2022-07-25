@@ -119,12 +119,12 @@ input:focus-within {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem;
+  padding: 2rem;
   background: #01684f;
 }
 
 .hero__header__logo {
-  width: 12rem;
+  width: 10rem;
 }
 
 .hero__container {
