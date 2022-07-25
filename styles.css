@@ -119,7 +119,7 @@ input:focus-within {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 1.5rem 2rem 1.5rem;
   background: #01684f;
 }
 
