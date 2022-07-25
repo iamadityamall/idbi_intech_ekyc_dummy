@@ -21,7 +21,6 @@
 }
 
 body {
-  background-color: whitesmoke;
   font-size: 1rem;
   font-family: var(--font-primary);
 }
@@ -111,7 +110,6 @@ input:focus-within {
 .hero-container {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(red, blue);
 }
 
 .hero__header {
@@ -137,7 +135,11 @@ input:focus-within {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #01684f;
+  background: linear-gradient(
+    -45deg,
+    var(--ternary-color) 10%,
+    var(--secondary-color) 90%
+  );
 }
 
 .hero-left__container {
