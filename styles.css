@@ -138,8 +138,9 @@ input:focus-within {
   align-items: center;
   background: linear-gradient(
     -45deg,
-    var(--ternary-color) 10%,
-    /* var(--primary-color) 10%, */ var(--secondary-color) 10%
+    var(--ternary-color) 50%,
+    /* var(--primary-color) 10%, */ 
+    var(--secondary-color) 50%
   );
 }
 
