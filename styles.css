@@ -119,7 +119,7 @@ input:focus-within {
   top: 0;
   left: 0;
   height: 12vh;
-  /* background: #01684f; */
+  background: #01684f;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -138,8 +138,8 @@ input:focus-within {
   align-items: center;
   background: linear-gradient(
     -45deg,
-    var(--ternary-color) 50%,
-    /* var(--primary-color) 10%, */ var(--secondary-color) 50%
+    var(--ternary-color) 20%,
+    /* var(--primary-color) 10%, */ var(--secondary-color) 20%
   );
   overflow: hidden;
 }
