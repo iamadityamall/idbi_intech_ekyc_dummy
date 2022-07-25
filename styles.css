@@ -115,16 +115,20 @@ input:focus-within {
 }
 
 .hero__header {
+  width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  padding: 2rem 1.5rem 2rem 1.5rem;
+  height: 10vh;
   background: #01684f;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .hero__header__logo {
   width: 10rem;
+  margin-left: 1rem;
 }
 
 .hero__container {
@@ -148,7 +152,7 @@ input:focus-within {
 }
 
 .hero-form__container {
-  margin-top: 5rem;
+  margin-top: 10vh;
   background-color: rgba(255, 255, 255, 1);
   padding: 2rem;
   display: grid;
