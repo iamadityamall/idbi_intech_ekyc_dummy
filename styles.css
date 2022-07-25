@@ -150,6 +150,7 @@ input:focus-within {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 
 .hero-form__container {
