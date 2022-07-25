@@ -118,7 +118,7 @@ input:focus-within {
   position: absolute;
   top: 0;
   left: 0;
-  height: 10vh;
+  height: 20vh;
   background: #01684f;
   display: flex;
   justify-content: flex-start;
