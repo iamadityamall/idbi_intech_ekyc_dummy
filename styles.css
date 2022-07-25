@@ -156,7 +156,7 @@ input:focus-within {
 .hero-form__container {
   width: 90vw;
   background-color: rgba(255, 255, 255, 1);
-  padding: 3rem;
+  padding: 4rem;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: var(--padding-regular-1);
