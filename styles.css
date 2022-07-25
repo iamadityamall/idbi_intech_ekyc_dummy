@@ -186,12 +186,12 @@ input:focus-within {
 }
 
 .input__container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  justify-content: center;
   align-items: center;
-  border-radius: 10px;
-  overflow: hidden;
   padding: 0.5rem;
+  border-radius: 10px;
   background: rgba(0, 0, 0, 0.09);
 }
 
