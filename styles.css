@@ -137,9 +137,9 @@ input:focus-within {
   align-items: center;
   background: linear-gradient(
     -45deg,
-    var(--ternary-color) 10%,
-    var(--primary-color) 10%,
-    var(--secondary-color) 10%
+    var(--ternary-color) 2%,
+    /* var(--primary-color) 10%, */
+    var(--secondary-color) 2%
   );
 }
 
@@ -151,10 +151,10 @@ input:focus-within {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
 }
 
 .hero-form__container {
+  width: 90vw;
   margin-top: 10vh;
   background-color: rgba(255, 255, 255, 1);
   padding: 2rem;
