@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --primary-color: #ffffff;
   --secondary-color: #01684f;
@@ -12,12 +18,6 @@
   --padding-regular-2: 1rem;
   --padding-regular-3: 0.75rem;
   --padding-regular-4: 0.25rem;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -46,12 +46,6 @@ p {
   letter-spacing: 0.5px;
 }
 
-img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
 button {
   padding: 0.5rem;
   border-radius: 10px;
@@ -70,15 +64,22 @@ button:hover {
   transition: var(--transition);
 }
 
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 input[type="text"],
-input[type="password"],input[type="email"],
-input[type="tel"]  {
-  padding: var(--padding-regular-3);
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
+  padding: 8px;
   font-size: 1rem;
   border: none;
   background: rgba(255, 255, 255, 0.5);
   transition: var(--transition);
-  margin-left: 0;
+  margin-left: 2px;
 }
 
 input[type="text"]::placeholder {
@@ -103,12 +104,13 @@ input:focus-within {
   background-color: var(--primary-color);
 }
 
-.hero-container {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
+.section {
+  width: 90vw;
+  margin: auto;
+  background: yellow;
 }
 
+/* Login Page */
 .hero__header {
   width: 100vw;
   position: absolute;
@@ -151,9 +153,8 @@ input:focus-within {
 }
 
 .hero-form__container {
-  width: 90vw;
   background-color: rgba(255, 255, 255, 1);
-  padding: 4rem;
+  padding: 2.5rem;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: var(--padding-regular-1);
@@ -180,7 +181,7 @@ input:focus-within {
 .hero-form__container__input {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: var(--padding-regular-1);
+  row-gap: var(--padding-regular-3);
   position: relative;
 }
 
@@ -191,7 +192,7 @@ input:focus-within {
   align-items: center;
   padding: 0.5rem;
   border-radius: 10px;
-  background: rgba(0, 0, 0, 0.09);
+  background: rgba(0, 0, 0, 0.03);
 }
 
 .fail-username,
@@ -302,6 +303,7 @@ input:focus-within {
   top: 50%;
   right: -500%;
 }
+
 
 .hero-form__container__button p::after {
   content: "";
