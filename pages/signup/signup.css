@@ -323,12 +323,12 @@ input:focus-within {
 }
 
 .hero-form__container__button button:nth-child(3) {
-  background-color: white;
-  color: black;
-  font-size: 0.75rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+    font-size: 0.75rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 
 .hero-form__container__button button:nth-child(3):hover {
   background-color: rgba(0, 0, 0, 0.05);
@@ -363,7 +363,7 @@ input:focus-within {
     left: 0;
     width: 100vw;
     padding: var(--padding-regular-1);
-    background: transparent;
+    background: #01684f;
     z-index: 3;
   }
 
@@ -624,7 +624,7 @@ input:focus-within {
   }
 
   .hero-form__container__button button:nth-child(3) {
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.1);
     color: black;
     font-size: 0.75rem;
     padding-left: 2rem;
