@@ -21,7 +21,44 @@
         </figure>
       </nav>
 
-      <aside id="mobile-sidebar" class="mobile-sidebar"></aside>
+      <aside id="mobile-sidebar" class="mobile-sidebar">
+        <div class="mobile-sidebar__logo-container">
+          <figure class="mobile-sidebar__logo-container__logo">
+            <img src="../../assests/logo/logo2.png" alt="" />
+          </figure>
+          <h1>aditya mall</h1>
+        </div>
+        <div class="sidebar-buttons-container">
+          <button class="sidebarButton sidebar-button-active">
+            <i class="fa fa-home"></i>
+            <span>dashboard</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-user"> </i>
+            <span>profile</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-gear"></i>
+            <span>settings</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <span>user</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-language" aria-hidden="true"></i>
+            <span>language</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+            <span>help</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+            <span>logout</span>
+          </button>
+        </div>
+      </aside>
 
       <button id="sidebar-button">
         <div class="sidebar-button__bar-one"></div>
@@ -29,6 +66,7 @@
       </button>
 
       <!-- mobile version end -->
+
       <aside class="sidebar">
         <nav class="sidebar-navbar">
           <!-- <figure class="inactive" id="logo1">
@@ -773,18 +811,12 @@
         },
       });
 
-      
-
       // mobile responsive
 
       const sidebarButton = document.getElementById("sidebar-button");
       const sidebar = document.getElementById("mobile-sidebar");
-      const sidebarBarOne = document.querySelector(
-        ".sidebar-button__bar-one"
-      );
-      const sidebarBarTwo = document.querySelector(
-        ".sidebar-button__bar-two"
-      );
+      const sidebarBarOne = document.querySelector(".sidebar-button__bar-one");
+      const sidebarBarTwo = document.querySelector(".sidebar-button__bar-two");
 
       sidebarButton.addEventListener("click", () => {
         console.log(sidebarBarOne);
