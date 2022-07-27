@@ -829,6 +829,9 @@
       allButtons.forEach((button) => {
         button.addEventListener("click", function () {
           this.classList.add("sidebar-button-active");
+          sidebar.classList.remove("active-sidebar");
+          sidebarBarOne.classList.toggle("sidebar-button__bar-one-active");
+          sidebarBarTwo.classList.toggle("sidebar-button__bar-two-active");
         });
         button.classList.remove("sidebar-button-active");
       });
