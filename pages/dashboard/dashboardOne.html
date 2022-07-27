@@ -19,64 +19,36 @@
         <figure class="mobile-navbar__logo">
           <img src="../../assests/logo/idbi-bank-logo.svg" alt="" />
         </figure>
-        <button id="mobile-navbar__sidebutton--open">
-          <div
-            style="
-              width: 50px;
-              height: 5px;
-              background: black;
-              margin-bottom: 5px;
-            "
-          ></div>
-          <div
-            style="
-              width: 50px;
-              height: 5px;
-              background: black;
-              margin-bottom: 5px;
-            "
-          ></div>
-          <div
-            style="
-              width: 50px;
-              height: 5px;
-              background: black;
-              margin-bottom: 5px;
-            "
-          ></div>
-        </button>
       </nav>
 
-      <aside id="sidebar">
-        <div class="sidebar__button-container">
-          <button id="sidebar__button--close">
-            <div
-              style="
-                width: 50px;
-                height: 5px;
-                background: black;
-                margin-bottom: 5px;
-              "
-            ></div>
-            <div
-              style="
-                width: 50px;
-                height: 5px;
-                background: black;
-                margin-bottom: 5px;
-              "
-            ></div>
-            <div
-              style="
-                width: 50px;
-                height: 5px;
-                background: black;
-                margin-bottom: 5px;
-              "
-            ></div>
-          </button>
-        </div>
-      </aside>
+      <aside id="mobile-sidebar" class="mobile-sidebar"></aside>
+
+      <button id="sidebar-button">
+        <div
+          style="
+            width: 50px;
+            height: 5px;
+            background: black;
+            margin-bottom: 5px;
+          "
+        ></div>
+        <div
+          style="
+            width: 50px;
+            height: 5px;
+            background: black;
+            margin-bottom: 5px;
+          "
+        ></div>
+        <div
+          style="
+            width: 50px;
+            height: 5px;
+            background: black;
+            margin-bottom: 5px;
+          "
+        ></div>
+      </button>
 
       <!-- mobile version end -->
       <aside class="sidebar">
@@ -823,20 +795,16 @@
         },
       });
 
-      const mobileSidebarButtonOpen = document.getElementById(
-        "mobile-navbar__sidebutton--open"
-      );
-      const mobileSidebarButtonClose = document.getElementById(
-        "sidebar__button--close"
-      );
-      const sidebar = document.getElementById("sidebar");
+      // mobile responsive
 
-      mobileSidebarButtonOpen.addEventListener("click", () => {
-        sidebar.style.animation = "slideIn 2000ms ease-in-out forwards";
+      const sidebarButton = document.getElementById("sidebar-button");
+      const sidebar = document.getElementById("mobile-sidebar");
+
+      sidebarButton.addEventListener("click", () => {
+        sidebar.classList.toggle("active-sidebar");
       });
-      mobileSidebarButtonClose.addEventListener("click", () => {
-        sidebar.style.animation = "slideOut 2000ms ease-in-out forwards";
-      });
+
+      // mobile responsive end
     </script>
   </body>
 </html>

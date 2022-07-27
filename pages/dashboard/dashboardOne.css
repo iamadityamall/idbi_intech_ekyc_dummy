@@ -55,38 +55,26 @@ img {
   width: 10rem;
 }
 
-#mobile-navbar__sidebutton-open {
-}
-
-#sidebar {
+.mobile-sidebar {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   background: yellow;
-  /* transition: all 2000ms ease-in-out; */
-  transform: translateX(100%);
+  transition: all 700ms ease-in-out;
   z-index: 2;
+  transform: translateX(100%);
 }
 
-@keyframes slideIn {
-  100% {
-    transform: translateX(17%);
-  }
+.active-sidebar {
+  transform: translateX(15%);
 }
 
-@keyframes slideOut {
-  0% {
-    transform: translateX(17%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-.sidebar__button-container{
-  
-}
-.sidebar__button--close{
-
+#sidebar-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  transform: translate(-30%, 70%);
 }
