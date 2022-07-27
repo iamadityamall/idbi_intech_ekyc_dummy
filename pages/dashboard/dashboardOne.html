@@ -14,6 +14,71 @@
   </head>
   <body>
     <section class="dashboard-section">
+      <!-- mobile version -->
+      <nav id="mobile-navbar">
+        <figure class="mobile-navbar__logo">
+          <img src="../../assests/logo/idbi-bank-logo.svg" alt="" />
+        </figure>
+        <button id="mobile-navbar__sidebutton--open">
+          <div
+            style="
+              width: 50px;
+              height: 5px;
+              background: black;
+              margin-bottom: 5px;
+            "
+          ></div>
+          <div
+            style="
+              width: 50px;
+              height: 5px;
+              background: black;
+              margin-bottom: 5px;
+            "
+          ></div>
+          <div
+            style="
+              width: 50px;
+              height: 5px;
+              background: black;
+              margin-bottom: 5px;
+            "
+          ></div>
+        </button>
+      </nav>
+
+      <aside id="sidebar">
+        <div class="sidebar__button-container">
+          <button id="sidebar__button--close">
+            <div
+              style="
+                width: 50px;
+                height: 5px;
+                background: black;
+                margin-bottom: 5px;
+              "
+            ></div>
+            <div
+              style="
+                width: 50px;
+                height: 5px;
+                background: black;
+                margin-bottom: 5px;
+              "
+            ></div>
+            <div
+              style="
+                width: 50px;
+                height: 5px;
+                background: black;
+                margin-bottom: 5px;
+              "
+            ></div>
+          </button>
+        </div>
+      </aside>
+
+      <!-- mobile version end -->
       <aside class="sidebar">
         <nav class="sidebar-navbar">
           <!-- <figure class="inactive" id="logo1">
@@ -138,7 +203,12 @@
                 <label for="mobile"
                   >Mobile Number: <span style="color: red">*</span></label
                 >
-                <input type="text" id="mobile" placeholder="mobile number" maxlength="10"/>
+                <input
+                  type="text"
+                  id="mobile"
+                  placeholder="mobile number"
+                  maxlength="10"
+                />
                 <div class="preloader-container">
                   <!-- added now -->
                   <div class="fail">
@@ -232,6 +302,7 @@
         </div>
       </div>
     </section>
+
     <section class="otp-container">
       <form class="otp-form">
         <div class="preloader-container-2">
@@ -750,6 +821,21 @@
           loaderVerifyContainer.style.display = "none";
           dashboard.style.filter = "none";
         },
+      });
+
+      const mobileSidebarButtonOpen = document.getElementById(
+        "mobile-navbar__sidebutton--open"
+      );
+      const mobileSidebarButtonClose = document.getElementById(
+        "sidebar__button--close"
+      );
+      const sidebar = document.getElementById("sidebar");
+
+      mobileSidebarButtonOpen.addEventListener("click", () => {
+        sidebar.style.animation = "slideIn 2000ms ease-in-out forwards";
+      });
+      mobileSidebarButtonClose.addEventListener("click", () => {
+        sidebar.style.animation = "slideOut 2000ms ease-in-out forwards";
       });
     </script>
   </body>
