@@ -24,30 +24,8 @@
       <aside id="mobile-sidebar" class="mobile-sidebar"></aside>
 
       <button id="sidebar-button">
-        <div
-          style="
-            width: 50px;
-            height: 5px;
-            background: black;
-            margin-bottom: 5px;
-          "
-        ></div>
-        <div
-          style="
-            width: 50px;
-            height: 5px;
-            background: black;
-            margin-bottom: 5px;
-          "
-        ></div>
-        <div
-          style="
-            width: 50px;
-            height: 5px;
-            background: black;
-            margin-bottom: 5px;
-          "
-        ></div>
+        <div class="sidebar-button__bar-one"></div>
+        <div class="sidebar-button__bar-two"></div>
       </button>
 
       <!-- mobile version end -->
@@ -795,13 +773,25 @@
         },
       });
 
+      
+
       // mobile responsive
 
       const sidebarButton = document.getElementById("sidebar-button");
       const sidebar = document.getElementById("mobile-sidebar");
+      const sidebarBarOne = document.querySelector(
+        ".sidebar-button__bar-one"
+      );
+      const sidebarBarTwo = document.querySelector(
+        ".sidebar-button__bar-two"
+      );
 
       sidebarButton.addEventListener("click", () => {
+        console.log(sidebarBarOne);
+        console.log(sidebarBarTwo);
         sidebar.classList.toggle("active-sidebar");
+        sidebarBarOne.classList.toggle("sidebar-button__bar-one-active");
+        sidebarBarTwo.classList.toggle("sidebar-button__bar-two-active");
       });
 
       // mobile responsive end
