@@ -246,6 +246,11 @@
             </form>
           </div>
           <div id="profile" class="forms">profile page</div>
+          <!-- <div id="settings" class="forms">profile page</div>
+          <div id="user" class="forms">profile page</div>
+          <div id="language" class="forms">profile page</div>
+          <div id="help" class="forms">profile page</div>
+          <div id="logout" class="forms">logout</div> -->
         </div>
       </div>
       <div id="loader-verify">
@@ -408,7 +413,7 @@
       // 1. Show and hide sidebar with button click
       function showContainer(e) {
         const title = e.target.innerText.toLowerCase();
-
+        console.log(title);
         forms.forEach((item) => {
           if (item.getAttribute("id") === title) {
             item.style.display = "flex";
@@ -817,6 +822,16 @@
       const sidebar = document.getElementById("mobile-sidebar");
       const sidebarBarOne = document.querySelector(".sidebar-button__bar-one");
       const sidebarBarTwo = document.querySelector(".sidebar-button__bar-two");
+      const allButtons = document.querySelectorAll(
+        ".sidebar-buttons-container button"
+      );
+
+      allButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          this.classList.add("sidebar-button-active");
+        });
+        button.classList.remove("sidebar-button-active");
+      });
 
       sidebarButton.addEventListener("click", () => {
         console.log(sidebarBarOne);
