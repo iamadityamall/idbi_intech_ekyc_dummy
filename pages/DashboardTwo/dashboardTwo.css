@@ -456,7 +456,148 @@ img {
   text-transform: capitalize;
 }
 
+/*  loader*/
 
+.dial {
+  height: 600px;
+  width: 600px;
+  filter: drop-shadow(5px 5px 0.5px rgba(245, 130, 32, 0.85));
+  /* background-color: brown; */
+}
+
+.timer {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(240, 240, 240, 0.25);
+}
+
+.timer input {
+  display: block;
+  border: none;
+  width: 240px;
+  font-size: 90px;
+  text-align: center;
+}
+
+.timer button {
+  border: none;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+.timer button:focus {
+  outline: none;
+}
+
+.timer input:focus {
+  outline: none;
+}
+
+.controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.infoo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.infoo h1 {
+  letter-spacing: 1px;
+  text-shadow: 0 0 2px 1px rgb(245, 130, 32);
+  color: var(--secondary-color);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/**
+ * ==============================================
+ * Dot Flashing
+ * ==============================================
+ */
+.dot-flashing {
+  align-self: flex-end;
+  margin-top: 1.75rem;
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 5px;
+  background-color: #ff4c00;
+  color: #ff4c00;
+  animation: dotFlashing 1s infinite linear alternate;
+  animation-delay: 0.5s;
+}
+
+.dot-flashing::before,
+.dot-flashing::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-flashing::before {
+  left: -15px;
+  width: 7px;
+  height: 7px;
+  border-radius: 5px;
+  background-color: #ff4c00;
+  color: #ff4c00;
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 0s;
+}
+
+.dot-flashing::after {
+  left: 15px;
+  width: 7px;
+  height: 7px;
+  border-radius: 5px;
+  background-color: #ff4c00;
+  color: #ff4c00;
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 1s;
+}
+
+@keyframes dotFlashing {
+  0% {
+    background-color: #ff4c00;
+  }
+  50%,
+  100% {
+    background-color: #ebe6ff;
+  }
+}
+
+#loader-verify {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.75);
+}
 
 /* media screen 1024 ======================== */
 
@@ -756,14 +897,14 @@ img {
   }
 
   #ekyc-form {
-  width: 100%;
-  height: 100%;
-  transition: all 200ms linear;
-  /* border-left: 2px solid var(--secondary-color); */
-  display: none;
-  justify-content: flex-start;
-  align-items: center;
-}
+    width: 100%;
+    height: 100%;
+    transition: all 200ms linear;
+    /* border-left: 2px solid var(--secondary-color); */
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+  }
 
   .animation {
     animation: fade-in 700ms ease-in-out;
@@ -1156,148 +1297,5 @@ img {
   .disabled {
     background: rgba(255, 255, 255, 0.8);
     cursor: none;
-  }
-
-  /*  loader*/
-
-  .dial {
-    height: 600px;
-    width: 600px;
-    filter: drop-shadow(5px 5px 0.5px rgba(245, 130, 32, 0.85));
-    /* background-color: brown; */
-  }
-
-  .timer {
-    position: absolute;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(240, 240, 240, 0.25);
-  }
-
-  .timer input {
-    display: block;
-    border: none;
-    width: 240px;
-    font-size: 90px;
-    text-align: center;
-  }
-
-  .timer button {
-    border: none;
-    font-size: 36px;
-    cursor: pointer;
-  }
-
-  .timer button:focus {
-    outline: none;
-  }
-
-  .timer input:focus {
-    outline: none;
-  }
-
-  .controls {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .infoo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.75rem;
-    font-weight: bold;
-  }
-
-  .infoo h1 {
-    letter-spacing: 1px;
-    text-shadow: 0 0 2px 1px rgb(245, 130, 32);
-    color: var(--secondary-color);
-    text-align: center;
-    text-transform: capitalize;
-  }
-
-  /**
- * ==============================================
- * Dot Flashing
- * ==============================================
- */
-  .dot-flashing {
-    align-self: flex-end;
-    margin-top: 1.75rem;
-    position: relative;
-    width: 7px;
-    height: 7px;
-    border-radius: 5px;
-    background-color: #ff4c00;
-    color: #ff4c00;
-    animation: dotFlashing 1s infinite linear alternate;
-    animation-delay: 0.5s;
-  }
-
-  .dot-flashing::before,
-  .dot-flashing::after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    top: 0;
-  }
-
-  .dot-flashing::before {
-    left: -15px;
-    width: 7px;
-    height: 7px;
-    border-radius: 5px;
-    background-color: #ff4c00;
-    color: #ff4c00;
-    animation: dotFlashing 1s infinite alternate;
-    animation-delay: 0s;
-  }
-
-  .dot-flashing::after {
-    left: 15px;
-    width: 7px;
-    height: 7px;
-    border-radius: 5px;
-    background-color: #ff4c00;
-    color: #ff4c00;
-    animation: dotFlashing 1s infinite alternate;
-    animation-delay: 1s;
-  }
-
-  @keyframes dotFlashing {
-    0% {
-      background-color: #ff4c00;
-    }
-    50%,
-    100% {
-      background-color: #ebe6ff;
-    }
-  }
-
-  #loader-verify {
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.75);
   }
 }
