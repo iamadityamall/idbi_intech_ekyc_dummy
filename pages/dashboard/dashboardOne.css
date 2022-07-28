@@ -194,10 +194,17 @@ img {
   position: relative;
 }
 
+#main-form {
+  width: 90vw;
+  padding: 1rem;
+}
+
 #dashboard {
   transition: all 200ms linear;
   /* border-left: 2px solid var(--secondary-color); */
   transition: all 1000ms ease-in-out;
+  display: flex;
+  justify-content: center;
 }
 
 #profile {
