@@ -363,7 +363,7 @@ img {
   justify-content: flex-end;
   align-items: center;
   color: red;
-  font-size: 0.75rem;
+  font-size: 0.5rem;
   padding-bottom: 5px;
 }
 
@@ -413,6 +413,7 @@ img {
   justify-content: flex-end;
   margin-left: 15px;
   padding-bottom: 5px;
+  font-size: 0.5rem;
 }
 
 .fail {
@@ -422,6 +423,7 @@ img {
   justify-content: flex-end;
   margin-left: 15px;
   padding-bottom: 5px;
+  font-size: 0.5rem;
 }
 
 .preloader-container .success i {
