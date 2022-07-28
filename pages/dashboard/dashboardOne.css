@@ -31,7 +31,7 @@ img {
   width: 100vw;
   height: 100vh;
   position: relative;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 /* mobile sectoin */
@@ -93,7 +93,7 @@ img {
   transition: all 700ms ease-in-out;
   z-index: 2;
   transform: translateX(100%);
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -103,7 +103,6 @@ img {
 }
 
 .mobile-sidebar__logo-container {
-  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -187,4 +186,245 @@ img {
 
 .otp-container {
   display: none;
+}
+
+.tabs {
+  width: 80vh;
+  height: 100vh;
+  background: var(--white-shade-1);
+  position: relative;
+}
+
+#dashboard {
+  transition: all 200ms linear;
+  /* border-left: 2px solid var(--secondary-color); */
+  transition: all 1000ms ease-in-out;
+}
+
+#profile {
+  width: 100%;
+  height: 100%;
+  transition: all 200ms linear;
+  /* border-left: 2px solid var(--secondary-color); */
+  display: none;
+}
+
+.animation {
+  animation: fade-in 700ms ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.notes {
+  padding: 0.75rem;
+  background-color: var(--white-shade-1);
+  border-radius: 10px;
+  font-size: 0.75rem;
+  margin-top: 10px;
+  /* width: 65%; */
+}
+.notes ul {
+  margin-left: 3rem;
+}
+.notes ul li {
+  margin-bottom: 5px;
+}
+
+.forms {
+  width: 95%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+}
+
+.forms form {
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.forms form .common {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.85rem;
+  font-family: var(--font-primary);
+  margin-bottom: 1rem;
+}
+
+.forms form label {
+  /* width: 10rem; */
+  margin-right: 2rem;
+  font-weight: bold;
+}
+
+.forms form input {
+  height: 1.75rem;
+  /* width: 20rem; */
+  padding: 1.15rem;
+  background-color: var(--white-shade-1);
+  border: none;
+  border-radius: 5px;
+}
+
+.forms form input::placeholder {
+  letter-spacing: 0.5px;
+  font-weight: lighter;
+  text-transform: capitalize;
+  font-size: 13px;
+}
+
+.forms form input:focus {
+  background-color: var(--primary-color);
+  outline: 2px solid var(--secondary-color);
+}
+
+.forms form .address .address-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.forms form .address label {
+  align-self: flex-start;
+  letter-spacing: 0.5px;
+}
+
+.forms form .address div input {
+  margin-bottom: 0.25rem;
+}
+
+.forms form .buttons {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.forms form .buttons button {
+  padding: 1rem;
+  margin-right: 1rem;
+  border: none;
+  background: var(--ternary-color);
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-family: var(--font-heading);
+  font-weight: bolder;
+  transition: all 200ms ease-in-out;
+  letter-spacing: 1px;
+}
+
+.forms form .buttons button:hover {
+  border: 2px solid black;
+  transition: all 200ms ease-in-out;
+}
+
+.forms form .buttons button:nth-child(2) {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.aadhar-inputs {
+  display: flex;
+  justify-items: flex-start;
+  align-items: center;
+  width: 20rem;
+}
+
+.aadhar-inputs span {
+  padding: 0 5px 0 5px;
+}
+
+.aadhar-inputs input {
+  width: 5rem !important;
+}
+
+.name-fail,
+.dob-fail,
+.aadhar-fail,
+.address-fail {
+  margin-left: 2rem;
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
+  color: red;
+  font-size: 0.75rem;
+}
+
+.name-fail p,
+.dob-fail p,
+.aadhar-fail p,
+.address-fail p {
+  margin-left: 5px;
+}
+
+.active {
+  display: flex;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.preloader-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.preloader-container .preloader-tub {
+  display: none;
+  margin-left: 15px;
+}
+
+.preloader-container .preloader-tub .preloader {
+  border: 3.5px solid #f3f3f3;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border-top: 3.5px solid #3498db;
+  animation: rotate 2s linear infinite;
+}
+
+.preloader-container .success {
+  color: var(--secondary-color);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+}
+
+.preloader-container .fail {
+  color: red;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+}
+
+.preloader-container .success i {
+  margin-right: 10px;
+}
+
+.preloader-container .fail i {
+  margin-right: 10px;
+}
+
+.preloader-container p {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: capitalize;
 }
