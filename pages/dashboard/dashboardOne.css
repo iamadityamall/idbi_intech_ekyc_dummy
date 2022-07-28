@@ -103,11 +103,12 @@ img {
 }
 
 .mobile-sidebar__logo-container {
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 3rem 0 3rem 0;
+  padding: 6rem 0 3rem 0;
   border-radius: 10px;
 }
 
