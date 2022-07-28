@@ -189,7 +189,6 @@ img {
 }
 
 .tabs {
-  width: 80vh;
   height: 100vh;
   background: var(--white-shade-1);
   position: relative;
@@ -223,18 +222,10 @@ img {
 }
 
 .notes {
-  padding: 0.75rem;
   background-color: var(--white-shade-1);
   border-radius: 10px;
   font-size: 0.75rem;
   margin-top: 10px;
-  /* width: 65%; */
-}
-.notes ul {
-  margin-left: 3rem;
-}
-.notes ul li {
-  margin-bottom: 5px;
 }
 
 .forms {
@@ -264,7 +255,6 @@ img {
 
 .forms form label {
   /* width: 10rem; */
-  margin-right: 2rem;
   font-weight: bold;
 }
 
