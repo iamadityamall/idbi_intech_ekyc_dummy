@@ -804,6 +804,7 @@ img {
     width: 10rem;
     margin-right: 2rem;
     font-weight: bold;
+    align-self: center;
   }
 
   .forms form input {
@@ -833,7 +834,7 @@ img {
   }
 
   .forms form .address label {
-    align-self: flex-start;
+    align-self: center;
     letter-spacing: 0.5px;
   }
 
