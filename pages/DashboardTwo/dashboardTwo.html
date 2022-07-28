@@ -18,11 +18,68 @@
         /* border-left: 2px solid var(--secondary-color); */
         display: none;
       }
-      
     </style>
   </head>
   <body>
     <section class="dashboard-section">
+      <!-- ======================================== -->
+      <!-- mobile version -->
+      <nav id="mobile-navbar">
+        <figure class="mobile-navbar__logo">
+          <img src="../../assests/logo/idbi-bank-logo.svg" alt="" />
+        </figure>
+      </nav>
+
+      <aside id="mobile-sidebar" class="mobile-sidebar">
+        <div class="mobile-sidebar__logo-container">
+          <figure class="mobile-sidebar__logo-container__logo">
+            <img src="../../assests/logo/logo2.png" alt="" />
+          </figure>
+          <h1>aditya mall</h1>
+        </div>
+        <div class="sidebar-buttons-container">
+          <button class="sidebarButton sidebar-button-active">
+            <i class="fa fa-home"></i>
+            <span>dashboard</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-user"> </i>
+            <span>profile</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-user"> </i>
+            <span>eKYC-Form</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-gear"></i>
+            <span>settings</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <span>user</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-language" aria-hidden="true"></i>
+            <span>language</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+            <span>help</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+            <span>logout</span>
+          </button>
+        </div>
+      </aside>
+
+      <button id="sidebar-button">
+        <div class="sidebar-button__bar-one"></div>
+        <div class="sidebar-button__bar-two"></div>
+      </button>
+
+      <!-- mobile version end -->
+      <!-- ========================================== -->
       <aside class="sidebar">
         <nav class="sidebar-navbar">
           <!-- <figure class="inactive" id="logo1">
@@ -93,39 +150,38 @@
               width: 100%;
             "
           >
-            
             <h1 style="color: #3ab4f2; font-size: 8rem">CIBIL</h1>
             <p style="font-size: 2rem">coming soon ....</p>
           </div>
           <div id="profile" class="forms">profile page</div>
           <div id="ekyc-form" class="forms animation">
             <form id="main-form">
+              <!-- new changes done -->
+              <div class="name-fail">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>Name field cannot be empty</p>
+              </div>
               <div class="name common">
                 <label for="name"
-                  >Name:
-                  <span style="color: red; margin-left: 10px">*</span></label
+                  >Name: <span style="color: red">*</span></label
                 >
                 <input type="text" id="name" placeholder="Full Name" />
-                <div class="name-fail">
-                  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                  <p>Name field cannot be empty</p>
-                </div>
+              </div>
+              <div class="dob-fail">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>Kindly select your date of birth</p>
               </div>
               <div class="dob common">
-                <label for="dob"
-                  >DOB:
-                  <span style="color: red; margin-left: 10px">*</span></label
-                >
+                <label for="dob">DOB: <span style="color: red">*</span></label>
                 <input type="date" placeholder="Date of birth" id="dob" />
-                <div class="dob-fail">
-                  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                  <p>Kindly select your date of birth</p>
-                </div>
+              </div>
+              <div class="aadhar-fail">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>aadhar field cannot be empty</p>
               </div>
               <div class="aadhar common">
                 <label for="aadhar"
-                  >Aadhar Number:
-                  <span style="color: red; margin-left: 10px">*</span></label
+                  >Aadhar Number: <span style="color: red">*</span></label
                 >
                 <div class="aadhar-inputs">
                   <input
@@ -135,7 +191,7 @@
                     maxlength="4"
                   /><span>-</span>
                   <input
-                    type="text" 
+                    type="text"
                     placeholder="XXXX"
                     id="aadhar-2"
                     maxlength="4"
@@ -147,10 +203,10 @@
                     maxlength="4"
                   />
                 </div>
-                <div class="aadhar-fail">
-                  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                  <p>aadhar field cannot be empty</p>
-                </div>
+              </div>
+              <div class="address-fail">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>address field cannot be empty</p>
               </div>
               <div class="address common">
                 <label for="address">Address:</label>
@@ -159,11 +215,17 @@
                   <input type="text" id="address2" placeholder="address 2" />
                   <input type="text" id="address3" placeholder="address 3" />
                 </div>
-                <div class="address-fail">
-                  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                  <p>address field cannot be empty</p>
-                </div>
               </div>
+              <!-- added now -->
+              <div class="fail">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>Mobile number must be of 10-digits</p>
+              </div>
+              <div class="success">
+                <i class="fa fa-check" aria-hidden="true"></i>
+                <p>Mobile number verified successfully. Click Submit</p>
+              </div>
+              <!-- added now end -->
               <div class="mobile common">
                 <label for="mobile"
                   >Mobile Number: <span style="color: red">*</span></label
@@ -174,23 +236,15 @@
                   placeholder="mobile number"
                   maxlength="10"
                 />
-
                 <div class="preloader-container">
-                  <!-- added now -->
-                  <div class="fail">
-                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                    <p>Mobile number must be of 10-digits</p>
-                  </div>
-                  <!-- added now end -->
-
                   <!-- <div class="preloader-tub">
                     <div class="preloader"></div>
                     <p>waiting for verification</p>
                   </div> -->
-                  <div class="success">
+                  <!-- <div class="success">
                     <i class="fa fa-check" aria-hidden="true"></i>
                     <p>Mobile number verified successfully. Click Submit</p>
-                  </div>
+                  </div> -->
                   <!-- <div class="fail">
                     <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
                     <p>failed to verify your mobile number.</p>
@@ -291,12 +345,8 @@
       const aadhar2 = document.querySelector("#aadhar-2");
       const aadhar3 = document.querySelector("#aadhar-3");
       const preloader = document.querySelector(".preloader-container");
-      const preloaderFail = document.querySelector(
-        ".preloader-container .fail"
-      );
-      const preloaderSuccess = document.querySelector(
-        ".preloader-container .success"
-      );
+      const preloaderFail = document.querySelector("#main-form .fail");
+      const preloaderSuccess = document.querySelector("#main-form .success");
 
       // (added now)
       inputs.forEach((input) => {
@@ -410,20 +460,20 @@
 
       // (added now start)
       reset.addEventListener("click", () => {
-        preloaderTube.style.display = "none";
+        // preloaderTube.style.display = "none";
         preloaderFail.style.display = "none";
         preloaderSuccess.style.display = "none";
-        preloader2.style.display = "none";
+        // preloader2.style.display = "none";
         mobileNumber.removeAttribute("disabled");
-        otpMessages.querySelector(".success").style.display = "none";
-        otpMessages.querySelector(".fail").style.display = "none";
-        otpBox.value = "";
+        // otpMessages.querySelector(".success").style.display = "none";
+        // otpMessages.querySelector(".fail").style.display = "none";
+        // otpBox.value = "";
         inputs.forEach((button) => button.removeAttribute("disabled"));
         nameFailAlert.style.display = "none";
         addressFailAlert.style.display = "none";
         aadharFailAlert.style.display = "none";
         dobFailAlert.style.display = "none";
-
+        mobileNumber.style.border = "none";
         name.style.border = "none";
         dob.style.border = "none";
         address1.style.border = "none";
@@ -617,6 +667,47 @@
         },
       });
       timer.start();
+
+      //=================================================
+
+      // mobile responsive
+
+      const sidebarButton = document.getElementById("sidebar-button");
+      const sidebar = document.getElementById("mobile-sidebar");
+      const sidebarBarOne = document.querySelector(".sidebar-button__bar-one");
+      const sidebarBarTwo = document.querySelector(".sidebar-button__bar-two");
+      const allButtons = document.querySelectorAll(
+        ".sidebar-buttons-container button"
+      );
+
+      allButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          console.log(this.innerText);
+          if (this.innerText !== "Logout") {
+            sidebar.classList.remove("active-sidebar");
+          }
+          this.classList.add("sidebar-button-active");
+
+          sidebarBarOne.classList.toggle("sidebar-button__bar-one-active");
+          sidebarBarTwo.classList.toggle("sidebar-button__bar-two-active");
+        });
+        if (
+          !button.innerText === "dashboard" ||
+          button.innerText === "logout"
+        ) {
+          button.classList.remove("sidebar-button-active");
+        }
+      });
+
+      sidebarButton.addEventListener("click", () => {
+        console.log(sidebarBarOne);
+        console.log(sidebarBarTwo);
+        sidebar.classList.toggle("active-sidebar");
+        sidebarBarOne.classList.toggle("sidebar-button__bar-one-active");
+        sidebarBarTwo.classList.toggle("sidebar-button__bar-two-active");
+      });
+
+      // mobile responsive end
     </script>
   </body>
 </html>
