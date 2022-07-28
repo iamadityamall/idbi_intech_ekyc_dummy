@@ -132,8 +132,7 @@
               </div>
               <div class="name common">
                 <label for="name"
-                  >Name:
-                  <span style="color: red; margin-left: 10px">*</span></label
+                  >Name: <span style="color: red">*</span></label
                 >
                 <input type="text" id="name" placeholder="Full Name" />
               </div>
@@ -142,10 +141,7 @@
                 <p>Kindly select your date of birth</p>
               </div>
               <div class="dob common">
-                <label for="dob"
-                  >DOB:
-                  <span style="color: red; margin-left: 10px">*</span></label
-                >
+                <label for="dob">DOB: <span style="color: red">*</span></label>
                 <input type="date" placeholder="Date of birth" id="dob" />
               </div>
               <div class="aadhar-fail">
@@ -154,8 +150,7 @@
               </div>
               <div class="aadhar common">
                 <label for="aadhar"
-                  >Aadhar Number:
-                  <span style="color: red; margin-left: 10px">*</span></label
+                  >Aadhar Number: <span style="color: red">*</span></label
                 >
                 <div class="aadhar-inputs">
                   <input
@@ -370,7 +365,7 @@
       const preloaderTube = document.querySelector(
         ".preloader-container .preloader-tub"
       );
-       
+
       // new changes
       const preloaderSuccess = document.querySelector("#main-form .success");
       const preloaderFail = document.querySelector("#main-form .fail");
@@ -636,7 +631,7 @@
       });
 
       reset.addEventListener("click", () => {
-        preloaderTube.style.display = "none";
+        // preloaderTube.style.display = "none";
         preloaderFail.style.display = "none";
         preloaderSuccess.style.display = "none";
         preloader2.style.display = "none";

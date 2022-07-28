@@ -264,7 +264,7 @@ img {
   justify-content: space-between;
   align-items: center; */
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 40% 60%;
   font-size: 0.85rem;
   font-family: var(--font-primary);
   margin-bottom: 1rem;
@@ -347,11 +347,11 @@ img {
 }
 
 .aadhar-inputs span {
-  padding: 0 5px 0 5px;
+  padding: 0 2px 0 2px;
 }
 
 .aadhar-inputs input {
-  width: 5rem !important;
+  width: 4rem !important;
 }
 
 .name-fail,
