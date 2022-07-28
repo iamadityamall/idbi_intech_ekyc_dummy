@@ -93,7 +93,7 @@ img {
   transition: all 700ms ease-in-out;
   z-index: 2;
   transform: translateX(100%);
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -403,7 +403,7 @@ img {
   animation: rotate 2s linear infinite;
 }
 
-.preloader-container .success {
+.success {
   color: var(--secondary-color);
   display: none;
   align-items: center;
@@ -411,7 +411,7 @@ img {
   margin-left: 15px;
 }
 
-.preloader-container .fail {
+.fail {
   color: red;
   display: none;
   align-items: center;

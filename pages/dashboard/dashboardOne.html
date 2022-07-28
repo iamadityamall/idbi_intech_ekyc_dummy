@@ -125,16 +125,21 @@
         <div class="tabs">
           <div id="dashboard" class="forms animation">
             <form id="main-form">
+              <!-- new changes done -->
+              <div class="name-fail">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>Name field cannot be empty</p>
+              </div>
               <div class="name common">
                 <label for="name"
                   >Name:
                   <span style="color: red; margin-left: 10px">*</span></label
                 >
                 <input type="text" id="name" placeholder="Full Name" />
-                <div class="name-fail">
-                  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                  <p>Name field cannot be empty</p>
-                </div>
+              </div>
+              <div class="dob-fail">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>Kindly select your date of birth</p>
               </div>
               <div class="dob common">
                 <label for="dob"
@@ -142,10 +147,10 @@
                   <span style="color: red; margin-left: 10px">*</span></label
                 >
                 <input type="date" placeholder="Date of birth" id="dob" />
-                <div class="dob-fail">
-                  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                  <p>Kindly select your date of birth</p>
-                </div>
+              </div>
+              <div class="aadhar-fail">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>aadhar field cannot be empty</p>
               </div>
               <div class="aadhar common">
                 <label for="aadhar"
@@ -172,10 +177,10 @@
                     maxlength="4"
                   />
                 </div>
-                <div class="aadhar-fail">
-                  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                  <p>aadhar field cannot be empty</p>
-                </div>
+              </div>
+              <div class="address-fail">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>address field cannot be empty</p>
               </div>
               <div class="address common">
                 <label for="address">Address:</label>
@@ -184,11 +189,17 @@
                   <input type="text" id="address2" placeholder="address 2" />
                   <input type="text" id="address3" placeholder="address 3" />
                 </div>
-                <div class="address-fail">
-                  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                  <p>address field cannot be empty</p>
-                </div>
               </div>
+              <!-- added now -->
+              <div class="fail">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>Mobile number must be of 10-digits</p>
+              </div>
+              <div class="success">
+                <i class="fa fa-check" aria-hidden="true"></i>
+                <p>Mobile number verified successfully. Click Submit</p>
+              </div>
+              <!-- added now end -->
               <div class="mobile common">
                 <label for="mobile"
                   >Mobile Number: <span style="color: red">*</span></label
@@ -200,21 +211,14 @@
                   maxlength="10"
                 />
                 <div class="preloader-container">
-                  <!-- added now -->
-                  <div class="fail">
-                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                    <p>Mobile number must be of 10-digits</p>
-                  </div>
-                  <!-- added now end -->
-
                   <!-- <div class="preloader-tub">
                     <div class="preloader"></div>
                     <p>waiting for verification</p>
                   </div> -->
-                  <div class="success">
+                  <!-- <div class="success">
                     <i class="fa fa-check" aria-hidden="true"></i>
                     <p>Mobile number verified successfully. Click Submit</p>
-                  </div>
+                  </div> -->
                   <!-- <div class="fail">
                     <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
                     <p>failed to verify your mobile number.</p>
@@ -817,11 +821,6 @@
           dashboard.style.filter = "none";
         },
       });
-
-
-
-
-
 
       //=================================================
 
