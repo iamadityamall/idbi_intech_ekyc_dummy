@@ -192,10 +192,12 @@ img {
   height: 100vh;
   background: var(--white-shade-1);
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 #main-form {
-  width: 95vw;
+  width: 95%;
   padding: 1rem;
 }
 
@@ -203,8 +205,12 @@ img {
   transition: all 200ms linear;
   /* border-left: 2px solid var(--secondary-color); */
   transition: all 1000ms ease-in-out;
-  display: flex;
+  display: none;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
 }
 
 #profile {
@@ -215,7 +221,7 @@ img {
   display: none;
 }
 
-#ekyc-form{
+#ekyc-form {
   width: 100%;
   height: 100%;
   transition: all 200ms linear;
@@ -234,8 +240,6 @@ img {
     opacity: 1;
   }
 }
-
-
 .notes {
   background-color: var(--white-shade-1);
   border-radius: 10px;
@@ -449,6 +453,95 @@ img {
   font-weight: bold;
   font-size: 12px;
   text-transform: capitalize;
+}
+
+#loader-verify {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+/*  loader*/
+
+.dial {
+  height: 600px;
+  width: 600px;
+  filter: drop-shadow(5px 5px 0.5px rgba(245, 130, 32, 0.85));
+  position: relative;
+  left: -10%;
+  /* background-color: brown; */
+}
+
+.timer {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* background-color: rgba(240, 240, 240, 0.5); */
+}
+
+.timer input {
+  display: block;
+  border: none;
+  width: 240px;
+  font-size: 90px;
+  text-align: center;
+}
+
+.timer button {
+  border: none;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+.timer button:focus {
+  outline: none;
+}
+
+.timer input:focus {
+  outline: none;
+}
+
+.controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.infoo {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.infoo h1 {
+  letter-spacing: 1px;
+  text-shadow: 0 0 2px 1px rgb(245, 130, 32);
+  color: var(--secondary-color);
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1rem;
 }
 
 /* media screen 1024 ======================== */
@@ -1275,10 +1368,10 @@ img {
   }
 
   #loader-verify {
-    display: none;
+    display: flex;
     position: absolute;
-    top: 0%;
-    left: 0%;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background: rgba(255, 255, 255, 0.75);
