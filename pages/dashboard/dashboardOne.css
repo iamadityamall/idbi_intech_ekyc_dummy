@@ -67,8 +67,8 @@ img {
 
 .sidebar-button__bar-one,
 .sidebar-button__bar-two {
-  width: 40px;
-  height: 5px;
+  width: 30px;
+  height: 4px;
   background: var(--primary-color);
   margin-bottom: 5px;
   transition: all 700ms ease-in-out;
@@ -112,7 +112,7 @@ img {
 }
 
 .mobile-sidebar__logo-container__logo {
-  width: 150px;
+  width: 100px;
   border: 6px solid var(--ternary-color);
   border-radius: 50%;
   overflow: hidden;
