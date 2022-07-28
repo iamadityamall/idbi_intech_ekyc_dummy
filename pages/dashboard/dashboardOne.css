@@ -360,10 +360,11 @@ img {
 .address-fail {
   margin-left: 2rem;
   display: none;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   color: red;
   font-size: 0.75rem;
+  padding-bottom: 5px;
 }
 
 .name-fail p,
@@ -409,16 +410,18 @@ img {
   color: var(--secondary-color);
   display: none;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   margin-left: 15px;
+  padding-bottom: 5px;
 }
 
 .fail {
   color: red;
   display: none;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   margin-left: 15px;
+  padding-bottom: 5px;
 }
 
 .preloader-container .success i {
