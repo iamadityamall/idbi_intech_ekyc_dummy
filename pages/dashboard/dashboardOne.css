@@ -52,7 +52,7 @@ img {
 }
 
 .mobile-navbar__logo {
-  width: 5rem;
+  width: 10rem;
 }
 
 #sidebar-button {
@@ -112,7 +112,7 @@ img {
 }
 
 .mobile-sidebar__logo-container__logo {
-  width: 100px;
+  width: 80px;
   border: 6px solid var(--ternary-color);
   border-radius: 50%;
   overflow: hidden;
