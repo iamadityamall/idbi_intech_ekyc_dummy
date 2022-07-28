@@ -60,7 +60,7 @@ img {
   top: 0;
   right: 0;
   z-index: 1000;
-  transform: translate(-50%, 170%);
+  transform: translate(-50%, 200%);
   background: transparent;
   border: none;
 }
@@ -195,7 +195,6 @@ img {
 }
 
 #main-form {
-  width: 90vw;
   padding: 1rem;
 }
 
@@ -260,9 +259,11 @@ img {
 }
 
 .forms form .common {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: 20% 80%;
   font-size: 0.85rem;
   font-family: var(--font-primary);
   margin-bottom: 1rem;
