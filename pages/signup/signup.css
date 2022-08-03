@@ -65,7 +65,8 @@ button:hover {
 }
 
 img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 100%;
 }
@@ -81,6 +82,34 @@ input[type="tel"] {
   background: rgba(255, 255, 255, 0.5);
   transition: var(--transition);
   margin-left: 2px;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+  letter-spacing: 1px;
+  color: gray;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+input[type="text"]::-moz-placeholder {
+  letter-spacing: 1px;
+  color: gray;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+input[type="text"]:-ms-input-placeholder {
+  letter-spacing: 1px;
+  color: gray;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+input[type="text"]::-ms-input-placeholder {
+  letter-spacing: 1px;
+  color: gray;
+  text-transform: capitalize;
+  font-size: 14px;
 }
 
 input[type="text"]::placeholder {
@@ -163,7 +192,17 @@ input:focus-within {
   align-items: center;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
-  animation: popUp 200ms ease-in-out;
+  -webkit-animation: popUp 200ms ease-in-out;
+          animation: popUp 200ms ease-in-out;
+}
+
+@-webkit-keyframes popUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes popUp {
@@ -255,7 +294,8 @@ input:focus-within {
 .icon img {
   width: 60%;
   height: 50%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   color: var(--secondary-color);
 }
 
@@ -437,7 +477,8 @@ input:focus-within {
     letter-spacing: 1px;
     color: white;
     text-transform: capitalize;
-    animation: fade-left 2s linear;
+    -webkit-animation: fade-left 2s linear;
+            animation: fade-left 2s linear;
     margin: 0;
     padding: 0;
   }
@@ -464,7 +505,25 @@ input:focus-within {
     justify-content: center;
     border-radius: 10px;
     box-shadow: 2px 2px 30px 10px rgba(0, 0, 0, 0.1);
-    animation: fade-left 1s ease-in-out;
+    -webkit-animation: fade-left 1s ease-in-out;
+            animation: fade-left 1s ease-in-out;
+  }
+
+  @-webkit-keyframes fade-left {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+    /* 25% {
+    transform: translateX(-15%);
+  } 50% {
+    transform: translateX(30%);
+  } */
+    /* 100% {
+    transform: translateX(0%);
+  } */
   }
 
   @keyframes fade-left {
@@ -557,7 +616,8 @@ input:focus-within {
   .icon img {
     width: 60%;
     height: 50%;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
     color: var(--secondary-color);
   }
 

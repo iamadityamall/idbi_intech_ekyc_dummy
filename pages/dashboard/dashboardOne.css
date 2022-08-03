@@ -7,7 +7,8 @@
 }
 
 img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 100%;
 }
@@ -216,7 +217,17 @@ img {
 }
 
 .animation {
-  animation: fade-in 700ms ease-in-out;
+  -webkit-animation: fade-in 700ms ease-in-out;
+          animation: fade-in 700ms ease-in-out;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade-in {
@@ -282,6 +293,34 @@ img {
   background-color: var(--white-shade-1);
   border: none;
   border-radius: 5px;
+}
+
+.forms form input::-webkit-input-placeholder {
+  letter-spacing: 0.5px;
+  font-weight: lighter;
+  text-transform: capitalize;
+  font-size: 13px;
+}
+
+.forms form input::-moz-placeholder {
+  letter-spacing: 0.5px;
+  font-weight: lighter;
+  text-transform: capitalize;
+  font-size: 13px;
+}
+
+.forms form input:-ms-input-placeholder {
+  letter-spacing: 0.5px;
+  font-weight: lighter;
+  text-transform: capitalize;
+  font-size: 13px;
+}
+
+.forms form input::-ms-input-placeholder {
+  letter-spacing: 0.5px;
+  font-weight: lighter;
+  text-transform: capitalize;
+  font-size: 13px;
 }
 
 .forms form input::placeholder {
@@ -380,6 +419,15 @@ img {
   display: flex;
 }
 
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -405,7 +453,8 @@ img {
   width: 20px;
   height: 20px;
   border-top: 3.5px solid #3498db;
-  animation: rotate 2s linear infinite;
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
 }
 
 .success {
@@ -504,7 +553,8 @@ img {
   .sidebar-navbar img {
     height: 40px;
     width: 80%;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
     margin-left: 10px;
   }
 
@@ -632,7 +682,8 @@ img {
   .profile-container figure img {
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
     border: 3px solid var(--ternary-color);
     border-radius: 100%;
   }
@@ -646,7 +697,8 @@ img {
     transition: all 200ms ease-in-out;
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.6);
     border-radius: 2px;
-    animation: fade-out 200ms;
+    -webkit-animation: fade-out 200ms;
+            animation: fade-out 200ms;
     margin-top: 0rem;
     width: 200px;
     /* height: 400px; */
@@ -659,6 +711,15 @@ img {
 
   .showSubmenu {
     display: flex !important;
+  }
+
+  @-webkit-keyframes fade-out {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   @keyframes fade-out {
@@ -741,7 +802,17 @@ img {
   }
 
   .animation {
-    animation: fade-in 700ms ease-in-out;
+    -webkit-animation: fade-in 700ms ease-in-out;
+            animation: fade-in 700ms ease-in-out;
+  }
+
+  @-webkit-keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   @keyframes fade-in {
@@ -814,6 +885,34 @@ img {
     background-color: var(--white-shade-1);
     border: none;
     border-radius: 5px;
+  }
+
+  .forms form input::-webkit-input-placeholder {
+    letter-spacing: 0.5px;
+    font-weight: lighter;
+    text-transform: capitalize;
+    font-size: 13px;
+  }
+
+  .forms form input::-moz-placeholder {
+    letter-spacing: 0.5px;
+    font-weight: lighter;
+    text-transform: capitalize;
+    font-size: 13px;
+  }
+
+  .forms form input:-ms-input-placeholder {
+    letter-spacing: 0.5px;
+    font-weight: lighter;
+    text-transform: capitalize;
+    font-size: 13px;
+  }
+
+  .forms form input::-ms-input-placeholder {
+    letter-spacing: 0.5px;
+    font-weight: lighter;
+    text-transform: capitalize;
+    font-size: 13px;
   }
 
   .forms form input::placeholder {
@@ -901,7 +1000,8 @@ img {
     width: 20px;
     height: 20px;
     border-top: 3.5px solid #3498db;
-    animation: rotate 2s linear infinite;
+    -webkit-animation: rotate 2s linear infinite;
+            animation: rotate 2s linear infinite;
   }
 
   .preloader-container .success {
@@ -959,6 +1059,15 @@ img {
 
   .active {
     display: flex;
+  }
+
+  @-webkit-keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 
   @keyframes rotate {
@@ -1095,6 +1204,34 @@ img {
     border-radius: 5px;
   }
 
+  .otp-form input::-webkit-input-placeholder {
+    letter-spacing: 0.5px;
+    font-weight: lighter;
+    text-transform: capitalize;
+    font-size: 13px;
+  }
+
+  .otp-form input::-moz-placeholder {
+    letter-spacing: 0.5px;
+    font-weight: lighter;
+    text-transform: capitalize;
+    font-size: 13px;
+  }
+
+  .otp-form input:-ms-input-placeholder {
+    letter-spacing: 0.5px;
+    font-weight: lighter;
+    text-transform: capitalize;
+    font-size: 13px;
+  }
+
+  .otp-form input::-ms-input-placeholder {
+    letter-spacing: 0.5px;
+    font-weight: lighter;
+    text-transform: capitalize;
+    font-size: 13px;
+  }
+
   .otp-form input::placeholder {
     letter-spacing: 0.5px;
     font-weight: lighter;
@@ -1119,7 +1256,8 @@ img {
     width: 20px;
     height: 20px;
     border-top: 3.5px solid var(--secondary-color);
-    animation: rotate 2s linear infinite;
+    -webkit-animation: rotate 2s linear infinite;
+            animation: rotate 2s linear infinite;
   }
   .otp-form .preloader-container-2 p {
     margin-left: 1rem;
@@ -1138,7 +1276,8 @@ img {
   .dial {
     height: 600px;
     width: 600px;
-    filter: drop-shadow(5px 5px 0.5px rgba(245, 130, 32, 0.85));
+    -webkit-filter: drop-shadow(5px 5px 0.5px rgba(245, 130, 32, 0.85));
+            filter: drop-shadow(5px 5px 0.5px rgba(245, 130, 32, 0.85));
     /* background-color: brown; */
   }
 
@@ -1222,8 +1361,10 @@ img {
     border-radius: 5px;
     background-color: #ff4c00;
     color: #ff4c00;
-    animation: dotFlashing 1s infinite linear alternate;
-    animation-delay: 0.5s;
+    -webkit-animation: dotFlashing 1s infinite linear alternate;
+            animation: dotFlashing 1s infinite linear alternate;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
   }
 
   .dot-flashing::before,
@@ -1241,8 +1382,10 @@ img {
     border-radius: 5px;
     background-color: #ff4c00;
     color: #ff4c00;
-    animation: dotFlashing 1s infinite alternate;
-    animation-delay: 0s;
+    -webkit-animation: dotFlashing 1s infinite alternate;
+            animation: dotFlashing 1s infinite alternate;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
   }
 
   .dot-flashing::after {
@@ -1252,8 +1395,20 @@ img {
     border-radius: 5px;
     background-color: #ff4c00;
     color: #ff4c00;
-    animation: dotFlashing 1s infinite alternate;
-    animation-delay: 1s;
+    -webkit-animation: dotFlashing 1s infinite alternate;
+            animation: dotFlashing 1s infinite alternate;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+
+  @-webkit-keyframes dotFlashing {
+    0% {
+      background-color: #ff4c00;
+    }
+    50%,
+    100% {
+      background-color: #ebe6ff;
+    }
   }
 
   @keyframes dotFlashing {

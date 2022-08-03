@@ -26,7 +26,8 @@ body {
 }
 
 img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 100%;
 }
@@ -52,7 +53,8 @@ p {
 }
 
 img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 100%;
 }
@@ -83,6 +85,34 @@ input[type="password"] {
   background: rgba(255, 255, 255, 0.5);
   transition: var(--transition);
   margin-left: 0;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+  letter-spacing: 1px;
+  color: gray;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+input[type="text"]::-moz-placeholder {
+  letter-spacing: 1px;
+  color: gray;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+input[type="text"]:-ms-input-placeholder {
+  letter-spacing: 1px;
+  color: gray;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+input[type="text"]::-ms-input-placeholder {
+  letter-spacing: 1px;
+  color: gray;
+  text-transform: capitalize;
+  font-size: 14px;
 }
 
 input[type="text"]::placeholder {
@@ -164,7 +194,17 @@ input:focus-within {
   justify-content: center;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
-  animation: popUp 200ms ease-in-out;
+  -webkit-animation: popUp 200ms ease-in-out;
+          animation: popUp 200ms ease-in-out;
+}
+
+@-webkit-keyframes popUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes popUp {
@@ -243,7 +283,8 @@ input:focus-within {
 .icon img {
   width: 60%;
   height: 50%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   color: var(--secondary-color);
 }
 
@@ -366,7 +407,17 @@ input:focus-within {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    animation: fade-out 2s ease-in-out;
+    -webkit-animation: fade-out 2s ease-in-out;
+            animation: fade-out 2s ease-in-out;
+  }
+
+  @-webkit-keyframes fade-out {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
   @keyframes fade-out {
@@ -393,18 +444,30 @@ input:focus-within {
   }
 
   .step-one {
-    animation: fade-right 2s ease-in-out;
+    -webkit-animation: fade-right 2s ease-in-out;
+            animation: fade-right 2s ease-in-out;
     transition: all 1s ease;
   }
 
   .step-two {
-    animation: fade-right 3s ease-in-out;
+    -webkit-animation: fade-right 3s ease-in-out;
+            animation: fade-right 3s ease-in-out;
     transition: all 1s ease;
   }
 
   .step-three {
-    animation: fade-right 4s ease-in-out;
+    -webkit-animation: fade-right 4s ease-in-out;
+            animation: fade-right 4s ease-in-out;
     transition: all 1s ease;
+  }
+
+  @-webkit-keyframes fade-right {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
   }
 
   @keyframes fade-right {
@@ -438,7 +501,8 @@ input:focus-within {
     width: 50px;
     height: 50px;
     border-radius: 5%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     padding: 0.25rem;
     background-color: #f2f2f2;
   }
@@ -448,7 +512,17 @@ input:focus-within {
     background-color: rgba(0, 0, 0, 0.05);
     padding: 3rem;
     box-shadow: 2px 2px 30px 10px rgba(0, 0, 0, 0.1);
-    animation: fade-left 2000ms ease-in-out;
+    -webkit-animation: fade-left 2000ms ease-in-out;
+            animation: fade-left 2000ms ease-in-out;
+  }
+
+  @-webkit-keyframes fade-left {
+    0% {
+      transform: translateX(150%);
+    }
+    100% {
+      transform: trans + lateX(0%);
+    }
   }
 
   @keyframes fade-left {
