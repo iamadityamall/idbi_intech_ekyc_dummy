@@ -211,3 +211,15 @@ img {
   color: var(--primary-color);
 }
 
+.card i {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card span {
+  color: var(--white-shade-1);
+  font-size: 0.85rem;
+  font-family: var(--font-primary);
+}
+
