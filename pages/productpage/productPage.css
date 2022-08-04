@@ -201,7 +201,7 @@ a {
   font-size: 1rem;
   font-family: var(--font-primary);
   -webkit-animation: moveup 2s ease-in-out 3s forwards;
-          animation: moveup 2s ease-in-out 3s forwards;
+  animation: moveup 2s ease-in-out 3s forwards;
 }
 
 @-webkit-keyframes moveup {
@@ -249,7 +249,7 @@ a {
 
 .hero-container-info span:nth-child(4) {
   -webkit-animation: arrow 3s ease-out forwards;
-          animation: arrow 3s ease-out forwards;
+  animation: arrow 3s ease-out forwards;
 }
 
 @-webkit-keyframes arrow {
@@ -274,7 +274,7 @@ a {
   z-index: 10;
   background: var(--secondary-color);
   -webkit-animation: swipe-in 2s ease-in forwards;
-          animation: swipe-in 2s ease-in forwards;
+  animation: swipe-in 2s ease-in forwards;
 }
 
 @-webkit-keyframes swipe-in {
@@ -312,7 +312,7 @@ a {
   padding: 1rem;
   opacity: 0;
   -webkit-animation: fadeouttext 1s ease-in-out 3s forwards;
-          animation: fadeouttext 1s ease-in-out 3s forwards;
+  animation: fadeouttext 1s ease-in-out 3s forwards;
 }
 @-webkit-keyframes fadeouttext {
   100% {
@@ -330,6 +330,14 @@ a {
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   padding: 1rem;
+  opacity: 0;
+  animation: showcard 2s ease-in-out 3s forwards;
+}
+
+@keyframes showcard {
+  100% {
+    opacity: 100%;
+  }
 }
 
 .card {
