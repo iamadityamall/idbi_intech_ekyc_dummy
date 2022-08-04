@@ -29,7 +29,10 @@
           <h1>aditya mall</h1>
         </div>
         <div class="sidebar-buttons-container">
-          <button class="sidebarButton sidebar-button-active">
+          <button
+            class="sidebarButton sidebar-button-active"
+            onclick="location.href='../dashboard/dashboardOne.html'"
+          >
             <i class="fa fa-home"></i>
             <span>i-eAadhar</span>
           </button>
@@ -103,12 +106,6 @@
           sidebarBarTwo.classList.toggle("sidebar-button__bar-two-active");
         });
         console.log(button.innerText);
-        if (
-          button.innerText === "I-EAadhar" ||
-          button.innerText === "logout"
-        ) {
-          button.classList.remove("sidebar-button-active");
-        }
       });
 
       sidebarButton.addEventListener("click", () => {
@@ -117,32 +114,6 @@
         sidebar.classList.toggle("active-sidebar");
         sidebarBarOne.classList.toggle("sidebar-button__bar-one-active");
         sidebarBarTwo.classList.toggle("sidebar-button__bar-two-active");
-      });
-
-       // 1. Show and hide sidebar with button click
-      function showContainer(e) {
-        console.log(e);
-        const title = e.target.innerText.toLowerCase();
-        console.log(title);
-        forms.forEach((item) => {
-          if (item.getAttribute("id") === title) {
-            item.style.display = "flex";
-            item.classList.add("animation");
-            this.classList.add("sidebar-button-active");
-          } else {
-            item.style.display = "none";
-            sidebarButtons.forEach((button) => {
-              if (button !== this) {
-                button.classList.remove("sidebar-button-active");
-              }
-            });
-          }
-        });
-      }
-
-      // 1. adding evenetlisteners to sidebar buttons
-      sidebarButtons.forEach((button) => {
-        button.addEventListener("click", showContainer);
       });
 
       // mobile responsive end
