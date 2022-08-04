@@ -184,13 +184,14 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  
 }
 
 .hero-card-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  padding: 2rem;
 }
 
 .card {
