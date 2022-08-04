@@ -178,10 +178,7 @@ img {
 }
 
 .hero-container {
-  margin-top: 10vh;
-  width: 80vw;
-  margin: auto;
-  min-height: 90vh;
+  min-height: 100vh;
   background: yellow;
   display: flex;
   flex-direction: column;
