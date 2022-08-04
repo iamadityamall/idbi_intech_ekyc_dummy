@@ -32,7 +32,7 @@ img {
   width: 100vw;
   height: 100vh;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* mobile sectoin */
@@ -179,12 +179,15 @@ img {
 
 .hero-container {
   margin-top: 10vh;
-  height: 90vh;
+  width: 80vw;
+  margin: auto;
+  min-height: 90vh;
   background: yellow;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 
 .hero-card-container {
