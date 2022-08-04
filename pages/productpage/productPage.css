@@ -209,7 +209,7 @@ a{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 1rem;
   background: var(--ternary-color);
   border-radius: 10px;
   color: var(--primary-color);
@@ -217,13 +217,13 @@ a{
 
 .card i {
   color: var(--primary-color);
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 .card span {
   color: black;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   font-family: var(--font-primary);
   font-weight: bold;
   letter-spacing: 1px;
