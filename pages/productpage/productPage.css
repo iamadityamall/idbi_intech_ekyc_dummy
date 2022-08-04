@@ -178,6 +178,8 @@ img {
 }
 
 .hero-container {
+  width: 90vw;
+  margin:auto;
   min-height: 100vh;
   background: var(--white-shade-1);
   display: flex;
@@ -191,7 +193,6 @@ img {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  padding: 2rem;
 }
 
 .card {
