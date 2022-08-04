@@ -839,16 +839,16 @@
             sidebar.classList.remove("active-sidebar");
           }
           this.classList.add("sidebar-button-active");
-
           sidebarBarOne.classList.toggle("sidebar-button__bar-one-active");
           sidebarBarTwo.classList.toggle("sidebar-button__bar-two-active");
         });
-        if (
-          !button.innerText === "dashboard" ||
-          button.innerText === "logout"
-        ) {
-          button.classList.remove("sidebar-button-active");
-        }
+
+        // if (
+        //   !button.innerText === "dashboard" ||
+        //   button.innerText === "logout"
+        // ) {
+        //   button.classList.remove("sidebar-button-active");
+        // }
       });
 
       sidebarButton.addEventListener("click", () => {

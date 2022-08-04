@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../productpage/productPage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section class="dashboard-section">
+      <!-- ======================================== -->
+      <!-- mobile version -->
+      <nav id="mobile-navbar">
+        <figure class="mobile-navbar__logo">
+          <img src="../../assests/logo/idbi-bank-logo.svg" alt="" />
+        </figure>
+      </nav>
+
+      <aside id="mobile-sidebar" class="mobile-sidebar">
+        <div class="mobile-sidebar__logo-container">
+          <figure class="mobile-sidebar__logo-container__logo">
+            <img src="../../assests/logo/logo2.png" alt="" />
+          </figure>
+          <h1>aditya mall</h1>
+        </div>
+        <div class="sidebar-buttons-container">
+          <button class="sidebarButton sidebar-button-active">
+            <i class="fa fa-home"></i>
+            <span>i-eAadhar</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-user"> </i>
+            <span>i-Pan</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-user"> </i>
+            <span>i-oKYC</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-gear"></i>
+            <span>i-maskedAadhar</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <span>i-VideoKYC</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-language" aria-hidden="true"></i>
+            <span>i-cibil</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+            <span>i-savingsAccount</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+            <span>i-currentAccount</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+            <span>logout</span>
+          </button>
+        </div>
+      </aside>
+
+      <button id="sidebar-button">
+        <div class="sidebar-button__bar-one"></div>
+        <div class="sidebar-button__bar-two"></div>
+      </button>
+
+      <!-- mobile version end -->
+      <!-- ========================================== -->
+    </section>
+
+    <script>
+      //=================================================
+
+      // mobile responsive
+
+      const sidebarButton = document.getElementById("sidebar-button");
+      const sidebar = document.getElementById("mobile-sidebar");
+      const sidebarBarOne = document.querySelector(".sidebar-button__bar-one");
+      const sidebarBarTwo = document.querySelector(".sidebar-button__bar-two");
+      const allButtons = document.querySelectorAll(
+        ".sidebar-buttons-container button"
+      );
+
+      allButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          this.classList.add("sidebar-button-active");
+
+          if (this.innerText !== "Logout") {
+            sidebar.classList.remove("active-sidebar");
+          }
+
+          sidebarBarOne.classList.toggle("sidebar-button__bar-one-active");
+
+          sidebarBarTwo.classList.toggle("sidebar-button__bar-two-active");
+        });
+        console.log(button.innerText);
+        if (
+          button.innerText === "I-EAadhar" ||
+          button.innerText === "logout"
+        ) {
+          button.classList.remove("sidebar-button-active");
+        }
+      });
+
+      sidebarButton.addEventListener("click", () => {
+        console.log(sidebarBarOne);
+        console.log(sidebarBarTwo);
+        sidebar.classList.toggle("active-sidebar");
+        sidebarBarOne.classList.toggle("sidebar-button__bar-one-active");
+        sidebarBarTwo.classList.toggle("sidebar-button__bar-two-active");
+      });
+
+       // 1. Show and hide sidebar with button click
+      function showContainer(e) {
+        console.log(e);
+        const title = e.target.innerText.toLowerCase();
+        console.log(title);
+        forms.forEach((item) => {
+          if (item.getAttribute("id") === title) {
+            item.style.display = "flex";
+            item.classList.add("animation");
+            this.classList.add("sidebar-button-active");
+          } else {
+            item.style.display = "none";
+            sidebarButtons.forEach((button) => {
+              if (button !== this) {
+                button.classList.remove("sidebar-button-active");
+              }
+            });
+          }
+        });
+      }
+
+      // 1. adding evenetlisteners to sidebar buttons
+      sidebarButtons.forEach((button) => {
+        button.addEventListener("click", showContainer);
+      });
+
+      // mobile responsive end
+    </script>
+  </body>
+</html>

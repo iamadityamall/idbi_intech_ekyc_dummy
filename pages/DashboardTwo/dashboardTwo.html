@@ -105,6 +105,7 @@
           </button>
         </div>
       </aside>
+
       <div class="tabs-container">
         <nav class="tabs-navbar">
           <div class="profile-container">
@@ -680,17 +681,13 @@
           sidebarBarOne.classList.toggle("sidebar-button__bar-one-active");
           sidebarBarTwo.classList.toggle("sidebar-button__bar-two-active");
         });
-        if (
-          !button.innerText === "dashboard" ||
-          button.innerText === "logout"
-        ) {
-          button.classList.remove("sidebar-button-active");
-        }
+
+        // if (button.innerText === "dashboard" || button.innerText === "logout") {
+        //   button.classList.remove("sidebar-button-active");
+        // }
       });
 
       sidebarButton.addEventListener("click", () => {
-        console.log(sidebarBarOne);
-        console.log(sidebarBarTwo);
         sidebar.classList.toggle("active-sidebar");
         sidebarBarOne.classList.toggle("sidebar-button__bar-one-active");
         sidebarBarTwo.classList.toggle("sidebar-button__bar-two-active");
