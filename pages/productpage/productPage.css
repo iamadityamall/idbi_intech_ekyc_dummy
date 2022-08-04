@@ -13,6 +13,10 @@ img {
   height: 100%;
 }
 
+a{
+  text-decoration: none;
+}
+
 :root {
   --primary-color: #ffffff;
   --secondary-color: #01684f;
@@ -216,7 +220,7 @@ img {
 }
 
 .card span {
-  color: var(--white-shade-1);
+  color: black;
   font-size: 0.7rem;
   font-family: var(--font-primary);
 }
