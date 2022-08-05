@@ -366,3 +366,11 @@ a {
   font-weight: bold;
   letter-spacing: 1px;
 }
+
+/* laptop version */
+
+@media screen and (min-width: 1024px) {
+  .dashboard-section {
+    overflow: hidden;
+  }
+}
