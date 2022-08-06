@@ -244,6 +244,38 @@ a {
     transform: translateY(3%);
   }
 }
+
+.hero-container-info blockquote {
+  padding: 2rem;
+  position: relative;
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+
+.hero-container-info blockquote::before {
+  content: '"';
+  font-size: 5rem;
+  position: absolute;
+  top: -15%;
+  left: 0;
+  height: 100%;
+  color: var(--ternary-color)
+}
+
+.hero-container-info blockquote::after {
+  content: '"';
+  font-size: 5rem;
+  position: absolute;
+  bottom: -55%;
+  right: 0;
+  height: 100%;
+  color: var(--ternary-color)
+}
+
+.hero-container-info span:nth-child(3) {
+  margin-top: 2rem;
+}
+
 .hero-container-info span {
   /* margin-bottom: 1rem; */
   padding: 0.5rem;
@@ -542,6 +574,21 @@ a {
       transform: rotate(-0deg);
     }
   }
+
+  .hero-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1.5rem;
+    grid-template-areas:
+      "a b c d"
+      "e f g h"
+      "i j k l"
+      "m n o p";
+    padding: 1rem;
+    opacity: 0;
+    animation: showcard 2s ease-in-out 3s forwards;
+  }
   .card {
     display: flex;
     flex-direction: column;
@@ -552,6 +599,30 @@ a {
     border-radius: 10px;
     color: var(--primary-color);
     box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.15);
+  }
+  #card7 {
+    grid-area: k;
+  }
+  #card6 {
+    grid-area: o;
+  }
+  #card5 {
+    grid-area: n;
+  }
+  #card4 {
+    grid-area: j;
+  }
+  #card3 {
+    grid-area: i;
+  }
+  #card2 {
+    grid-area: f;
+  }
+  #card1 {
+    grid-area: e;
+  }
+  #card0 {
+    grid-area: a;
   }
 
   .card:hover {
