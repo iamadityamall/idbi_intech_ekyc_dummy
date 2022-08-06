@@ -253,6 +253,7 @@ img {
 }
 
 #main-form {
+  margin-top: 5rem;
   width: 95%;
   padding: 1rem;
 }
