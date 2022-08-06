@@ -97,7 +97,7 @@ img {
   transition: all 700ms ease-in-out;
   z-index: 2;
   transform: translateX(100%);
-   display: grid;
+  display: grid;
   grid-template-columns: 1fr;
 }
 
@@ -198,14 +198,16 @@ img {
 }
 
 #main-form {
-  width: 95vw;
+  
+  scroll-padding: 20rem;
+  margin-top: 20rem;
+  width: 90vw;
   padding-top: 5rem;
 }
 
 #dashboard {
-  transition: all 200ms linear;
   /* border-left: 2px solid var(--secondary-color); */
-  transition: all 1000ms ease-in-out;
+  /* transition: all 1000ms ease-in-out; */
   display: flex;
   justify-content: center;
 }
@@ -257,7 +259,7 @@ img {
 }
 
 .forms {
-  width: 95%;
+  width: 90vw;
   display: flex;
   justify-content: flex-start;
   align-items: center;
