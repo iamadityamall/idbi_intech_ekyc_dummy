@@ -172,7 +172,7 @@ a {
   margin-top: 1rem;
   font-size: 2rem;
   font-weight: bold;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   letter-spacing: 1px;
 }
 
@@ -212,7 +212,7 @@ a {
   transition: all 200ms ease-in-out;
   font-size: 0.75rem;
   letter-spacing: 1px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   font-weight: bold;
   font-family: var(--font-primary);
   color: black;
@@ -698,7 +698,7 @@ a {
     -ms-flex-align: center;
     align-items: center;
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: var(--font-primary);
     -webkit-animation: moveup 2s ease-in-out 3s forwards;
     animation: moveup 2s ease-in-out 3s forwards;
@@ -769,7 +769,7 @@ a {
     grid-area: o;
   }
   #card5 {
-    grid-area: n;
+    grid-area: g;
   }
   #card4 {
     grid-area: j;
@@ -802,13 +802,13 @@ a {
 
   .card i {
     color: var(--primary-color);
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
   }
 
   .card span {
     color: var(--primary-color);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-family: var(--font-primary);
     font-weight: bold;
     letter-spacing: 1px;

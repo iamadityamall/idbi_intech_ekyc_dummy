@@ -10,6 +10,22 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/brands.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/regular.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/solid.min.css"
+    />
     <script src="./HackTimer.js"></script>
   </head>
   <body>
@@ -31,37 +47,44 @@
           <figure class="mobile-sidebar__logo-container__logo">
             <img src="../../assests/logo/logo2.png" alt="" />
           </figure>
-          <h1>aditya mall</h1>
+          <h1>Aditya Mall</h1>
         </div>
         <div class="sidebar-buttons-container">
+          <button
+            class="sidebarButton"
+            onclick="location.href='../productpage/ProductPage.html'"
+          >
+            <i class="fa-solid fa-circle-left"></i>
+            <span>Back to Dashboard</span>
+          </button>
           <button class="sidebarButton sidebar-button-active">
             <i class="fa fa-home"></i>
-            <span>dashboard</span>
+            <span>i-eAadhar</span>
           </button>
           <button class="sidebarButton">
             <i class="fa fa-user"> </i>
-            <span>profile</span>
+            <span>Profile</span>
           </button>
 
           <button class="sidebarButton">
             <i class="fa fa-gear"></i>
-            <span>settings</span>
+            <span>Settings</span>
           </button>
           <button class="sidebarButton">
             <i class="fa fa-user" aria-hidden="true"></i>
-            <span>user</span>
+            <span>User</span>
           </button>
           <button class="sidebarButton">
             <i class="fa fa-language" aria-hidden="true"></i>
-            <span>language</span>
+            <span>Language</span>
           </button>
           <button class="sidebarButton">
             <i class="fa fa-info-circle" aria-hidden="true"></i>
-            <span>help</span>
+            <span>Help</span>
           </button>
           <button class="sidebarButton">
             <i class="fa fa-sign-out" aria-hidden="true"></i>
-            <span>logout</span>
+            <span>Logout</span>
           </button>
         </div>
       </aside>
@@ -80,13 +103,20 @@
           <button><i class="fa fa-bars"></i></button>
         </nav>
         <div class="sidebar-buttons-container">
+          <button
+            class="sidebarButton"
+            onclick="location.href='../productpage/ProductPage.html'"
+          >
+            <i class="fa-solid fa-circle-left"></i>
+            <span>Back to Dashboard</span>
+          </button>
           <button class="sidebarButton sidebar-button-active">
             <i class="fa fa-home"></i>
-            <span>dashboard</span>
+            <span>i-eAadhar</span>
           </button>
           <button class="sidebarButton">
             <i class="fa fa-user"> </i>
-            <span>profile</span>
+            <span>Profile</span>
           </button>
         </div>
       </aside>
@@ -123,7 +153,7 @@
           </div>
         </nav>
         <div class="tabs">
-          <div id="dashboard" class="forms animation">
+          <div id="i-eAadhar" class="forms animation">
             <form id="main-form">
               <!-- new changes done -->
               <div class="name-fail">
@@ -246,7 +276,7 @@
               </div>
             </form>
           </div>
-          <div id="profile" class="forms">profile page</div>
+          <div id="Profile" class="forms">profile page</div>
           <!-- <div id="settings" class="forms">profile page</div>
           <div id="user" class="forms">profile page</div>
           <div id="language" class="forms">profile page</div>
@@ -378,7 +408,7 @@
       const address1 = document.getElementById("address1");
       const address2 = document.getElementById("address2");
       const address3 = document.getElementById("address3");
-      const reset = document.querySelector("#dashboard form .buttons #reset");
+      const reset = document.querySelector("#i-eAadhar form .buttons #reset");
       const mainSubmit = document.getElementById("main-submit");
       const inputs = document.querySelectorAll(".forms input");
       const aadharInputs = document.querySelectorAll(".aadhar-inputs input");
@@ -387,7 +417,7 @@
       const aadharFailAlert = document.querySelector(".aadhar-fail");
       const addressFailAlert = document.querySelector(".address-fail");
       const state = document.getElementById("state");
-      const dashboard = document.getElementById("dashboard");
+      const dashboard = document.getElementById("i-eaadhar");
       const loaderVerifyContainer = document.getElementById("loader-verify");
 
       // Otp Container
@@ -413,7 +443,7 @@
 
       // 1. Show and hide sidebar with button click
       function showContainer(e) {
-        const title = e.target.innerText.toLowerCase();
+        // const title = e.target.innerText.toLowerCase();
         console.log(title);
         forms.forEach((item) => {
           if (item.getAttribute("id") === title) {
