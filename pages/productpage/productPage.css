@@ -679,6 +679,7 @@ a {
   .hero-container {
     margin-top: 10vh;
     min-height: 100vh;
+    padding: 0;
     background: var(--white-shade-1);
     display: -ms-grid;
     display: grid;
