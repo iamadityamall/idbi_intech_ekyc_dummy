@@ -14,10 +14,6 @@
   box-sizing: border-box;
 }
 
-html {
-  padding: 0 !important;
-}
-
 :root {
   --primary-color: #ffffff;
   --secondary-color: #01684f;
@@ -36,7 +32,6 @@ body {
   background-color: whitesmoke;
   font-size: 1rem;
   font-family: var(--font-primary);
-  box-sizing: border-box;
 }
 
 a {
@@ -99,7 +94,6 @@ input[type="tel"] {
   -o-transition: var(--transition);
   transition: var(--transition);
   margin-left: 2px;
-  box-sizing: border-box;
 }
 
 input[type="text"]::-webkit-input-placeholder {
@@ -114,7 +108,6 @@ input[type="text"]::-moz-placeholder {
   color: gray;
   text-transform: capitalize;
   font-size: 14px;
-  box-sizing: border-box;
 }
 
 input[type="text"]:-ms-input-placeholder {
@@ -122,7 +115,6 @@ input[type="text"]:-ms-input-placeholder {
   color: gray;
   text-transform: capitalize;
   font-size: 14px;
-  box-sizing: border-box;
 }
 
 input[type="text"]::-ms-input-placeholder {
@@ -130,7 +122,6 @@ input[type="text"]::-ms-input-placeholder {
   color: gray;
   text-transform: capitalize;
   font-size: 14px;
-  box-sizing: border-box;
 }
 
 input[type="text"]::placeholder {
@@ -138,7 +129,6 @@ input[type="text"]::placeholder {
   color: gray;
   text-transform: capitalize;
   font-size: 14px;
-  box-sizing: border-box;
 }
 
 input[type="checkbox"] {
@@ -158,7 +148,6 @@ input:focus-within {
 
 .section {
   width: 90vw;
-  min-height: 100vh;
   margin: auto;
   background: yellow;
 }
@@ -229,7 +218,7 @@ input:focus-within {
 }
 
 .hero-form__container {
-  margin-top: 10vh;
+  margin-top: 15vh;
   width: 90%;
   background-color: rgba(255, 255, 255, 1);
   padding: 2rem;
@@ -251,7 +240,6 @@ input:focus-within {
   box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
   -webkit-animation: popUp 200ms ease-in-out;
   animation: popUp 200ms ease-in-out;
-  box-sizing: border-box;
 }
 
 @-webkit-keyframes popUp {
@@ -287,7 +275,7 @@ input:focus-within {
 }
 
 .input__container {
-  margin-bottom: 2rem;
+  margin: auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 20% 80%;
@@ -301,7 +289,7 @@ input:focus-within {
   padding: 0.5rem;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.03);
-  box-sizing: border-box !important;
+  margin-bottom: 1rem;
 }
 
 .fail-username,
@@ -326,17 +314,17 @@ input:focus-within {
 }
 
 .fail-username {
-  top: -4%;
+  top: -5%;
 }
 
 .fail-email,
 .fail-email-invalid-char {
-  top: 17%;
+  top: 16%;
 }
 
 .fail-phone,
 .fail-phone-numbers {
-  top: 38%;
+  top: 36%;
 }
 
 .fail-phone-numbers {
@@ -344,11 +332,11 @@ input:focus-within {
 }
 
 .fail-password {
-  top: 59%;
+  top: 56%;
 }
 
 .fail-retypepassword {
-  top: 79%;
+  top: 75%;
 }
 
 .icon {
@@ -615,7 +603,7 @@ input:focus-within {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 0;
+    padding: 0 0 0 0;
   }
 
   .hero-form__container__heading {
@@ -629,7 +617,6 @@ input:focus-within {
 
   .hero-form__container {
     margin: 0;
-    padding: 0;
     width: initial;
     background-color: rgba(255, 255, 255, 1);
     padding: 2.5rem;
@@ -705,6 +692,7 @@ input:focus-within {
     overflow: hidden;
     padding: 0.5rem;
     background: rgba(0, 0, 0, 0.025);
+    margin-bottom: 0;
   }
 
   .fail-username,
