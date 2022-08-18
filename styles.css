@@ -25,7 +25,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -35,7 +35,7 @@ body {
 
 img {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
 }
@@ -62,7 +62,7 @@ p {
 
 img {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
 }
@@ -151,7 +151,7 @@ input:focus-within {
 
 .hero-container {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 }
 
@@ -166,11 +166,11 @@ input:focus-within {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .hero__header__logo {
@@ -185,11 +185,11 @@ input:focus-within {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background: -o-linear-gradient(
     135deg,
     var(--ternary-color) 20%,
@@ -212,15 +212,16 @@ input:focus-within {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .hero-form__container {
   width: 90vw;
+  
   background-color: rgba(255, 255, 255, 1);
   padding: 4rem;
   display: -ms-grid;
@@ -229,13 +230,13 @@ input:focus-within {
   grid-template-columns: 1fr;
   row-gap: var(--padding-regular-1);
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
   -webkit-animation: popUp 200ms ease-in-out;
-          animation: popUp 200ms ease-in-out;
+  animation: popUp 200ms ease-in-out;
 }
 
 @-webkit-keyframes popUp {
@@ -261,8 +262,8 @@ input:focus-within {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .hero-form__container__input {
@@ -280,11 +281,11 @@ input:focus-within {
   -ms-grid-columns: 20% 80%;
   grid-template-columns: 20% 80%;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 0.5rem;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.09);
@@ -294,8 +295,8 @@ input:focus-within {
   font-size: 8px;
   display: none;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: red;
   position: absolute;
   top: -12%;
@@ -312,8 +313,8 @@ input:focus-within {
   font-size: 8px;
   display: none;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: red;
   position: absolute;
   top: 45%;
@@ -335,18 +336,18 @@ input:focus-within {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .icon img {
   width: 60%;
   height: 50%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   color: var(--secondary-color);
 }
 
@@ -355,11 +356,11 @@ input:focus-within {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-weight: bold;
 }
 
@@ -373,11 +374,11 @@ input:focus-within {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .hero-form__container__checkbox-forgot-password a {
@@ -397,11 +398,11 @@ input:focus-within {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-size: 12px;
   font-weight: bold;
 }
@@ -460,8 +461,8 @@ input:focus-within {
     top: -10%;
     right: 48%;
     -webkit-transform: translate(10%, -50%);
-        -ms-transform: translate(10%, -50%);
-            transform: translate(10%, -50%);
+    -ms-transform: translate(10%, -50%);
+    transform: translate(10%, -50%);
     outline: none;
     z-index: 1;
     border: 10px solid rgba(245, 130, 32, 1);
@@ -476,8 +477,8 @@ input:focus-within {
     top: -5%;
     right: 55%;
     -webkit-transform: translate(10%, -50%);
-        -ms-transform: translate(10%, -50%);
-            transform: translate(10%, -50%);
+    -ms-transform: translate(10%, -50%);
+    transform: translate(10%, -50%);
     outline: none;
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.05);
@@ -489,11 +490,11 @@ input:focus-within {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
   }
 
   .hero-left__container__step__header {
@@ -507,13 +508,13 @@ input:focus-within {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     -webkit-animation: fade-out 2s ease-in-out;
-            animation: fade-out 2s ease-in-out;
+    animation: fade-out 2s ease-in-out;
   }
 
   @-webkit-keyframes fade-out {
@@ -552,7 +553,7 @@ input:focus-within {
 
   .step-one {
     -webkit-animation: fade-right 2s ease-in-out;
-            animation: fade-right 2s ease-in-out;
+    animation: fade-right 2s ease-in-out;
     -webkit-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
@@ -560,7 +561,7 @@ input:focus-within {
 
   .step-two {
     -webkit-animation: fade-right 3s ease-in-out;
-            animation: fade-right 3s ease-in-out;
+    animation: fade-right 3s ease-in-out;
     -webkit-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
@@ -568,7 +569,7 @@ input:focus-within {
 
   .step-three {
     -webkit-animation: fade-right 4s ease-in-out;
-            animation: fade-right 4s ease-in-out;
+    animation: fade-right 4s ease-in-out;
     -webkit-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
@@ -577,22 +578,22 @@ input:focus-within {
   @-webkit-keyframes fade-right {
     0% {
       -webkit-transform: translateX(-100%);
-              transform: translateX(-100%);
+      transform: translateX(-100%);
     }
     100% {
       -webkit-transform: translateX(0%);
-              transform: translateX(0%);
+      transform: translateX(0%);
     }
   }
 
   @keyframes fade-right {
     0% {
       -webkit-transform: translateX(-100%);
-              transform: translateX(-100%);
+      transform: translateX(-100%);
     }
     100% {
       -webkit-transform: translateX(0%);
-              transform: translateX(0%);
+      transform: translateX(0%);
     }
   }
 
@@ -601,11 +602,11 @@ input:focus-within {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin-bottom: 1rem;
   }
 
@@ -625,7 +626,7 @@ input:focus-within {
     height: 50px;
     border-radius: 5%;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     padding: 0.25rem;
     background-color: #f2f2f2;
   }
@@ -635,30 +636,30 @@ input:focus-within {
     background-color: rgba(0, 0, 0, 0.05);
     padding: 3rem;
     -webkit-box-shadow: 2px 2px 30px 10px rgba(0, 0, 0, 0.1);
-            box-shadow: 2px 2px 30px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 30px 10px rgba(0, 0, 0, 0.1);
     -webkit-animation: fade-left 2000ms ease-in-out;
-            animation: fade-left 2000ms ease-in-out;
+    animation: fade-left 2000ms ease-in-out;
   }
 
   @-webkit-keyframes fade-left {
     0% {
       -webkit-transform: translateX(150%);
-              transform: translateX(150%);
+      transform: translateX(150%);
     }
     100% {
       -webkit-transform: trans + lateX(0%);
-              transform: trans + lateX(0%);
+      transform: trans + lateX(0%);
     }
   }
 
   @keyframes fade-left {
     0% {
       -webkit-transform: translateX(150%);
-              transform: translateX(150%);
+      transform: translateX(150%);
     }
     100% {
       -webkit-transform: trans + lateX(0%);
-              transform: trans + lateX(0%);
+      transform: trans + lateX(0%);
     }
   }
 
