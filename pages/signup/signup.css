@@ -307,6 +307,7 @@ input:focus-within {
   padding: 0.5rem;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.03);
+  box-sizing: border-box !important;
 }
 
 .fail-username,
