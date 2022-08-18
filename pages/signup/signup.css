@@ -282,10 +282,14 @@ input:focus-within {
 }
 
 .hero-form__container__input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .input__container {
-  margin: auto;
+  margin-bottom: 1rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 20% 80%;
