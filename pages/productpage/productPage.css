@@ -55,7 +55,7 @@ a {
 
 /* mobile navbar */
 #mobile-navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -71,7 +71,7 @@ a {
   -ms-flex-align: center;
   align-items: center;
   padding: 1rem;
-  z-index: 1;
+  z-index: 5;
 }
 
 .mobile-navbar__logo {
