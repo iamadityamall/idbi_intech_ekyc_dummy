@@ -11,7 +11,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
@@ -76,7 +76,7 @@ button:hover {
 
 img {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
 }
@@ -164,11 +164,11 @@ input:focus-within {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .hero__header__logo {
@@ -177,16 +177,16 @@ input:focus-within {
 }
 
 .hero__container {
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background: -o-linear-gradient(
     135deg,
     var(--ternary-color) 20%,
@@ -209,11 +209,11 @@ input:focus-within {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .hero-form__container {
@@ -226,19 +226,19 @@ input:focus-within {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
   -webkit-animation: popUp 200ms ease-in-out;
-          animation: popUp 200ms ease-in-out;
+  animation: popUp 200ms ease-in-out;
 }
 
 @-webkit-keyframes popUp {
@@ -264,8 +264,8 @@ input:focus-within {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-bottom: 1rem;
 }
 
@@ -285,11 +285,11 @@ input:focus-within {
   -ms-grid-columns: 20% 80%;
   grid-template-columns: 20% 80%;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 0.5rem;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.03);
@@ -305,8 +305,8 @@ input:focus-within {
   font-size: 8px;
   display: none;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: red;
   position: absolute;
   right: 5%;
@@ -349,18 +349,18 @@ input:focus-within {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .icon img {
   width: 60%;
   height: 50%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   color: var(--secondary-color);
 }
 
@@ -369,11 +369,11 @@ input:focus-within {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-weight: bold;
 }
 
@@ -387,11 +387,11 @@ input:focus-within {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .hero-form__container__checkbox-forgot-password a {
@@ -408,11 +408,11 @@ input:focus-within {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 1rem;
 }
 
@@ -450,12 +450,12 @@ input:focus-within {
 }
 
 .hero-form__container__button button:nth-child(3) {
-    background-color: rgba(0, 0, 0, 0.1);
-    color: black;
-    font-size: 0.75rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
+  background-color: rgba(0, 0, 0, 0.1);
+  color: black;
+  font-size: 0.75rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
 
 .hero-form__container__button button:nth-child(3):hover {
   background-color: rgba(0, 0, 0, 0.05);
@@ -474,11 +474,11 @@ input:focus-within {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-size: 12px;
   font-weight: bold;
 }
@@ -539,8 +539,8 @@ input:focus-within {
     top: -10%;
     right: 48%;
     -webkit-transform: translate(10%, -50%);
-        -ms-transform: translate(10%, -50%);
-            transform: translate(10%, -50%);
+    -ms-transform: translate(10%, -50%);
+    transform: translate(10%, -50%);
     outline: none;
     z-index: 1;
     border: 10px solid rgba(245, 130, 32, 1);
@@ -555,8 +555,8 @@ input:focus-within {
     top: -5%;
     right: 55%;
     -webkit-transform: translate(10%, -50%);
-        -ms-transform: translate(10%, -50%);
-            transform: translate(10%, -50%);
+    -ms-transform: translate(10%, -50%);
+    transform: translate(10%, -50%);
     outline: none;
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.05);
@@ -570,14 +570,14 @@ input:focus-within {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
 
   .hero-left__container__header {
@@ -591,7 +591,7 @@ input:focus-within {
     color: white;
     text-transform: capitalize;
     -webkit-animation: fade-left 2s linear;
-            animation: fade-left 2s linear;
+    animation: fade-left 2s linear;
     margin: 0;
     padding: 0;
   }
@@ -601,11 +601,11 @@ input:focus-within {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .hero-form__container__heading {
@@ -613,8 +613,8 @@ input:focus-within {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   .hero-form__container {
@@ -628,13 +628,13 @@ input:focus-within {
     grid-template-columns: 1fr;
     row-gap: var(--padding-regular-3);
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     border-radius: 10px;
     -webkit-box-shadow: 2px 2px 30px 10px rgba(0, 0, 0, 0.1);
-            box-shadow: 2px 2px 30px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 30px 10px rgba(0, 0, 0, 0.1);
     -webkit-animation: fade-left 1s ease-in-out;
-            animation: fade-left 1s ease-in-out;
+    animation: fade-left 1s ease-in-out;
   }
 
   @-webkit-keyframes fade-left {
@@ -685,11 +685,11 @@ input:focus-within {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     border-radius: 10px;
     overflow: hidden;
     padding: 0.5rem;
@@ -706,8 +706,8 @@ input:focus-within {
     font-size: 8px;
     display: none;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     color: red;
     position: absolute;
     right: 5%;
@@ -750,18 +750,18 @@ input:focus-within {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .icon img {
     width: 60%;
     height: 50%;
     -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
     color: var(--secondary-color);
   }
 
@@ -770,11 +770,11 @@ input:focus-within {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     font-weight: bold;
   }
 
@@ -788,11 +788,11 @@ input:focus-within {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .hero-form__container__checkbox-forgot-password a {
@@ -809,11 +809,11 @@ input:focus-within {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .hero-form__container__button p {
@@ -874,11 +874,11 @@ input:focus-within {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     font-size: 12px;
     font-weight: bold;
   }
