@@ -282,11 +282,6 @@ input:focus-within {
 }
 
 .hero-form__container__input {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-  grid-template-columns: 1fr;
-  row-gap: var(--padding-regular-3);
 }
 
 .input__container {
