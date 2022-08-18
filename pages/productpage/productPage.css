@@ -244,8 +244,8 @@ a {
 }
 
 .hero-container {
-  margin-top: 15vh;
-  padding: 5rem 0 5rem 0;
+  margin-top: 10vh;
+  padding: 10rem 0 5rem 0;
   min-height: 100vh;
   background: var(--white-shade-1);
   display: -webkit-box;
@@ -683,7 +683,7 @@ a {
   .hero-container {
     margin-top: 10vh;
     min-height: 100vh;
-    padding: 0;
+    padding-top: 0;
     background: var(--white-shade-1);
     display: -ms-grid;
     display: grid;
