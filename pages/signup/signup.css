@@ -216,6 +216,7 @@ input:focus-within {
 }
 
 .hero-right__container {
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
