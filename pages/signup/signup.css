@@ -110,6 +110,7 @@ input[type="text"]::-moz-placeholder {
   color: gray;
   text-transform: capitalize;
   font-size: 14px;
+  box-sizing: border-box;
 }
 
 input[type="text"]:-ms-input-placeholder {
@@ -117,6 +118,7 @@ input[type="text"]:-ms-input-placeholder {
   color: gray;
   text-transform: capitalize;
   font-size: 14px;
+  box-sizing: border-box;
 }
 
 input[type="text"]::-ms-input-placeholder {
@@ -124,6 +126,7 @@ input[type="text"]::-ms-input-placeholder {
   color: gray;
   text-transform: capitalize;
   font-size: 14px;
+  box-sizing: border-box;
 }
 
 input[type="text"]::placeholder {
@@ -131,6 +134,7 @@ input[type="text"]::placeholder {
   color: gray;
   text-transform: capitalize;
   font-size: 14px;
+  box-sizing: border-box;
 }
 
 input[type="checkbox"] {
