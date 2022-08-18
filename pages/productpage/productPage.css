@@ -455,7 +455,7 @@ a {
   padding: 1rem;
   opacity: 0;
   -webkit-animation: showcard 2s ease-in-out 3s forwards;
-  animation: showcard 2s ease-in-out 3s forwards;
+  animation: showcard 900ms ease-in-out 3s forwards;
 }
 
 @-webkit-keyframes showcard {
