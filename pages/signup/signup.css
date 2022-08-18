@@ -136,6 +136,7 @@ input:focus-within {
 
 .section {
   width: 90vw;
+  min-height: 100vh;
   margin: auto;
   background: yellow;
 }
