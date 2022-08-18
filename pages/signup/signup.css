@@ -281,14 +281,14 @@ input:focus-within {
   margin-bottom: 1rem;
 }
 
-.hero-form__container__input {
+/* .hero-form__container__input {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
   row-gap: var(--padding-regular-3);
   position: relative;
-}
+} */
 
 .input__container {
   margin: auto;
