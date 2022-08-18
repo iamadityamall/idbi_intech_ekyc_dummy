@@ -218,7 +218,7 @@ input:focus-within {
 }
 
 .hero-form__container {
-  margin-top: 15vh;
+  margin-top: 10vh;
   width: 90%;
   background-color: rgba(255, 255, 255, 1);
   padding: 2rem;
