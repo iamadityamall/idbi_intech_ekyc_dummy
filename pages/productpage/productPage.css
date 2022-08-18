@@ -46,7 +46,7 @@ a {
 
 .dashboard-section {
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   overflow-x: hidden;
 }
@@ -55,7 +55,7 @@ a {
 
 /* mobile navbar */
 #mobile-navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -119,8 +119,9 @@ a {
   position: absolute;
   width: 100%;
   margin-top: 10vh;
-  top: 0;
+  height: 90vh;
   left: 0;
+  bottom: 0;
   background: var(--secondary-color);
   -webkit-transition: all 700ms ease-in-out;
   -o-transition: all 700ms ease-in-out;
@@ -243,7 +244,7 @@ a {
 }
 
 .hero-container {
-  margin-top: 10vh;
+  margin-top: 8vh;
   padding: 10rem 0 5rem 0;
   min-height: 100vh;
   background: var(--white-shade-1);
