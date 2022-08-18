@@ -226,10 +226,11 @@ input:focus-within {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 5rem 0 5rem 0;
 }
 
 .hero-form__container {
-  margin-top: 10vh;
+  margin-top: 15vh;
   width: 90%;
   background-color: rgba(255, 255, 255, 1);
   padding: 2rem;
