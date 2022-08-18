@@ -55,7 +55,7 @@ a {
 
 /* mobile navbar */
 #mobile-navbar {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -119,7 +119,7 @@ a {
   position: absolute;
   width: 100%;
   margin-top: 10vh;
-  height: 90vh;
+  height: 100vh;
   left: 0;
   bottom: 0;
   background: var(--secondary-color);
@@ -244,7 +244,7 @@ a {
 }
 
 .hero-container {
-  margin-top: 8vh;
+  margin-top: 5vh;
   padding: 10rem 0 5rem 0;
   min-height: 100vh;
   background: var(--white-shade-1);
