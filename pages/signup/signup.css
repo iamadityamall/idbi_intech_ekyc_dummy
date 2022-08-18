@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+html {
+  padding: 0 !important;
+}
+
 :root {
   --primary-color: #ffffff;
   --secondary-color: #01684f;
