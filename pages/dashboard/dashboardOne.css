@@ -108,7 +108,7 @@ img {
 }
 
 .mobile-sidebar {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 90vh;
   bottom: 0;
