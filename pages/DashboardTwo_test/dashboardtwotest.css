@@ -190,7 +190,7 @@ img {
 }
 
 .tabs {
-  height: 100vh;
+  min-height: 100vh;
   background: var(--white-shade-1);
   position: relative;
   display: flex;
