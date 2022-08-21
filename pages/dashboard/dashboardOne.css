@@ -242,7 +242,7 @@ img {
 }
 
 .tabs {
-  height: 100vh;
+  min-height: 100vh;
   background: var(--white-shade-1);
   position: relative;
 }
@@ -250,7 +250,6 @@ img {
 #main-form {
   margin-top: 5rem;
   width: 90vw;
-  min-height: 100vh;
   padding: 5rem 0 5rem 0;
 }
 
