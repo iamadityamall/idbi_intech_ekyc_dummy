@@ -458,8 +458,8 @@ a {
   gap: 1rem;
   padding: 1rem;
   opacity: 0;
-  -webkit-animation: showcard 2s ease-in-out 3s forwards;
-  animation: showcard 900ms ease-in-out 3s forwards;
+  -webkit-animation: showcard 900ms ease-in-out 1s forwards;
+  animation: showcard 900ms ease-in-out 1s forwards;
 }
 
 @-webkit-keyframes showcard {
@@ -509,6 +509,74 @@ a {
   font-weight: bold;
   letter-spacing: 1px;
 }
+
+/* add to eclipse */
+.popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: out 200ms ease-in-out forwards;
+  padding: 1rem;
+}
+
+@keyframes out {
+  100% {
+    opacity: 1;
+  }
+}
+.popup__modal {
+  background: white;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr 1fr 1fr;
+  gap: 1rem 0;
+  border-radius: 5px;
+}
+.popup__modal button {
+  border: none;
+  padding: 1.5rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-family: var(--font-primary);
+  background: var(--ternary-color);
+  color: var(--primary-color);
+  border-radius: 5px;
+}
+
+.popup__modal button:hover {
+  background: white;
+  border: 2px solid var(--ternary-color);
+  color: black;
+  transition: all 300ms ease-in-out;
+  text-decoration: underline;
+}
+
+#popupClose {
+  padding: 0.25rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.popup__modal div {
+  justify-self: flex-end;
+}
+
+.popup__modal h1 {
+  letter-spacing: 1px;
+  font-family: var(--font-primary);
+}
+
+/* add to eclipse end */
 
 /* laptop version */
 
@@ -767,6 +835,7 @@ a {
     color: var(--primary-color);
     -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
   }
   #card7 {
     grid-area: k;
@@ -879,5 +948,30 @@ a {
   #card0 {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
+  }
+  .popup__modal {
+    padding: 4rem;
+    box-shadow: 0 0 2px -5px rgba(0, 0, 0, 0.5);
+    position: relative;
+  }
+  .popup__modal button {
+    font-size: 1rem;
+  }
+  #popupClose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-60%, 10%);
+    padding: 0.25rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  #popupClose:hover {
+    border: none;
+  }
+  .popup__modal h1 {
+    font-size: 1.5rem;
   }
 }

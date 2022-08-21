@@ -76,7 +76,7 @@
         <div class="sidebar-buttons-container">
           <button
             class="sidebarButton sidebar-button-active"
-            onclick="location.href='../dashboard/dashboardOne.html'"
+            id="ieaadhar_mobileSidebar--button"
           >
             <i class="fa-solid fa-user"></i>
             <span>i-eAadhar</span>
@@ -126,7 +126,7 @@
         </div>
 
         <div class="hero-card-container">
-          <a href="../dashboard/dashboardOne.html" class="card" id="card0">
+          <a class="card" id="card0">
             <i class="fa-solid fa-user"></i>
             <span>i-eAadhar</span>
           </a>
@@ -165,6 +165,32 @@
       <!-- ========================================== -->
     </section>
 
+    <!-- add to eclipse -->
+    <section class="popup">
+      <aside class="popup__modal">
+        <div>
+          <button type="button" id="popupClose" style="justify-self: flex-end">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <h1>Select your option for ekyc process</h1>
+        <a href="">
+          <button
+            type="button"
+            onclick="location.href='../dashboard/dashboardOne.html'"
+            style="width: 100%"
+          >
+            Enter your details Manually
+          </button>
+        </a>
+
+        <button onclick="alert('under development')">
+          Enter your details using QR Code
+        </button>
+      </aside>
+    </section>
+    <!-- add to eclipse end -->
+
     <script>
       //=================================================
 
@@ -177,6 +203,31 @@
       const allButtons = document.querySelectorAll(
         ".sidebar-buttons-container button"
       );
+
+      // add to eclipse
+
+      const popup = document.querySelector(".popup");
+      const popupClose = document.getElementById("popupClose");
+      const ieaadhar = document.getElementById("card0");
+      const ieaadharMobileSidebarButton = document.getElementById(
+        "ieaadhar_mobileSidebar--button"
+      );
+
+      ieaadharMobileSidebarButton.addEventListener("click", function () {
+        popup.style.display = "grid";
+      });
+
+      popupClose.addEventListener("click", function () {
+        popup.style.display = "none";
+      });
+
+      
+
+      ieaadhar.addEventListener("click", function () {
+        popup.style.display = "grid";
+      });
+
+      // add to eclipse end
 
       allButtons.forEach((button) => {
         button.addEventListener("click", function () {

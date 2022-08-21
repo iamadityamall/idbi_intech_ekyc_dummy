@@ -11,7 +11,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
     <style>
-      #ekyc-form {
+      #i-eAadhar {
         width: 100%;
         height: 100%;
         transition: all 200ms linear;
@@ -42,6 +42,13 @@
           <h1>aditya mall</h1>
         </div>
         <div class="sidebar-buttons-container">
+          <button
+            class="sidebarButton"
+            onclick="location.href='../productpage/ProductPage.html'"
+          >
+            <i class="fa-solid fa-circle-left"></i>
+            <span>Back to Dashboard</span>
+          </button>
           <button class="sidebarButton sidebar-button-active">
             <i class="fa fa-home"></i>
             <span>dashboard</span>
@@ -52,7 +59,7 @@
           </button>
           <button class="sidebarButton">
             <i class="fa fa-user"> </i>
-            <span>eKYC-Form</span>
+            <span>i-eAadhar</span>
           </button>
           <button class="sidebarButton">
             <i class="fa fa-gear"></i>
@@ -100,7 +107,7 @@
           </button>
           <button class="sidebarButton">
             <i class="fa-solid fa-circle-e"></i>
-            <span style="text-transform: none">eKYC-Form</span>
+            <span style="text-transform: none">i-eAadhar</span>
           </button>
         </div>
       </aside>
@@ -142,8 +149,10 @@
             <h1 style="color: #3ab4f2; font-size: 8rem">CIBIL</h1>
             <p style="font-size: 2rem">coming soon ....</p>
           </div>
-          <div id="profile" class="forms">profile page</div>
-          <div id="ekyc-form" class="forms animation">
+          <div id="profile" class="forms">
+            <h1 style="font-size: 2rem">coming soon...</h1>
+          </div>
+          <div id="i-eAadhar" class="forms animation">
             <form id="main-form">
               <!-- new changes done -->
               <div class="name-fail">
@@ -320,7 +329,7 @@
       const address1 = document.getElementById("address1");
       const address2 = document.getElementById("address2");
       const address3 = document.getElementById("address3");
-      const reset = document.querySelector("#ekyc-form form .buttons #reset");
+      const reset = document.querySelector("#i-eAadhar form .buttons #reset");
       const mainSubmit = document.getElementById("main-submit");
       const inputs = document.querySelectorAll(".forms input");
       const aadharInputs = document.querySelectorAll(".aadhar-inputs input");
@@ -548,7 +557,7 @@
       // 1. Show and hide sidebar with button click
       function showContainer(e) {
         console.log(e);
-        const title = e.target.innerText.toLowerCase();
+        const title = e.target.innerText;  
         console.log(title);
         forms.forEach((item) => {
           if (item.getAttribute("id") === title) {
