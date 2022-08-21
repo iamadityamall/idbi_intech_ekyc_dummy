@@ -747,7 +747,7 @@ img {
   /* tabs container sections */
   .tabs-container {
     width: 85vw;
-    min-height: 100%;
+    min-height: 100vh;
     position: absolute;
     top: 0;
     right: 0;
