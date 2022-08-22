@@ -47,7 +47,7 @@ img {
   width: 100vw;
   min-height: 100vh;
   position: relative;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 /* mobile sectoin */
