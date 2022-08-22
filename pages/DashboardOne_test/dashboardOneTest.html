@@ -49,43 +49,45 @@
           </figure>
           <h1>Aditya Mall</h1>
         </div>
-        <div class="sidebar-buttons-container">
-          <a
-            th:href="@{/productPage}"
-            style="width: 100%; text-decoration: none"
-          >
-            <button class="sidebarButton">
-              <i class="fa-solid fa-circle-left"></i>
-              <span>Back to Dashboard</span>
+        <div style="overflow: hidden; padding: 0.5rem; border-radius: 10px;">
+          <div class="sidebar-buttons-container">
+            <a
+              th:href="@{/productPage}"
+              style="width: 100%; text-decoration: none"
+            >
+              <button class="sidebarButton">
+                <i class="fa-solid fa-circle-left"></i>
+                <span>Back to Dashboard</span>
+              </button>
+            </a>
+            <button class="sidebarButton sidebar-button-active">
+              <i class="fa fa-home"></i> <span>i-eAadhar</span>
             </button>
-          </a>
-          <button class="sidebarButton sidebar-button-active">
-            <i class="fa fa-home"></i> <span>i-eAadhar</span>
-          </button>
-          <!-- <button class="sidebarButton">
+            <!-- <button class="sidebarButton">
 					<i class="fa fa-user"> </i> <span>profile</span>
 				</button> -->
 
-          <button class="sidebarButton">
-            <i class="fa fa-gear"></i> <span>settings</span>
-          </button>
-          <button class="sidebarButton">
-            <i class="fa fa-user" aria-hidden="true"></i> <span>user</span>
-          </button>
-          <button class="sidebarButton">
-            <i class="fa fa-language" aria-hidden="true"></i>
-            <span>language</span>
-          </button>
-          <button class="sidebarButton">
-            <i class="fa fa-info-circle" aria-hidden="true"></i>
-            <span>help</span>
-          </button>
-          <a th:href="@{/logout}" style="width: 100%; text-decoration: none">
-            <button>
-              <i class="fa fa-sign-out" aria-hidden="true"></i
-              ><span>Logout</span>
+            <button class="sidebarButton">
+              <i class="fa fa-gear"></i> <span>settings</span>
             </button>
-          </a>
+            <button class="sidebarButton">
+              <i class="fa fa-user" aria-hidden="true"></i> <span>user</span>
+            </button>
+            <button class="sidebarButton">
+              <i class="fa fa-language" aria-hidden="true"></i>
+              <span>language</span>
+            </button>
+            <button class="sidebarButton">
+              <i class="fa fa-info-circle" aria-hidden="true"></i>
+              <span>help</span>
+            </button>
+            <a th:href="@{/logout}" style="width: 100%; text-decoration: none">
+              <button>
+                <i class="fa fa-sign-out" aria-hidden="true"></i
+                ><span>Logout</span>
+              </button>
+            </a>
+          </div>
         </div>
       </aside>
 
