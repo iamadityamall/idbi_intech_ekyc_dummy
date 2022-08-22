@@ -246,10 +246,7 @@ img {
 }
 
 #main-form {
-  margin-top: 5rem;
   width: 90vw;
-  height: 100vh;
-  padding-top: 5rem;
 }
 
 #i-eAadhar {
@@ -261,7 +258,7 @@ img {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: 100%;
+  height: 100vh;
 }
 
 #profile {
