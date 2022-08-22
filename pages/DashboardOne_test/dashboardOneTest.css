@@ -248,6 +248,7 @@ img {
 #main-form {
   margin-top: 5rem;
   width: 90vw;
+  height: 100vh;
   padding-top: 5rem;
 }
 
@@ -260,6 +261,7 @@ img {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  height: 100%;
 }
 
 #profile {
