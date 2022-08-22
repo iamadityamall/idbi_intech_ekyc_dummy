@@ -152,7 +152,7 @@ img {
 }
 
 .mobile-sidebar__logo-container__logo {
-  width: 70px;
+  width: 80px;
   border: 4px solid var(--ternary-color);
   border-radius: 50%;
   overflow: hidden;
