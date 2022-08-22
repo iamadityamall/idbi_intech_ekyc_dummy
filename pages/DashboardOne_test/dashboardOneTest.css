@@ -212,6 +212,7 @@ img {
   font-weight: bold;
   font-family: var(--font-primary);
   color: black;
+  border-radius: 5px;
 }
 
 .sidebar-buttons-container button:hover {
