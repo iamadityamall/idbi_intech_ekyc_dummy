@@ -148,7 +148,7 @@ img {
   width: 100%;
   padding: 2rem;
   border-radius: 10px;
-  background: var(--white-shade-1);
+  background: var(--primary-color);
 }
 
 .mobile-sidebar__logo-container__logo {
