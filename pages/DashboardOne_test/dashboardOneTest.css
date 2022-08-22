@@ -45,7 +45,7 @@ img {
 
 .dashboard-section {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   overflow-x: hidden;
 }
@@ -250,7 +250,7 @@ img {
 .tabs {
   min-height: 100vh;
   background: var(--white-shade-1);
-  position: relative;
+  position: relative; 
 }
 
 #main-form {
@@ -267,6 +267,7 @@ img {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  align-items: center;
 }
 
 #profile {
