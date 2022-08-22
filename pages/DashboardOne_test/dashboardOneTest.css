@@ -113,7 +113,7 @@ img {
   margin-top: 5rem;
   top: 0;
   left: 0;
-  min-height: 100vh;
+  height: 100vh;
   background: var(--secondary-color);
   -webkit-transition: all 700ms ease-in-out;
   -o-transition: all 700ms ease-in-out;
