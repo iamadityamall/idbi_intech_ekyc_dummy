@@ -115,7 +115,7 @@ img {
   width: 100%;
   top: 0;
   left: 0;
-  height: 100vh;
+  min-height: 100vh;
   background: var(--secondary-color);
   -webkit-transition: all 700ms ease-in-out;
   -o-transition: all 700ms ease-in-out;
