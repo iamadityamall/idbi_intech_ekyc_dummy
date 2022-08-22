@@ -330,48 +330,6 @@
       </div>
     </section>
 
-    <section class="otp-container">
-      <form class="otp-form">
-        <div class="preloader-container-2">
-          <div class="preloader"></div>
-          <p>verifying otp</p>
-        </div>
-        <div class="messages">
-          <div class="success">
-            <i class="fa fa-check" aria-hidden="true"></i>
-            <p>OTP verified successfully</p>
-          </div>
-          <div class="fail">
-            <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-            <p>Entered OTP is incorrect.</p>
-          </div>
-        </div>
-        <div class="info">
-          <h1 style="margin-bottom: 1rem">Enter your OTP</h1>
-          <p>
-            One time OTP password for eKYC registration has been sent to your
-            mobile number
-            <span>+91902XXXXX18</span>. Kindly enter the otp in the text below.
-          </p>
-        </div>
-        <div class="input-box">
-          <input
-            type="text"
-            placeholder="enter your otp"
-            id="otp-number"
-            required
-            autocomplete="one-time-code"
-            inputmode="numeric"
-          />
-        </div>
-        <div class="buttons">
-          <button type="button" id="verify">submit</button>
-          <button type="reset" id="reset">resend otp</button>
-          <button type="reset" id="cancel">cancel</button>
-        </div>
-      </form>
-    </section>
-
     <script>
       // sidebar
       const sidebutton = document.querySelector(".sidebar-navbar button");
@@ -464,11 +422,7 @@
         });
       }
 
-      // 2. Showing submenus when hover on profile pic in tab-nav
-      // function showSubmenu(e) {
-      //   submenu.classList.toggle("showSubmenu");
-      // }
-
+      
       // Adding Eventlisteners
 
       // 1. adding evenetlisteners to sidebar buttons
@@ -483,13 +437,7 @@
         logo2.classList.toggle("inactive");
       });
 
-      // submenu
-      // profilePicture.addEventListener("click", showSubmenu);
-      // profilePicture.addEventListener("mouseenter", showSubmenu);
-
-      // window.addEventListener("click", () =>
-      //   submenu.classList.remove("showSubmenu")
-      // );
+    
       aadharInputs.forEach((input) => {
         input.addEventListener("keypress", function (e) {
           var char = String.fromCharCode(e.which);
@@ -596,17 +544,6 @@
         }
       });
 
-      // mobileNumber.addEventListener("keyup", (e) => {
-      //   const number = e.target.value;d
-      //   if (number.length == 10) {
-      //     // mobileNumber.disabled = "true";
-      //     preloaderTube.style.display = "flex";
-      //     setTimeout(() => {
-      //       otpContainer.style.display = "flex";
-      //     }, 3000);
-      //   }
-      // });
-
       inputs.forEach((input) => {
         input.addEventListener("keydown", () => {
           input.setAttribute(
@@ -616,53 +553,7 @@
         });
       });
 
-      // otp control login
-      verify.addEventListener("click", (e) => {
-        e.preventDefault();
-        preloader2.style.display = "flex";
-        if (otpNumber.value == 12345) {
-          result = true;
-          otpMessages.style.display = "flex";
-          setTimeout(() => {
-            preloader2.style.display = "none";
-            success.style.display = "flex";
-          }, 2000);
-          setTimeout(() => {
-            otpContainer.style.display = "none";
-            preloaderTube.style.display = "none";
-            preloaderSuccess.style.display = "flex";
-          }, 4000);
-
-          inputs.forEach((input) => {
-            input.setAttribute("disabled", true);
-          });
-        }
-
-        if (otpNumber.value === "") {
-          alert("enter your otp in the input box.");
-          preloader2.style.display = "none";
-        }
-
-        if (otpNumber.value !== "12345") {
-          result = false;
-          setTimeout(() => {
-            preloader2.style.display = "none";
-            fail.style.display = "flex";
-          }, 2000);
-          setTimeout(() => {
-            otpContainer.style.display = "none";
-            preloaderTube.style.display = "none";
-            preloaderFail.style.display = "flex";
-          }, 4000);
-        }
-
-        mainSubmit.removeAttribute("disabled");
-        reset.removeAttribute("disabled");
-      });
-
-      cancel.addEventListener("click", () => {
-        otpContainer.style.display = "none";
-      });
+      
 
       reset.addEventListener("click", () => {
         // preloaderTube.style.display = "none";
