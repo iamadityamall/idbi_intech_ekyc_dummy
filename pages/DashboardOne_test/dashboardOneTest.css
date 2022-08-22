@@ -126,6 +126,7 @@ img {
   display: grid;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
+  transition: all 400ms ease-in-out;
 }
 
 .active-sidebar {
@@ -146,7 +147,7 @@ img {
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  padding: 2rem 0 2rem 0;
+  padding: 1rem 0 0rem 0;
   border-radius: 10px;
 }
 
