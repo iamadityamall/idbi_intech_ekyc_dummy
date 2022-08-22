@@ -67,7 +67,7 @@ img {
   -ms-flex-align: center;
   align-items: center;
   padding: 1rem;
-  z-index: 1;
+  z-index: 1000;
 }
 
 .mobile-navbar__logo {
