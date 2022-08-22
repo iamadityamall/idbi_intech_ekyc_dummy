@@ -111,7 +111,7 @@ img {
 }
 
 .mobile-sidebar {
-  position: absolute;
+  position: fixed;
   width: 100%;
   margin-top: 5rem;
   top: 0;
