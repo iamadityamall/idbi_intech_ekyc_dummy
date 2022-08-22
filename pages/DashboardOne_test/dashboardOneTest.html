@@ -43,13 +43,23 @@
       </nav>
 
       <aside id="mobile-sidebar" class="mobile-sidebar">
-        <div class="mobile-sidebar__logo-container">
-          <figure class="mobile-sidebar__logo-container__logo">
-            <img src="../../assests/logo/logo2.png" alt="" />
-          </figure>
-          <h1>Aditya Mall</h1>
+        <div style="background: #01684f; padding: 0.5rem">
+          <div class="mobile-sidebar__logo-container">
+            <figure class="mobile-sidebar__logo-container__logo">
+              <img src="../../assests/logo/logo2.png" alt="" />
+            </figure>
+            <h1>Aditya Mall</h1>
+          </div>
         </div>
-        <div style="height: 100%; padding: 0.5rem; background: white; align-self: center;">
+
+        <div
+          style="
+            height: 100%;
+            padding: 0.5rem;
+            background: white;
+            align-self: center;
+          "
+        >
           <div class="sidebar-buttons-container">
             <a
               th:href="@{/productPage}"
