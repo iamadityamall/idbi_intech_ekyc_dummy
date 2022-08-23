@@ -184,6 +184,7 @@ body {
   letter-spacing: 1px;
   font-family: var(--font-secondary);
   align-self: center;
+  justify-self: center;
 }
 
 .sidebar-buttons-container {
