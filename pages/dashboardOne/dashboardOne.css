@@ -726,7 +726,7 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 1rem 0 1rem 0.5rem;
+    padding: 1rem 0 1rem 0.75rem;
     background-color: var(--white-shade-1);
   }
 
