@@ -108,10 +108,11 @@ img {
 }
 
 .mobile-sidebar {
+  margin-top: 5rem;
   position: absolute;
   width: 100%;
   height: calc(100vh - 5rem);
-  bottom: 0;
+  top: 0;
   left: 0;
   background: var(--secondary-color);
   -webkit-transition: all 700ms ease-in-out;
