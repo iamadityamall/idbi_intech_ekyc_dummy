@@ -243,6 +243,9 @@ img {
   min-height: 100vh;
   background: var(--primary-color);
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #main-form {
@@ -254,6 +257,7 @@ img {
 #i-eAadhar {
   /* border-left: 2px solid var(--secondary-color); */
   /* transition: all 1000ms ease-in-out; */
+  margin-top: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
