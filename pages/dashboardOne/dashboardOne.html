@@ -505,10 +505,6 @@
         }
       });
 
-      address1.addEventListener("keydown", function (e) {
-        console.log(e.key);
-      });
-
       aadhar1.addEventListener("click", () => {
         aadhar1.style.border = "none";
         aadhar2.style.border = "none";
@@ -522,6 +518,27 @@
         const maxlength = parseInt(this.getAttribute("maxlength"));
         if (length === maxlength) {
           aadhar2.focus();
+        }
+      });
+
+      address1.addEventListener("keydown", function (e) {
+        e.preventDefault();
+        if (e.key === "Enter") {
+          address2.focus();
+        }
+      });
+
+      address2.addEventListener("keydown", function (e) {
+        e.preventDefault();
+        if (e.key === "Enter") {
+          address3.focus();
+        }
+      });
+
+      address3.addEventListener("keydown", function (e) {
+        e.preventDefault();
+        if (e.key === "Enter") {
+          mobileNumber.focus();
         }
       });
 
@@ -594,6 +611,7 @@
         if (mobileNumber.value.length === 9) {
           preloaderSuccess.style.display = "none";
         }
+        e.preventDefault();
       });
 
       inputs.forEach((input) => {

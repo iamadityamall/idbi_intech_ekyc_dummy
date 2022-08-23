@@ -137,7 +137,6 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
   overflow-y: scroll;
-  
 }
 
 .mobile-sidebar-logo-container {
@@ -334,7 +333,7 @@ body {
   border-radius: 10px;
   font-size: 0.5rem;
   margin-top: 10px;
-  padding: 0.75rem;
+  padding: 0.75rem 0.75rem 0.25rem 0.75rem;
 }
 
 .notes ul {
@@ -526,6 +525,7 @@ body {
   color: red;
   font-size: 0.5rem;
   padding-bottom: 5px;
+  font-size: bold;
 }
 
 .name-fail p,
@@ -1069,7 +1069,7 @@ body {
   }
 
   .notes {
-    padding: 0.75rem;
+    padding: 0.75rem 0.75rem 0.5rem 0.75rem;
     background-color: var(--white-shade-1);
     border-radius: 10px;
     font-size: 0.75rem;
@@ -1316,8 +1316,9 @@ body {
     -ms-flex-align: center;
     align-items: center;
     color: red;
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     padding-bottom: 5px;
+    font-weight: bold;
   }
 
   .name-fail p,
