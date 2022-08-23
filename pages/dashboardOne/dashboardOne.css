@@ -730,6 +730,7 @@ body {
     flex-direction: column;
     padding: 1rem 0 1rem 0.652rem;
     background-color: var(--white-shade-1);
+    box-shadow: none;
   }
 
   /* sidebar buttons  */
