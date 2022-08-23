@@ -141,7 +141,6 @@ body {
 
 .mobile-sidebar-logo-container {
   padding: 1rem 1rem 1rem 1rem;
-  
 }
 
 .mobile-sidebar-sidebar-container {
@@ -198,7 +197,7 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 2rem 1rem 0rem 1rem;
+  padding: 1rem ;
   background: var(--white-shade-1);
   border-radius: 1rem;
 }
@@ -727,7 +726,7 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 1rem 0 1rem 1rem;
+    padding: 1rem 0 1rem 0.5rem;
     background-color: var(--white-shade-1);
   }
 
@@ -993,6 +992,7 @@ body {
     -webkit-box-pack: flex-start;
     -ms-flex-pack: flex-start;
     justify-content: flex-start;
+    align-items: center;
     -webkit-transition: all 200ms linear;
     -o-transition: all 200ms linear;
     transition: all 200ms linear;
