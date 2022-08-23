@@ -160,6 +160,7 @@
         </nav>
         <div class="tabs">
           <div id="i-eAadhar" class="forms animation">
+            <p>* Marked Fields are Mandatory</p>
             <form
               th:action="@{/IDBI/API/redirect}"
               method="post"
@@ -203,11 +204,11 @@
               </div>
               <div class="aadhar-fail">
                 <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                <p>aadhar field cannot be empty</p>
+                <p>aadhaar field cannot be empty</p>
               </div>
               <div class="aadhar common">
                 <label for="aadhar"
-                  >Aadhar Number: <span style="color: red">*</span></label
+                  >Aadhaar Number: <span style="color: red">*</span></label
                 >
                 <div class="aadhar-inputs">
                   <input
@@ -307,9 +308,9 @@
                     If mobile verification fails, try again by pressing the
                     reset button.
                   </li>
-                  <li>Input fields with the astrik are must to be filled.</li>
+                  <li>Input fields with the asterisk must be filled.</li>
                   <li>
-                    Enter proper Aadhar number without the hiphon eg:-
+                    Enter proper Aadhaar number without the hyphen eg:-
                     1234567891 <strike>1234-2345-12345</strike>
                   </li>
                 </ul>
