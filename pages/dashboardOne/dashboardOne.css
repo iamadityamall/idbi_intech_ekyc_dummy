@@ -139,12 +139,12 @@ body {
   overflow-y: scroll;
 }
 
-.mobile-sidebar div:nth-child(1) {
-  padding: 1rem 1rem 2rem 1rem;
-  background: var(--secondary-color);
+.mobile-sidebar-logo-container {
+  padding: 1rem 1rem 1rem 1rem;
+  
 }
 
-.mobile-sidebar div:nth-child(2) {
+.mobile-sidebar-sidebar-container {
   overflow: scroll;
   padding: 1rem 1rem 2rem 1rem;
   background: var(--primary-color);
@@ -159,17 +159,15 @@ body {
 .mobile-sidebar__logo-container {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   width: 100%;
-  padding: 2rem 0 1rem 0;
+  padding: 2rem 1rem 2rem 1rem;
   border-radius: 10px;
+  background: var(--primary-color);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-content: center;
+  gap: 0 2rem;
+  box-shadow: 0 0 2px -4px rgba(0, 0, 0, 0.5);
 }
 
 .mobile-sidebar__logo-container__logo {
@@ -182,7 +180,7 @@ body {
 .mobile-sidebar__logo-container h1 {
   color: black;
   margin-top: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   /* text-transform: capitalize; */
   letter-spacing: 1px;
@@ -201,7 +199,7 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 2rem 1rem 0rem 1rem;
-  background-color: var(--white-shade-1);
+  background: var(--white-shade-1);
   border-radius: 1rem;
 }
 
@@ -277,7 +275,7 @@ body {
   padding-top: 5rem;
 }
 
-#i-eAadhar {
+#i-eAadhaar {
   /* border-left: 2px solid var(--secondary-color); */
   /* transition: all 1000ms ease-in-out; */
   display: -webkit-box;
@@ -986,7 +984,7 @@ body {
   }
 
   /* tabs container dashboard  */
-  #i-eAadhar {
+  #i-eAadhaar {
     width: 100%;
     min-height: calc(100vh - 10vh);
     display: -webkit-box;

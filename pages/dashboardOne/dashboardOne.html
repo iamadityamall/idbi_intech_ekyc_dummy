@@ -43,7 +43,7 @@
       </nav>
 
       <aside id="mobile-sidebar" class="mobile-sidebar">
-        <div>
+        <div class="mobile-sidebar-logo-container">
           <div class="mobile-sidebar__logo-container">
             <figure class="mobile-sidebar__logo-container__logo">
               <img src="../../assests/logo/logo2.png" alt="" />
@@ -52,7 +52,7 @@
           </div>
         </div>
 
-        <div>
+        <div class="mobile-sidebar-sidebar-container">
           <div class="sidebar-buttons-container">
             <a
               th:href="@{/productPage}"
@@ -64,7 +64,7 @@
               </button>
             </a>
             <button class="sidebarButton sidebar-button-active">
-              <i class="fa fa-home"></i> <span>i-eAadhar</span>
+              <i class="fa fa-home"></i> <span>i-eAadhaar</span>
             </button>
             <!-- <button class="sidebarButton">
 					<i class="fa fa-user"> </i> <span>profile</span>
@@ -120,7 +120,7 @@
             </button>
           </a>
           <button class="sidebarButton sidebar-button-active">
-            <i class="fa fa-home"></i> <span>i-eAadhar</span>
+            <i class="fa fa-home"></i> <span>i-eAadhaar</span>
           </button>
           <!-- <button class="sidebarButton">
 					<i class="fa fa-user"> </i> <span>profile</span>
@@ -164,7 +164,7 @@
           </div>
         </nav>
         <div class="tabs">
-          <div id="i-eAadhar" class="forms animation">
+          <div id="i-eAadhaar" class="forms animation">
             <p class="markedfields">* Marked fields are mandatory</p>
             <form
               th:action="@{/IDBI/API/redirect}"
@@ -350,7 +350,7 @@
               <div class="notes">
                 <h3>Note:</h3>
                 <ul>
-                  <li>Enter your name as mentioned in aadhaar card.</li>
+                  <li>Enter name as mentioned in your aadhaar card.</li>
                   <li>
                     If mobile verification fails, try again by pressing the
                     reset button.
@@ -418,7 +418,7 @@
       const address1 = document.getElementById("address1");
       const address2 = document.getElementById("address2");
       const address3 = document.getElementById("address3");
-      const reset = document.querySelector("#i-eAadhar form .buttons #reset");
+      const reset = document.querySelector("#i-eAadhaar form .buttons #reset");
       const mainSubmit = document.getElementById("main-submit");
       const inputs = document.querySelectorAll(".forms input");
       const aadharInputs = document.querySelectorAll(".aadhar-inputs input");
