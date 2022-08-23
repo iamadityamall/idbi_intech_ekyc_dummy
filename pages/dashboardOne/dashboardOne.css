@@ -241,8 +241,11 @@ img {
 
 .tabs {
   min-height: 100vh;
-  background: var(--white-shade-1);
+  background: var(--primary-color);
   position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 #main-form {
