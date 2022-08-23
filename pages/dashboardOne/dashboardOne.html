@@ -179,6 +179,9 @@
                   id="name"
                   name="name"
                   placeholder="Full Name"
+                  onpaste="return false;"
+                  ondrop="return false;"
+                  autocomplete="off"
                 />
                 <div class="name-fail">
                   <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
@@ -196,6 +199,9 @@
                   placeholder="Date of birth"
                   id="dob"
                   name="dob"
+                  onpaste="return false;"
+                  ondrop="return false;"
+                  autocomplete="off"
                 />
                 <div class="dob-fail">
                   <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
@@ -204,7 +210,7 @@
               </div>
               <div class="aadhar-fail">
                 <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                <p>aadhaar field cannot be empty</p>
+                <p>Aadhaar field cannot be empty</p>
               </div>
               <div class="aadhar common">
                 <label for="aadhar"
@@ -217,6 +223,9 @@
                     id="aadhar-1"
                     name="t1"
                     maxlength="4"
+                    onpaste="return false;"
+                    ondrop="return false;"
+                    autocomplete="off"
                   /><span>-</span>
                   <input
                     type="text"
@@ -224,6 +233,9 @@
                     id="aadhar-2"
                     name="t2"
                     maxlength="4"
+                    onpaste="return false;"
+                    ondrop="return false;"
+                    autocomplete="off"
                   /><span>-</span>
                   <input
                     type="text"
@@ -231,25 +243,52 @@
                     id="aadhar-3"
                     maxlength="4"
                     name="t3"
+                    onpaste="return false;"
+                    ondrop="return false;"
+                    autocomplete="off"
                   />
                 </div>
                 <div class="aadhar-fail">
                   <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                  <p>aadhar field cannot be empty</p>
+                  <p>Aadhaar field cannot be empty</p>
                 </div>
               </div>
               <div class="address-fail">
                 <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                <p>address field cannot be empty</p>
+                <p>Address field cannot be empty</p>
               </div>
               <div class="address common">
                 <label for="address"
                   >Address: <span style="color: red">*</span></label
                 >
                 <div class="address-container">
-                  <input type="text" id="address1" placeholder="address 1" />
-                  <input type="text" id="address2" placeholder="address 2" />
-                  <input type="text" id="address3" placeholder="address 3" />
+                  <input
+                    type="text"
+                    id="address1"
+                    placeholder="Address 1"
+                    onpaste="return false;"
+                    ondrop="return false;"
+                    autocomplete="off"
+                    maxlength="128"
+                  />
+                  <input
+                    type="text"
+                    id="address2"
+                    placeholder="Address 2"
+                    onpaste="return false;"
+                    ondrop="return false;"
+                    autocomplete="off"
+                    maxlength="128"
+                  />
+                  <input
+                    type="text"
+                    id="address3"
+                    placeholder="Address 3"
+                    onpaste="return false;"
+                    ondrop="return false;"
+                    autocomplete="off"
+                    maxlength="128"
+                  />
                 </div>
                 <div class="address-fail">
                   <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
@@ -276,6 +315,9 @@
                   name="mobileNo"
                   placeholder="mobile number"
                   maxlength="10"
+                  onpaste="return false;"
+                  ondrop="return false;"
+                  autocomplete="off"
                 />
                 <div class="preloader-container">
                   <!-- added now mobile validation errors -->
@@ -303,7 +345,7 @@
               <div class="notes">
                 <h3>Note:</h3>
                 <ul>
-                  <li>Enter your name as mentioned in aadhar card.</li>
+                  <li>Enter your name as mentioned in aadhaar card.</li>
                   <li>
                     If mobile verification fails, try again by pressing the
                     reset button.
@@ -449,6 +491,13 @@
       name.addEventListener("click", () => {
         nameFailAlert.style.display = "none";
         name.style.border = "none";
+      });
+
+      name.addEventListener("keypress", function (e) {
+        var char = String.fromCharCode(e.which);
+        if (!/^[A-Za-z]+$/.test(char)) {
+          e.preventDefault();
+        }
       });
 
       aadhar1.addEventListener("click", () => {
