@@ -243,15 +243,12 @@ img {
   min-height: 100vh;
   background: var(--primary-color);
   position: relative;
-  display: grid;
-  justify-content: center;
-  align-items: center;
 }
 
 #main-form {
-  /* margin-top: 5rem; */
+  margin-top: 5rem;
   width: 90vw;
-  /* padding-top: 5rem; */
+  padding-top: 5rem;
 }
 
 #i-eAadhar {
