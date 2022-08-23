@@ -1,8 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DashboardTwo</title>
+    <link rel="stylesheet" href="../DashboardTwo/dashboardTwo.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <style>
+      #i-eAadhar {
+        width: 100%;
+        height: 100%;
+        transition: all 200ms linear;
+        /* border-left: 2px solid var(--secondary-color); */
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="dashboard-section">
+      <!-- ======================================== -->
+      <!-- mobile version -->
+      <nav id="mobile-navbar">
+        <figure class="mobile-navbar__logo">
+          <img src="../../assests/logo/idbi-bank-logo.svg" alt="" />
+        </figure>
+        <button id="sidebar-button">
+          <div class="sidebar-button__bar-one"></div>
+          <div class="sidebar-button__bar-two"></div>
+        </button>
+      </nav>
+
+      <aside id="mobile-sidebar" class="mobile-sidebar">
+        <div class="mobile-sidebar__logo-container">
+          <figure class="mobile-sidebar__logo-container__logo">
+            <img src="../../assests/logo/logo2.png" alt="" />
+          </figure>
+          <h1>aditya mall</h1>
+        </div>
+        <div class="sidebar-buttons-container">
+          <button
+            class="sidebarButton"
+            onclick="location.href='../productpage/ProductPage.html'"
+          >
+            <i class="fa-solid fa-circle-left"></i>
+            <span>Back to Dashboard</span>
+          </button>
+          <button class="sidebarButton sidebar-button-active">
+            <i class="fa fa-home"></i>
+            <span>dashboard</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-user"> </i>
+            <span>profile</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-user"> </i>
+            <span>i-eAadhar</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-gear"></i>
+            <span>settings</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <span>user</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-language" aria-hidden="true"></i>
+            <span>language</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+            <span>help</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+            <span>logout</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- mobile version end -->
+      <!-- ========================================== -->
+      <aside class="sidebar">
+        <nav class="sidebar-navbar">
+          <!-- <figure class="inactive" id="logo1">
+            <img src="../../assests/logo/idbi-symbol.png" />
+          </figure> -->
+          <figure id="logo2">
+            <img src="../../assests/logo/idbi-bank-logo.svg" alt="" />
+          </figure>
+          <button><i class="fa fa-bars"></i></button>
+        </nav>
+        <div class="sidebar-buttons-container">
+          <button class="sidebarButton sidebar-button-active">
+            <i class="fa fa-home"></i>
+            <span>dashboard</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-user"> </i>
+            <span>profile</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa-solid fa-circle-e"></i>
+            <span style="text-transform: none">i-eAadhar</span>
+          </button>
+        </div>
+      </aside>
+
+      <div class="tabs-container">
+        <nav class="tabs-navbar">
+          <div class="profile-container">
+            <div>
+              <h1>Welcome, user</h1>
+              <span>Last Login:Apr 11, 2022 10:10:18</span>
+            </div>
+
+            <figure>
+              <img src="../../assests/logo/logo2.png" alt="" />
+              <!-- <i class="fa fa-user"> </i> -->
+            </figure>
+            <div class="submenu">
+              <button><i class="fa fa-gear"></i><span>Settings</span></button>
+              <button>
+                <i class="fa fa-user" aria-hidden="true"></i><span>User</span>
+              </button>
+              <button>
+                <i class="fa fa-language" aria-hidden="true"></i
+                ><span>Language</span>
+              </button>
+              <button>
+                <i class="fa fa-info-circle" aria-hidden="true"></i
+                ><span>Help</span>
+              </button>
+              <button>
+                <i class="fa fa-sign-out" aria-hidden="true"></i
+                ><span>Logout</span>
+              </button>
+            </div>
+          </div>
+        </nav>
+        <div class="tabs">
+          <div id="dashboard" class="forms animation cibil-section">
+            <h1 style="color: #3ab4f2; font-size: 8rem">CIBIL</h1>
+            <p style="font-size: 2rem">coming soon ....</p>
+          </div>
+          <div id="profile" class="forms">
+            <h1 style="font-size: 2rem">coming soon...</h1>
+          </div>
+          <div id="i-eAadhar" class="forms animation">
+            <form id="main-form">
+              <!-- new changes done -->
+              <div class="name-fail">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>Name field cannot be empty</p>
+              </div>
+              <div class="name common">
+                <label for="name"
+                  >Name: <span style="color: red">*</span></label
+                >
+                <input type="text" id="name" placeholder="Full Name" />
+              </div>
+              <div class="dob-fail">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>Kindly select your date of birth</p>
+              </div>
+              <div class="dob common">
+                <label for="dob">DOB: <span style="color: red">*</span></label>
+                <input type="date" placeholder="Date of birth" id="dob" />
+              </div>
+              <div class="aadhar-fail">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>aadhar field cannot be empty</p>
+              </div>
+              <div class="aadhar common">
+                <label for="aadhar"
+                  >Aadhar Number: <span style="color: red">*</span></label
+                >
+                <div class="aadhar-inputs">
+                  <input
+                    type="text"
+                    placeholder="XXXX"
+                    id="aadhar-1"
+                    maxlength="4"
+                  /><span>-</span>
+                  <input
+                    type="text"
+                    placeholder="XXXX"
+                    id="aadhar-2"
+                    maxlength="4"
+                  /><span>-</span>
+                  <input
+                    type="text"
+                    placeholder="XXXX"
+                    id="aadhar-3"
+                    maxlength="4"
+                  />
+                </div>
+              </div>
+              <div class="address-fail">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>address field cannot be empty</p>
+              </div>
+              <div class="address common">
+                <label for="address">Address:</label>
+                <div class="address-container">
+                  <input type="text" id="address1" placeholder="address 1" />
+                  <input type="text" id="address2" placeholder="address 2" />
+                  <input type="text" id="address3" placeholder="address 3" />
+                </div>
+              </div>
+              <!-- added now -->
+              <div class="fail">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>Mobile number must be of 10-digits</p>
+              </div>
+              <div class="success">
+                <i class="fa fa-check" aria-hidden="true"></i>
+                <p>Mobile number verified successfully. Click Submit</p>
+              </div>
+              <!-- added now end -->
+              <div class="mobile common">
+                <label for="mobile"
+                  >Mobile Number: <span style="color: red">*</span></label
+                >
+                <input
+                  type="text"
+                  id="mobile"
+                  placeholder="mobile number"
+                  maxlength="10"
+                />
+                <div class="preloader-container">
+                  <!-- <div class="preloader-tub">
+                    <div class="preloader"></div>
+                    <p>waiting for verification</p>
+                  </div> -->
+                  <!-- <div class="success">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                    <p>Mobile number verified successfully. Click Submit</p>
+                  </div> -->
+                  <!-- <div class="fail">
+                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    <p>failed to verify your mobile number.</p>
+                  </div> -->
+                </div>
+              </div>
+
+              <div class="notes">
+                <h3>Note:</h3>
+                <ul>
+                  <li>Enter your name as mentioned in aadhar card.</li>
+                  <li>
+                    If mobile verification fails, try again by pressing the
+                    reset button.
+                  </li>
+                  <li>Input fields with the astrik are must to be filled.</li>
+                  <li>
+                    Enter proper Aadhar number without the hiphon eg:-
+                    1234567891
+                    <strike>1234-2345-12345</strike>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="buttons">
+                <button type="button" id="main-submit" value="30">
+                  Submit
+                </button>
+                <button type="reset" id="reset">Reset</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="loader-verify">
+        <div class="timer">
+          <div class="controls">
+            <input id="duration" value="3" />
+            <div>
+              <button id="start"><i class="fas fa-play"></i></button>
+              <button id="pause"><i class="fas fa-pause"></i></button>
+            </div>
+          </div>
+          <div class="infoo">
+            <h1>
+              <!-- <span style="display: block; text-align: center">
+                success</span
+              > -->
+              eKYC verification completed successfully
+            </h1>
+            <!-- <div data-title=".dot-flashing" style="margin-left: 1.5rem">
+              <div class="stage">
+                <div class="dot-flashing"></div>
+              </div>
+            </div> -->
+          </div>
+          <svg class="dial">
+            <defs>
+              <filter id="f1" x="0" y="0" width="200%" height="200%">
+                <feOffset result="offOut" in="SourceGraphic" dx="20" dy="20" />
+                <feBlend in="SourceGraphic" in2="offOut" mode="normal" />
+              </filter>
+            </defs>
+            <circle
+              fill="transparent"
+              stroke="#01684F"
+              stroke-width="10"
+              r="250"
+              cx="-110"
+              cy="300"
+              transform="rotate(-90 100 100)"
+            />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // fail validation (added now)
+      const name = document.getElementById("name");
+      const dob = document.getElementById("dob");
+      const aadhar = document.getElementById("aadhar");
+      const mobileNumber = document.querySelector("#mobile");
+      const address1 = document.getElementById("address1");
+      const address2 = document.getElementById("address2");
+      const address3 = document.getElementById("address3");
+      const reset = document.querySelector("#i-eAadhar form .buttons #reset");
+      const mainSubmit = document.getElementById("main-submit");
+      const inputs = document.querySelectorAll(".forms input");
+      const aadharInputs = document.querySelectorAll(".aadhar-inputs input");
+      const nameFailAlert = document.querySelector(".name-fail");
+      const dobFailAlert = document.querySelector(".dob-fail");
+      const aadharFailAlert = document.querySelector(".aadhar-fail");
+      const addressFailAlert = document.querySelector(".address-fail");
+      const state = document.getElementById("state");
+      const dashboard = document.getElementById("dashboard");
+      const aadhar1 = document.querySelector("#aadhar-1");
+      const aadhar2 = document.querySelector("#aadhar-2");
+      const aadhar3 = document.querySelector("#aadhar-3");
+      const preloader = document.querySelector(".preloader-container");
+      const preloaderFail = document.querySelector("#main-form .fail");
+      const preloaderSuccess = document.querySelector("#main-form .success");
+
+      // (added now)
+      inputs.forEach((input) => {
+        input.addEventListener("keydown", () => {
+          input.setAttribute(
+            "oninput",
+            "this.value = this.value.toUpperCase()"
+          );
+        });
+      });
+
+      aadharInputs.forEach((input) => {
+        input.addEventListener("keypress", function (e) {
+          var char = String.fromCharCode(e.which);
+          if (!/[0-9]/.test(char)) {
+            e.preventDefault();
+          }
+        });
+      });
+
+      dob.addEventListener("click", () => {
+        dobFailAlert.style.display = "none";
+        dob.style.border = "none";
+      });
+
+      name.addEventListener("click", () => {
+        nameFailAlert.style.display = "none";
+        name.style.border = "none";
+      });
+
+      aadhar1.addEventListener("click", () => {
+        aadhar1.style.border = "none";
+        aadhar2.style.border = "none";
+        aadhar3.style.border = "none";
+        aadharFailAlert.style.display = "none";
+      });
+
+      aadhar1.addEventListener("keyup", function (e) {
+        const length = e.target.value.length;
+        const maxlength = parseInt(this.getAttribute("maxlength"));
+        if (length === maxlength) {
+          aadhar2.focus();
+        }
+      });
+
+      aadhar2.addEventListener("keyup", function (e) {
+        const length = e.target.value.length;
+        const maxlength = parseInt(this.getAttribute("maxlength"));
+        if (length === maxlength) {
+          aadhar3.focus();
+        }
+      });
+
+      aadhar3.addEventListener("keyup", function (e) {
+        const length = e.target.value.length;
+        const maxlength = parseInt(this.getAttribute("maxlength"));
+        if (length === maxlength) {
+          address1.focus();
+        }
+      });
+
+      address1.addEventListener("click", function (e) {
+        address1.style.border = "none";
+        addressFailAlert.style.display = "none";
+        address3.style.border = "none";
+        address2.style.border = "none";
+      });
+
+      mobileNumber.addEventListener("click", () => {
+        if (name.value === "") {
+          name.style.border = "2px solid red";
+          nameFailAlert.style.display = "flex";
+        }
+        if (dob.value === "") {
+          dob.style.border = "2px solid red";
+          dobFailAlert.style.display = "flex";
+        }
+        if (!aadhar1.value || !aadhar2.value || !aadhar3) {
+          aadhar1.style.border = "2px solid red";
+          aadhar2.style.border = "2px solid red";
+          aadhar3.style.border = "2px solid red";
+          aadharFailAlert.style.display = "flex";
+        }
+        if (!address1.value && !address2.value && !address3.value) {
+          address1.style.border = "2px solid red";
+          address2.style.border = "2px solid red";
+          address3.style.border = "2px solid red";
+          addressFailAlert.style.display = "flex";
+        }
+      });
+
+      mobileNumber.addEventListener("keypress", function (e) {
+        var char = String.fromCharCode(e.which);
+        console.log(char);
+        if (!/[0-9]/.test(char)) {
+          e.preventDefault();
+        }
+        if (mobileNumber.value.length < 9) {
+          preloaderSuccess.querySelector("p").innerText =
+            "Mobile Number must be of 10-digits";
+          preloaderSuccess.style.display = "flex";
+          preloaderSuccess.style.color = "green";
+          mobileNumber.style.border = "2px solid green";
+        }
+        if (mobileNumber.value.length === 9) {
+          preloaderSuccess.style.display = "none";
+        }
+      });
+
+      //(added now end)
+
+      // (added now start)
+      reset.addEventListener("click", () => {
+        // preloaderTube.style.display = "none";
+        preloaderFail.style.display = "none";
+        preloaderSuccess.style.display = "none";
+        // preloader2.style.display = "none";
+        mobileNumber.removeAttribute("disabled");
+        // otpMessages.querySelector(".success").style.display = "none";
+        // otpMessages.querySelector(".fail").style.display = "none";
+        // otpBox.value = "";
+        inputs.forEach((button) => button.removeAttribute("disabled"));
+        nameFailAlert.style.display = "none";
+        addressFailAlert.style.display = "none";
+        aadharFailAlert.style.display = "none";
+        dobFailAlert.style.display = "none";
+        mobileNumber.style.border = "none";
+        name.style.border = "none";
+        dob.style.border = "none";
+        address1.style.border = "none";
+        address2.style.border = "none";
+        address3.style.border = "none";
+        aadhar1.style.border = "none";
+        aadhar2.style.border = "none";
+        aadhar3.style.border = "none";
+        console.log("reset");
+      });
+
+      mainSubmit.addEventListener("click", (e) => {
+        // added now
+        if (mobileNumber.value === "") {
+          preloaderFail.querySelector("p").innerText =
+            "Mobile field cannot be empty";
+          mobileNumber.style.border = "2px solid red";
+          preloaderFail.style.display = "flex";
+          preloaderSuccess.style.display = "none";
+          e.preventDefault();
+        }
+        // added now (end)
+
+        if (name.value === "") {
+          name.style.border = "2px solid red";
+          nameFailAlert.style.display = "flex";
+          // mobileNumber.setAttribute("disabled", true);
+          e.preventDefault();
+        }
+        if (dob.value === "") {
+          dob.style.border = "2px solid red";
+          dobFailAlert.style.display = "flex";
+          // mobileNumber.setAttribute("disabled", true);
+          e.preventDefault();
+        }
+        if (!aadhar1.value || !aadhar2.value || !aadhar3) {
+          aadhar1.style.border = "2px solid red";
+          aadhar2.style.border = "2px solid red";
+          aadhar3.style.border = "2px solid red";
+          aadharFailAlert.style.display = "flex";
+          // mobileNumber.setAttribute("disabled", true);
+          e.preventDefault();
+        }
+        if (!address1.value && !address2.value && !address3.value) {
+          address1.style.border = "2px solid red";
+          address2.style.border = "2px solid red";
+          address3.style.border = "2px solid red";
+          addressFailAlert.style.display = "flex";
+          // mobileNumber.setAttribute("disabled", true);
+          e.preventDefault();
+        }
+      });
+
+      mobileNumber.addEventListener("click", () => {
+        preloaderFail.style.display = "none";
+        mobileNumber.style.border = "none";
+      });
+
+      // (added now end)
+
+      // sidebar
+      const sidebutton = document.querySelector(".sidebar-navbar button");
+      const sidebarButtons = document.querySelectorAll(".sidebarButton");
+      const sidebarNavbarIcons = document.querySelectorAll(
+        ".sidebar-navbar img"
+      );
+
+      // const logo1 = document.querySelector("#logo1");
+      const logo2 = document.querySelector("#logo2");
+
+      // Tabcontainer
+      const tabsContainer = document.querySelector(".tabs-container");
+
+      // Tabcontainer Header
+      const profilePicture = document.querySelector(
+        ".profile-container figure"
+      );
+      const submenu = document.querySelector(".profile-container .submenu");
+      const forms = document.querySelectorAll(".forms");
+
+      // Functions declaration
+
+      // 1. Show and hide sidebar with button click
+      function showContainer(e) {
+        console.log(e);
+        const title = e.target.innerText;  
+        console.log(title);
+        forms.forEach((item) => {
+          if (item.getAttribute("id") === title) {
+            item.style.display = "flex";
+            item.classList.add("animation");
+            this.classList.add("sidebar-button-active");
+          } else {
+            item.style.display = "none";
+            sidebarButtons.forEach((button) => {
+              if (button !== this) {
+                button.classList.remove("sidebar-button-active");
+              }
+            });
+          }
+        });
+      }
+
+      // 1. adding evenetlisteners to sidebar buttons
+      sidebarButtons.forEach((button) => {
+        button.addEventListener("click", showContainer);
+      });
+
+      // sidebar button icon
+      sidebutton.addEventListener("click", () => {
+        tabsContainer.classList.toggle("tabs-container-active");
+        logo2.classList.toggle("inactive");
+      });
+
+      // loader
+      class Timer {
+        constructor(durationInput, startButton, pauseButton, callbacks) {
+          this.durationInput = durationInput;
+          this.startButton = startButton;
+          this.pauseButton = pauseButton;
+          if (callbacks) {
+            this.onStart = callbacks.onStart;
+            this.onTick = callbacks.onTick;
+            this.onComplete = callbacks.onComplete;
+          }
+        }
+
+        start = () => {
+          if (this.onStart) {
+            this.onStart(this.timeRemaining);
+          }
+          this.tick();
+          this.interval = setInterval(this.tick, 10);
+        };
+
+        pause = () => {
+          clearInterval(this.interval);
+        };
+
+        tick = () => {
+          if (this.timeRemaining <= 0) {
+            this.pause();
+            if (this.onComplete) {
+              this.onComplete();
+            }
+            this.timeRemaining = 1;
+          } else {
+            this.timeRemaining = this.timeRemaining - 0.01;
+            if (this.onTick) {
+              this.onTick(this.timeRemaining);
+            }
+          }
+        };
+
+        get timeRemaining() {
+          return parseFloat(this.durationInput.value);
+        }
+        set timeRemaining(time) {
+          this.durationInput.value = time.toFixed(2);
+        }
+      }
+
+      const loaderVerifyContainer = document.getElementById("loader-verify");
+      const durationInput = document.getElementById("duration");
+      const startButton = document.getElementById("start");
+      const pauseButton = document.getElementById("pause");
+      const circle = document.querySelector("circle");
+
+      const perimeter = circle.getAttribute("r") * 2 * Math.PI;
+      circle.setAttribute("stroke-dasharray", perimeter);
+
+      const cibilSection = document.querySelector(".cibil-section");
+      console.log(cibilSection);
+
+      let currentOffset = 0;
+      let duration;
+      const timer = new Timer(durationInput, startButton, pauseButton, {
+        onStart(totalDuration) {
+          duration = totalDuration;
+          // console.log(totalDuration);
+        },
+        onTick(timeRemaining) {
+          circle.setAttribute(
+            "stroke-dashoffset",
+            (perimeter * timeRemaining) / duration - perimeter
+          );
+        },
+        onComplete() {
+          loaderVerifyContainer.style.display = "none";
+          cibilSection.style.display = "flex";
+        },
+      });
+      timer.start();
+
+      //=================================================
+
+      // mobile responsive
+
+      const sidebarButton = document.getElementById("sidebar-button");
+      const sidebar = document.getElementById("mobile-sidebar");
+      const sidebarBarOne = document.querySelector(".sidebar-button__bar-one");
+      const sidebarBarTwo = document.querySelector(".sidebar-button__bar-two");
+      const allButtons = document.querySelectorAll(
+        ".sidebar-buttons-container button"
+      );
+
+      allButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          console.log(this.innerText);
+          if (this.innerText !== "Logout") {
+            sidebar.classList.remove("active-sidebar");
+          }
+          this.classList.add("sidebar-button-active");
+
+          sidebarBarOne.classList.toggle("sidebar-button__bar-one-active");
+          sidebarBarTwo.classList.toggle("sidebar-button__bar-two-active");
+        });
+
+        // if (button.innerText === "dashboard" || button.innerText === "logout") {
+        //   button.classList.remove("sidebar-button-active");
+        // }
+      });
+
+      sidebarButton.addEventListener("click", () => {
+        sidebar.classList.toggle("active-sidebar");
+        sidebarBarOne.classList.toggle("sidebar-button__bar-one-active");
+        sidebarBarTwo.classList.toggle("sidebar-button__bar-two-active");
+      });
+
+      // mobile responsive end
+    </script>
+  </body>
+</html>
+
+
+// css
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 * {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -46,8 +765,14 @@ img {
   width: 100%;
   height: 10vh;
   background: var(--secondary-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 1rem;
   z-index: 1;
@@ -72,15 +797,21 @@ img {
   height: 4px;
   background: var(--primary-color);
   margin-bottom: 5px;
+  -webkit-transition: all 700ms ease-in-out;
+  -o-transition: all 700ms ease-in-out;
   transition: all 700ms ease-in-out;
   border-radius: 5px;
 }
 
 .sidebar-button__bar-one-active {
+  -webkit-transform: translateY(5px) rotate(45deg);
+  -ms-transform: translateY(5px) rotate(45deg);
   transform: translateY(5px) rotate(45deg);
 }
 
 .sidebar-button__bar-two-active {
+  -webkit-transform: translateY(-5px) rotate(-45deg);
+  -ms-transform: translateY(-5px) rotate(-45deg);
   transform: translateY(-5px) rotate(-45deg);
 }
 
@@ -91,21 +822,36 @@ img {
   bottom: 0;
   left: 0;
   background: var(--secondary-color);
+  -webkit-transition: all 700ms ease-in-out;
+  -o-transition: all 700ms ease-in-out;
   transition: all 700ms ease-in-out;
   z-index: 2;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
   transform: translateX(100%);
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
 }
 
 .active-sidebar {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
   transform: translateX(0);
 }
 
 .mobile-sidebar__logo-container {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 100%;
   padding: 0rem 0 0rem 0;
@@ -130,8 +876,15 @@ img {
 
 .sidebar-buttons-container {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 2rem 1rem 0rem 1rem;
   background-color: var(--white-shade-1);
@@ -140,18 +893,24 @@ img {
 /* sidebar buttons  */
 .sidebar-buttons-container button {
   width: 100%;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 3.25rem 1fr;
   grid-template-columns: 3.25rem 1fr;
   padding: 1rem 1rem 1rem 1rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
   text-align: left;
   border: none;
   margin-bottom: 1rem;
+  -webkit-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   font-size: 0.75rem;
   letter-spacing: 1px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   font-weight: bold;
   font-family: var(--font-primary);
   color: black;
@@ -179,6 +938,8 @@ img {
 }
 
 #loader-verify {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -194,22 +955,38 @@ img {
   height: 100vh;
   background: var(--white-shade-1);
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
 #main-form {
+  margin-top: 10rem;
   width: 95%;
   padding: 1rem;
 }
 
 #dashboard {
+  -webkit-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
   transition: all 200ms linear;
   /* border-left: 2px solid var(--secondary-color); */
+  -webkit-transition: all 1000ms ease-in-out;
+  -o-transition: all 1000ms ease-in-out;
   transition: all 1000ms ease-in-out;
   display: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   scroll-padding: 50px 0 0 50px;
   width: 100%;
@@ -218,6 +995,8 @@ img {
 #profile {
   width: 100%;
   height: 100%;
+  -webkit-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
   transition: all 200ms linear;
   /* border-left: 2px solid var(--secondary-color); */
   display: none;
@@ -226,9 +1005,13 @@ img {
 #ekyc-form {
   width: 100%;
   height: 100%;
+  -webkit-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
   transition: all 200ms linear;
   /* border-left: 2px solid var(--secondary-color); */
   display: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .animation {
@@ -271,8 +1054,14 @@ img {
 .forms {
   scroll-padding: 20rem;
   width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 100%;
   min-height: 100vh;
@@ -282,7 +1071,12 @@ img {
 
 .forms form {
   background-color: var(--primary-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -290,7 +1084,9 @@ img {
   /* display: flex;
   justify-content: space-between;
   align-items: center; */
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 40% 60%;
   grid-template-columns: 40% 60%;
   font-size: 0.85rem;
   font-family: var(--font-primary);
@@ -352,11 +1148,17 @@ img {
 }
 
 .forms form .address .address-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 .forms form .address label {
+  -ms-flex-item-align: start;
   align-self: flex-start;
   letter-spacing: 0.5px;
 }
@@ -366,6 +1168,8 @@ img {
 }
 
 .forms form .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 2rem;
 }
@@ -380,12 +1184,16 @@ img {
   color: white;
   font-family: var(--font-heading);
   font-weight: bolder;
+  -webkit-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   letter-spacing: 1px;
 }
 
 .forms form .buttons button:hover {
   border: 2px solid black;
+  -webkit-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
@@ -395,8 +1203,12 @@ img {
 }
 
 .aadhar-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   justify-items: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 20rem;
 }
@@ -415,7 +1227,11 @@ img {
 .address-fail {
   margin-left: 2rem;
   display: none;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   color: red;
   font-size: 0.5rem;
@@ -432,29 +1248,40 @@ img {
 }
 
 .active {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 @-webkit-keyframes rotate {
   from {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   to {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
 @keyframes rotate {
   from {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   to {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
 .preloader-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -476,7 +1303,11 @@ img {
 .success {
   color: var(--secondary-color);
   display: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
   margin-left: 15px;
   padding-bottom: 5px;
@@ -486,7 +1317,11 @@ img {
 .fail {
   color: red;
   display: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
   margin-left: 15px;
   padding-bottom: 5px;
@@ -523,8 +1358,14 @@ img {
   display: inline-block;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: rgba(240, 240, 240, 0.25);
 }
@@ -558,8 +1399,15 @@ img {
   right: 0;
   bottom: 0;
   display: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -569,8 +1417,14 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   font-size: 0.75rem;
   font-weight: bold;
@@ -590,6 +1444,7 @@ img {
  * ==============================================
  */
 .dot-flashing {
+  -ms-flex-item-align: end;
   align-self: flex-end;
   margin-top: 1.75rem;
   position: relative;
@@ -659,6 +1514,8 @@ img {
 }
 
 #loader-verify {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: absolute;
   top: 0;
@@ -690,6 +1547,8 @@ img {
     top: 0;
     right: 0;
     z-index: 1000;
+    -webkit-transform: translate(-50%, 200%);
+    -ms-transform: translate(-50%, 200%);
     transform: translate(-50%, 200%);
     background: transparent;
     border: none;
@@ -704,9 +1563,13 @@ img {
     position: fixed;
     left: 0;
     top: 0;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-rows: 12vh 2rem 1fr;
     grid-template-rows: 12vh 1fr;
     row-gap: 2rem;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
   }
 
@@ -715,8 +1578,14 @@ img {
     width: 100%;
     height: 10vh;
     background-color: var(--secondary-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 0 0rem 0 1.5rem;
     /* border-bottom: 4px solid var(--secondary-color); */
@@ -749,7 +1618,12 @@ img {
 
   /* sidebar buttons container */
   .sidebar-buttons-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     padding: 1rem 0 1rem 1rem;
     background-color: var(--white-shade-1);
@@ -758,14 +1632,20 @@ img {
   /* sidebar buttons  */
   .sidebar-buttons-container button {
     width: 100%;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 3.25rem 1fr;
     grid-template-columns: 3.25rem 1fr;
     padding: 1rem 1rem 1rem 1rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     cursor: pointer;
     text-align: left;
     border: none;
     margin-bottom: 1rem;
+    -webkit-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
     font-size: 1rem;
     letter-spacing: 1px;
@@ -799,6 +1679,8 @@ img {
     position: absolute;
     top: 0;
     right: 0;
+    -webkit-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
     background-color: var(--white-shade-1);
   }
@@ -811,17 +1693,31 @@ img {
   .tabs-navbar {
     height: 10vh;
     background-color: var(--secondary-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 0 2rem 0 1rem;
     /* border-bottom: 4px solid var(--secondary-color); */
+    -webkit-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
     transition: all 2s ease-in-out;
   }
 
   .profile-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     position: relative;
     color: var(--primary-color);
@@ -829,9 +1725,18 @@ img {
 
   .profile-container > div {
     /* align-self: flex-start; */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
   }
 
@@ -852,6 +1757,8 @@ img {
   }
 
   .profile-container:hover .submenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
@@ -870,7 +1777,10 @@ img {
     right: 0;
     background: var(--primary-color);
     z-index: 2;
+    -webkit-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
+    -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.6);
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.6);
     border-radius: 2px;
     -webkit-animation: fade-out 200ms;
@@ -879,13 +1789,20 @@ img {
     width: 200px;
     /* height: 400px; */
     display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
     padding: 0.5rem;
     transition: all 200ms ease-in-out;
   }
 
   .showSubmenu {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
   }
 
@@ -919,8 +1836,14 @@ img {
     background: var(--primary-color);
     border: none;
     cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 0.5rem;
     border-radius: 5px;
@@ -946,6 +1869,8 @@ img {
     height: calc(100vh - 10vh);
     background: var(--white-shade-1);
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
@@ -963,15 +1888,25 @@ img {
   #dashboard {
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
     transition: all 200ms linear;
+    -webkit-transition: all 1000ms ease-in-out;
+    -o-transition: all 1000ms ease-in-out;
     transition: all 1000ms ease-in-out;
   }
 
   #profile {
     width: 100%;
     height: 100%;
+    -webkit-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
     transition: all 200ms linear;
     /* border-left: 2px solid var(--secondary-color); */
     display: none;
@@ -981,10 +1916,16 @@ img {
     scroll-padding: 20rem;
     width: 100%;
     min-height: 100vh;
+    -webkit-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
     transition: all 200ms linear;
     /* border-left: 2px solid var(--secondary-color); */
     display: none;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 
@@ -1012,8 +1953,14 @@ img {
   }
 
   .forms {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     width: 100%;
     height: 100%;
@@ -1043,7 +1990,12 @@ img {
 
   .forms form {
     background-color: var(--primary-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -1051,7 +2003,9 @@ img {
     /* display: flex;
   justify-content: space-between;
   align-items: center; */
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 40% 60%;
     grid-template-columns: 40% 60%;
     font-size: 0.85rem;
     font-family: var(--font-primary);
@@ -1062,6 +2016,8 @@ img {
     width: 10rem;
     margin-right: 2rem;
     font-weight: bold;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
   }
 
@@ -1115,11 +2071,18 @@ img {
   }
 
   .forms form .address .address-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
   .forms form .address label {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
     letter-spacing: 0.5px;
   }
@@ -1129,6 +2092,8 @@ img {
   }
 
   .forms form .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: 2rem;
   }
@@ -1143,12 +2108,16 @@ img {
     color: white;
     font-family: var(--font-heading);
     font-weight: bolder;
+    -webkit-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
     letter-spacing: 1px;
   }
 
   .forms form .buttons button:hover {
     border: 2px solid black;
+    -webkit-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
   }
 
@@ -1158,8 +2127,12 @@ img {
   }
 
   .aadhar-inputs {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     justify-items: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     width: 20rem;
   }
@@ -1172,7 +2145,12 @@ img {
     width: 5rem !important;
   }
   .preloader-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -1194,7 +2172,11 @@ img {
   .preloader-container .success {
     color: var(--secondary-color);
     display: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-left: 15px;
   }
@@ -1202,7 +2184,11 @@ img {
   .preloader-container .fail {
     color: red;
     display: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-left: 15px;
   }
@@ -1228,7 +2214,11 @@ img {
   .address-fail {
     margin-left: 2rem;
     display: none;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     color: red;
     font-size: 0.75rem;
@@ -1245,23 +2235,29 @@ img {
   }
 
   .active {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
   @-webkit-keyframes rotate {
     from {
+      -webkit-transform: rotate(0deg);
       transform: rotate(0deg);
     }
     to {
+      -webkit-transform: rotate(360deg);
       transform: rotate(360deg);
     }
   }
 
   @keyframes rotate {
     from {
+      -webkit-transform: rotate(0deg);
       transform: rotate(0deg);
     }
     to {
+      -webkit-transform: rotate(360deg);
       transform: rotate(360deg);
     }
   }
@@ -1269,7 +2265,11 @@ img {
   .success {
     color: var(--secondary-color);
     display: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
     margin-left: 15px;
     padding-bottom: 5px;
@@ -1279,7 +2279,11 @@ img {
   .fail {
     color: red;
     display: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
     margin-left: 15px;
     padding-bottom: 5px;
@@ -1296,17 +2300,27 @@ img {
     top: 0;
     left: 0;
     display: none;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 
   .otp-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     background: white;
     padding: 1.5rem;
     border-radius: 10px;
     width: 25rem;
+    -webkit-box-shadow: 0 0 6px 8px rgba(255, 255, 255, 0.6);
     box-shadow: 0 0 6px 8px rgba(255, 255, 255, 0.6);
   }
 
@@ -1317,6 +2331,8 @@ img {
   .otp-form .messages {
     position: relative;
     margin-bottom: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
@@ -1326,7 +2342,11 @@ img {
     top: 0;
     left: 0;
     display: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 
@@ -1337,7 +2357,11 @@ img {
   .otp-form .messages .fail {
     color: red;
     display: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     position: absolute;
     top: 0;
@@ -1353,6 +2377,8 @@ img {
 } */
 
   .otp-form .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: 2rem;
   }
@@ -1367,12 +2393,16 @@ img {
     color: white;
     font-family: var(--font-heading);
     font-weight: bolder;
+    -webkit-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
     letter-spacing: 1px;
   }
 
   .otp-form .buttons button:hover {
     border: 2px solid black;
+    -webkit-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
   }
 
@@ -1433,6 +2463,8 @@ img {
 
   .otp-form .preloader-container-2 {
     display: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-bottom: 10px;
   }
