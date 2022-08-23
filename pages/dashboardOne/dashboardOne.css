@@ -246,9 +246,9 @@ img {
 }
 
 #main-form {
-  /* margin-top: 5rem; */
+  margin-top: 5rem;
   width: 90vw;
-  /* padding-top: 5rem; */
+  padding-top: 5rem;
 }
 
 #i-eAadhar {
@@ -262,7 +262,7 @@ img {
   justify-content: center;
 }
 
-#i-eAadhar p {
+.markedfields {
   position: absolute;
   top: 10%;
   right: 5%;
@@ -979,7 +979,7 @@ img {
     padding: 2rem 0 0 10rem;
   }
 
-  #i-eAadhar p {
+  .markedfields {
     position: absolute;
     top: 2%;
     right: 2%;
