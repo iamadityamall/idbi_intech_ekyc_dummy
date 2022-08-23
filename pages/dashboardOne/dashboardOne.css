@@ -999,7 +999,7 @@ body {
     -webkit-transition: all 1000ms ease-in-out;
     -o-transition: all 1000ms ease-in-out;
     transition: all 1000ms ease-in-out;
-    padding: 2rem 0 0 10rem;
+    padding: 0rem 0 0 10rem;
   }
 
   .markedfields {
