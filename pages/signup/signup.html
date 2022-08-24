@@ -207,7 +207,7 @@
           <div class="hero-form__container__input">
             <div class="fail-username">
               <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-              <p>username cannot be empty</p>
+              <p>Username cannot be empty</p>
             </div>
             <div class="input__container">
               <div class="icon">
@@ -217,21 +217,21 @@
             </div>
             <div class="fail-email">
               <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-              <p>email cannot be empty</p>
+              <p>Email cannot be empty</p>
             </div>
             <div class="fail-email-invalid-char">
               <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-              <p>invalid characters not allowed</p>
+              <p>Invalid characters not allowed</p>
             </div>
             <div class="input__container">
               <div class="icon">
                 <img src="../../assests/logo/message.svg" alt="" />
               </div>
-              <input type="email" placeholder="email" id="email" />
+              <input type="email" placeholder="Email" id="email" />
             </div>
             <div class="fail-phone">
               <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-              <p>phone cannot be empty</p>
+              <p>Phone cannot be empty</p>
             </div>
             <div class="fail-phone-numbers">
               <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
@@ -243,7 +243,7 @@
               </div>
               <input
                 type="tel"
-                placeholder="mobile number"
+                placeholder="Mobile number"
                 id="phone"
                 maxlength="10"
               />
@@ -251,17 +251,17 @@
 
             <div class="fail-password">
               <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-              <p>password cannot be empty</p>
+              <p>Password cannot be empty</p>
             </div>
             <div class="input__container">
               <div class="icon">
                 <img src="../../assests/logo/lock.svg" alt="" />
               </div>
-              <input type="password" placeholder="password" id="password" />
+              <input type="password" placeholder="Password" id="password" />
             </div>
             <div class="fail-retypepassword">
               <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-              <p>password didnot match</p>
+              <p>Password didnot match</p>
             </div>
             <div class="input__container">
               <div class="icon">
@@ -332,6 +332,22 @@
       const phoneInput = document.getElementById("phone");
       const passwordInput = document.getElementById("password");
       const retypepasswordInput = document.getElementById("retypepassword");
+
+      retypepasswordInput.addEventListener("keyup", function (e) {
+        if (e.target.value !== passwordInput.value) {
+          failReTypePassword.style.display = "flex";
+          retypepasswordInput.style.border = "2px solid red";
+          failReTypePassword.style.fontSize = "12px";
+          failReTypePassword.style.color = "red";
+          failReTypePassword.innerHTML = "<i class='fa fa-exclamation-circle' aria-hidden='true'></i><p>Password did not match</p>";
+        } else {
+          failReTypePassword.style.display = "flex";
+          failReTypePassword.style.color = "green";
+          failReTypePassword.style.fontSize = "12px";
+          failReTypePassword.innerText = "✅ Password matched";
+          retypepasswordInput.style.border = "2px solid green";
+        }
+      });
 
       const createAccountButton = document.getElementById("create-button");
 
