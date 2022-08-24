@@ -213,7 +213,7 @@
               <div class="icon">
                 <img src="../../assests/logo/user.svg" alt="" />
               </div>
-              <input type="text" placeholder="username" id="username" />
+              <input type="text" placeholder="Username" id="username" />
             </div>
             <div class="fail-email">
               <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
@@ -270,8 +270,7 @@
               <input
                 type="password"
                 placeholder="Re-type password"
-                id="retypepassword"
-              />
+                id="retypepassword"><button type="button" id="passwordeye" style="position: absolute; right: 5%; background: transparent; border:none; width:2rem; color: black"><i class="fa-solid fa-eye" style="font-size: 1rem;"></i></button></input>
             </div>
           </div>
 
@@ -332,6 +331,18 @@
       const phoneInput = document.getElementById("phone");
       const passwordInput = document.getElementById("password");
       const retypepasswordInput = document.getElementById("retypepassword");
+      const passwordeye = document.getElementById("passwordeye");
+
+      passwordeye.addEventListener("click", function(){
+        console.log(this.innerHTML)
+        const result = retypepasswordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        retypepasswordInput.setAttribute('type', result);
+        // if(this.innerHTML == '<i class="fa-solid fa-eye" style="font-size: 1rem;"></i>'){
+        //   this.innerHTML ==  '<i class="fa-solid fa-eye-slash" style="font-size: 1rem;"></i>'
+        // } else {
+        //   this.innerHTML = '<i class="fa-solid fa-eye" style="font-size: 1rem;"></i>';
+        // }
+      })
 
       retypepasswordInput.addEventListener("keyup", function (e) {
         if (e.target.value !== passwordInput.value) {
