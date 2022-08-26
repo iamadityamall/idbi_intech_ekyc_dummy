@@ -192,12 +192,13 @@
               Sign up to IDBI
               <span
                 style="
-                  display: inline;
-                  font-size: 0.75rem;
+                  display: block;
+                  font-size: 1rem;
                   font-weight: bolder;
                   letter-spacing: 0.5px;
                   color: #01684f;
                   margin-left: 5px;
+                  text-align: center;
                 "
                 >eKYC Portal</span
               >
@@ -270,7 +271,21 @@
               <input
                 type="password"
                 placeholder="Re-type password"
-                id="retypepassword"><button type="button" id="passwordeye" style="position: absolute; right: 5%; background: transparent; border:none; width:2rem; color: black"><i class="fa-solid fa-eye" style="font-size: 1rem;"></i></button></input>
+                id="retypepassword"
+              /><button
+                type="button"
+                id="passwordeye"
+                style="
+                  position: absolute;
+                  right: 5%;
+                  background: transparent;
+                  border: none;
+                  width: 2rem;
+                  color: black;
+                "
+              >
+                <i class="fa-solid fa-eye" style="font-size: 1rem"></i>
+              </button>
             </div>
           </div>
 
@@ -333,30 +348,41 @@
       const retypepasswordInput = document.getElementById("retypepassword");
       const passwordeye = document.getElementById("passwordeye");
 
-      passwordeye.addEventListener("click", function(){
-        console.log(this.innerHTML)
-        const result = retypepasswordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-        retypepasswordInput.setAttribute('type', result);
+      passwordeye.addEventListener("click", function () {
+        const result =
+          retypepasswordInput.getAttribute("type") === "password"
+            ? "text"
+            : "password";
+        retypepasswordInput.setAttribute("type", result);
         // if(this.innerHTML == '<i class="fa-solid fa-eye" style="font-size: 1rem;"></i>'){
         //   this.innerHTML ==  '<i class="fa-solid fa-eye-slash" style="font-size: 1rem;"></i>'
         // } else {
         //   this.innerHTML = '<i class="fa-solid fa-eye" style="font-size: 1rem;"></i>';
         // }
-      })
+      });
 
       retypepasswordInput.addEventListener("keyup", function (e) {
+        console.log(e.target.value);
+
         if (e.target.value !== passwordInput.value) {
           failReTypePassword.style.display = "flex";
           retypepasswordInput.style.border = "2px solid red";
           failReTypePassword.style.fontSize = "12px";
           failReTypePassword.style.color = "red";
-          failReTypePassword.innerHTML = "<i class='fa fa-exclamation-circle' aria-hidden='true'></i><p>Password did not match</p>";
+          failReTypePassword.innerHTML =
+            "<i class='fa fa-exclamation-circle' aria-hidden='true'></i><p>Password did not match</p>";
+        } else if (e.target.value === passwordInput.value) {
+          if (!e.target.value) {
+            failReTypePassword.syle.display = "none";
+          } else {
+            failReTypePassword.style.display = "flex";
+            failReTypePassword.style.color = "green";
+            failReTypePassword.style.fontSize = "12px";
+            failReTypePassword.innerText = "✅ Password matched";
+            retypepasswordInput.style.border = "2px solid green";
+          }
         } else {
-          failReTypePassword.style.display = "flex";
-          failReTypePassword.style.color = "green";
-          failReTypePassword.style.fontSize = "12px";
-          failReTypePassword.innerText = "✅ Password matched";
-          retypepasswordInput.style.border = "2px solid green";
+          failReTypePassword.style.display = "none";
         }
       });
 
@@ -447,7 +473,7 @@
         passwordInput.style.border = "none";
       });
 
-      retypepasswordInput.addEventListener("keydown", () => {
+      retypepasswordInput.addEventListener("keydown", (e) => {
         failReTypePassword.style.display = "none";
         retypepasswordInput.style.border = "none";
       });
