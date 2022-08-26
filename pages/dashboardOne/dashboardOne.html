@@ -409,6 +409,7 @@
       // new changes
       const preloaderSuccess = document.querySelector("#main-form .success");
       const preloaderFail = document.querySelector("#main-form .fail");
+      const aadhaarForm = document.getElementById("main-form");
       // new changes
 
       const name = document.getElementById("name");
@@ -435,6 +436,12 @@
       const aadhar1 = document.querySelector("#aadhar-1");
       const aadhar2 = document.querySelector("#aadhar-2");
       const aadhar3 = document.querySelector("#aadhar-3");
+
+      aadhaarForm.addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+          e.preventDefault();
+        }
+      });
 
       // Functions declaration
 
@@ -493,12 +500,23 @@
         dob.style.border = "none";
       });
 
+      dob.addEventListener("", function (e) {
+        console.log("eh");
+        if (e.key === "Enter") {
+          aadhar1.focus();
+        }
+      });
+
       name.addEventListener("click", () => {
         nameFailAlert.style.display = "none";
         name.style.border = "none";
       });
 
-      name.addEventListener("keypress", function (e) {
+      name.addEventListener("keyup", function (e) {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          dob.focus();
+        }
         var char = String.fromCharCode(e.which);
         if (!/^[A-Za-z]+$/.test(char)) {
           e.preventDefault();
@@ -556,6 +574,9 @@
         if (length === maxlength) {
           address1.focus();
         }
+        if (e.key == "Enter") {
+          address1.focus();
+        }
       });
 
       address1.addEventListener("click", function (e) {
@@ -611,7 +632,10 @@
         if (mobileNumber.value.length === 9) {
           preloaderSuccess.style.display = "none";
         }
-        e.preventDefault();
+        // e.preventDefault();
+        if (e.key === "Enter") {
+          mainSubmit.focus();
+        }
       });
 
       inputs.forEach((input) => {
