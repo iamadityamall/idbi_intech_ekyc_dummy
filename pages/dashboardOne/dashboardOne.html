@@ -506,6 +506,12 @@
         }
       });
 
+      dob.addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+          aadhar1.focus();
+        }
+      });
+
       name.addEventListener("click", () => {
         nameFailAlert.style.display = "none";
         name.style.border = "none";
