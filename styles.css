@@ -87,6 +87,10 @@ button:hover {
   transition: var(--transition);
 }
 
+input[type="text"] {
+  text-transform: uppercase;
+}
+
 input[type="text"],
 input[type="password"] {
   padding: var(--padding-regular-3);

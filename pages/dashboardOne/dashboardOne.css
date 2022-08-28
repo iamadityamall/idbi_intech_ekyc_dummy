@@ -56,6 +56,10 @@ body {
   user-select: none;
 }
 
+input {
+  text-transform: uppercase;
+}
+
 .dashboard-section {
   width: 100vw;
   /* min-height: 100vh; */

@@ -135,14 +135,10 @@
 
       // Event Listerners
       loginButton.addEventListener('click', checkDetails )
-      usernameInput.setAttribute(
-            "oninput",
-            "this.value = this.value.toUpperCase()"
-      )
+      
       usernameInput.addEventListener('keydown', () => {
         failUsername.style.display = "none";
         usernameInput.style.border = "none";
-        e.key.toUpperCase();
       });
 
       passwordInput.addEventListener('keydown', () => {
