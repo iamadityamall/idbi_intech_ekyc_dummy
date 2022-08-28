@@ -501,11 +501,7 @@
       dob.addEventListener("click", () => {
         dobFailAlert.style.display = "none";
         dob.style.border = "none";
-      });
-
-      dob.addEventListener("", function (e) {
-        console.log("eh");
-        if (e.key === "Enter") {
+        if (dob.value) {
           aadhar1.focus();
         }
       });
