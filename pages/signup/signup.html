@@ -354,11 +354,15 @@
             ? "text"
             : "password";
         retypepasswordInput.setAttribute("type", result);
-        // if(this.innerHTML == '<i class="fa-solid fa-eye" style="font-size: 1rem;"></i>'){
-        //   this.innerHTML ==  '<i class="fa-solid fa-eye-slash" style="font-size: 1rem;"></i>'
-        // } else {
-        //   this.innerHTML = '<i class="fa-solid fa-eye" style="font-size: 1rem;"></i>';
-        // }
+        if (result === "text") {
+          this.style.fontSize = "1rem";
+          this.innerHTML =
+            '<i class="fa-solid fa-eye-slash style="font-size: 1rem"></i>';
+        } else {
+          this.style.fontSize = "1rem";
+          this.innerHTML =
+            '<i class="fa-solid fa-eye" style="font-size: 1rem"></i>';
+        }
       });
 
       retypepasswordInput.addEventListener("keyup", function (e) {

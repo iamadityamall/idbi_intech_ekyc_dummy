@@ -124,6 +124,7 @@ input[type="text"]:-ms-input-placeholder {
 input[type="text"]::-ms-input-placeholder {
   letter-spacing: 1px;
   color: gray;
+  
   text-transform: capitalize;
   font-size: 14px;
 }
@@ -139,7 +140,7 @@ input[type="checkbox"] {
   width: 14px;
   height: 14px;
   border-radius: 0;
-}
+}json
 
 input:focus {
   border-bottom: 3px solid var(--secondary-color);

@@ -231,6 +231,7 @@
                     onpaste="return false;"
                     ondrop="return false;"
                     autocomplete="off"
+                    pattern="[0-9]+"
                   /><span>-</span>
                   <input
                     type="text"
@@ -241,6 +242,7 @@
                     onpaste="return false;"
                     ondrop="return false;"
                     autocomplete="off"
+                    pattern="[0-9]+"
                   /><span>-</span>
                   <input
                     type="text"
@@ -251,6 +253,7 @@
                     onpaste="return false;"
                     ondrop="return false;"
                     autocomplete="off"
+                    pattern="[0-9]+"
                   />
                 </div>
                 <div class="aadhar-fail">
@@ -586,6 +589,41 @@
         address2.style.border = "none";
       });
 
+      address2.addEventListener("click", function (e) {
+        address1.style.border = "none";
+        addressFailAlert.style.display = "none";
+        address3.style.border = "none";
+        address2.style.border = "none";
+      });
+
+      address3.addEventListener("click", function (e) {
+        address1.style.border = "none";
+        addressFailAlert.style.display = "none";
+        address3.style.border = "none";
+        address2.style.border = "none";
+      });
+
+      address1.addEventListener("keypress", function () {
+        address1.style.border = "none";
+        addressFailAlert.style.display = "none";
+        address3.style.border = "none";
+        address2.style.border = "none";
+      });
+
+      address2.addEventListener("keypress", function () {
+        address1.style.border = "none";
+        addressFailAlert.style.display = "none";
+        address3.style.border = "none";
+        address2.style.border = "none";
+      });
+
+      address3.addEventListener("keypress", function () {
+        address1.style.border = "none";
+        addressFailAlert.style.display = "none";
+        address3.style.border = "none";
+        address2.style.border = "none";
+      });
+
       mobileNumber.addEventListener("click", () => {
         if (name.value === "") {
           name.style.border = "2px solid red";
@@ -705,6 +743,21 @@
           address2.style.border = "2px solid red";
           address3.style.border = "2px solid red";
           addressFailAlert.style.display = "flex";
+          // mobileNumber.setAttribute("disabled", true);
+          e.preventDefault();
+        }
+        if (
+          address1.value === " " ||
+          address2.value === " " ||
+          address3.value === " "
+        ) {
+          address1.style.border = "2px solid red";
+          address2.style.border = "2px solid red";
+          address3.style.border = "2px solid red";
+          addressFailAlert.style.display = "flex";
+          addressFailAlert.innerHTML =
+            '<i class="fa fa-exclamation-circle" aria-hidden="true"></i><p>Empty space detected in the input field</p>';
+          console.log();
           // mobileNumber.setAttribute("disabled", true);
           e.preventDefault();
         }
