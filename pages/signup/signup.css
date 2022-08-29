@@ -85,6 +85,11 @@ input[type="email"] {
   text-transform: lowercase;
 }
 
+input::placeholder{
+  text-transform: capitalize;
+  font-size: 0.75rem !important; 
+}
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -123,12 +128,14 @@ input[type="text"]:-ms-input-placeholder {
 
 input[type="text"]::-ms-input-placeholder {
   letter-spacing: 1px;
-  color: gray;
-  
+  color: gray; 
   text-transform: capitalize;
   font-size: 14px;
 }
-
+input[type="password"]::placeholder {
+  font-family: var(--font-primary);
+  font-size: 0.75rem;
+}
 input[type="text"]::placeholder {
   letter-spacing: 1px;
   color: gray;
