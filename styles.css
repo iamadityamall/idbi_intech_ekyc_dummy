@@ -93,13 +93,15 @@ input::placeholder{
   letter-spacing: 1px;
 }
 
+input[type="password"]{
+  text-transform: capitalize;
+}
+
 input[type="text"] {
   text-transform: uppercase;
 }
 
-input[type="password"]{
-  text-transform: none;
-}
+
 
 input[type="text"],
 input[type="password"] {
