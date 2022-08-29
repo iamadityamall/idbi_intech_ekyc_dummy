@@ -49,55 +49,60 @@
       </nav>
 
       <aside id="mobile-sidebar" class="mobile-sidebar">
-        <div class="mobile-sidebar__logo-container">
-          <figure class="mobile-sidebar__logo-container__logo">
-            <img src="../../assests/logo/logo2.png" alt="" />
-          </figure>
-          <h1>Aditya Harendra Mall</h1>
+        <div class="mobile-sidebar-logo-container">
+          <div class="mobile-sidebar__logo-container">
+            <figure class="mobile-sidebar__logo-container__logo">
+              <img src="../../assests/logo/logo2.png" alt="" />
+            </figure>
+            <h1>Aditya Harendra Mall</h1>
+          </div>
         </div>
-        <div class="sidebar-buttons-container">
-          <!-- <button class="sidebarButton ">
+
+        <div class="mobile-sidebar-sidebar-container">
+          <div class="sidebar-buttons-container">
+            <!-- <button class="sidebarButton ">
 					<i class="fa fa-home"></i> <span>Dashboard</span>
 				</button> -->
 
-          <a
-            th:href="@{/productPage}"
-            style="width: 100%; text-decoration: none"
-          >
-            <button class="sidebarButton">
-              <i class="fa-solid fa-circle-left"></i
-              ><span>Back to Dashboard</span>
+            <a
+              th:href="@{/productPage}"
+              style="width: 100%; text-decoration: none"
+            >
+              <button class="sidebarButton">
+                <i class="fa-solid fa-circle-left"></i
+                ><span>Back to Dashboard</span>
+              </button>
+            </a>
+            <button class="sidebarButton sidebar-button-active">
+              <i class="fa fa-home"></i> <span>i-Pan</span>
             </button>
-          </a>
-          <button class="sidebarButton sidebar-button-active">
-            <i class="fa fa-home"></i> <span>i-Pan</span>
-          </button>
-          <!-- <button class="sidebarButton">
+            <!-- <button class="sidebarButton">
 					<i class="fa fa-user"> </i> <span>profile</span>
 				</button> -->
-          <button class="sidebarButton">
-            <i class="fa fa-user"> </i> <span>i-eAadhaar</span>
-          </button>
-          <button class="sidebarButton">
-            <i class="fa fa-gear"></i> <span>settings</span>
-          </button>
-          <button class="sidebarButton">
-            <i class="fa fa-user" aria-hidden="true"></i> <span>user</span>
-          </button>
-          <button class="sidebarButton">
-            <i class="fa fa-language" aria-hidden="true"></i>
-            <span>language</span>
-          </button>
-          <button class="sidebarButton">
-            <i class="fa fa-info-circle" aria-hidden="true"></i>
-            <span>help</span>
-          </button>
-          <a th:href="@{/logout}" style="width: 100%; text-decoration: none">
-            <button>
-              <i class="fa fa-sign-out" aria-hidden="true"></i
-              ><span>Logout</span>
+            <button class="sidebarButton">
+              <i class="fa fa-user"> </i> <span>i-eAadhaar</span>
             </button>
-          </a>
+            <button class="sidebarButton">
+              <i class="fa fa-gear"></i> <span>settings</span>
+            </button>
+            <button class="sidebarButton">
+              <i class="fa fa-user" aria-hidden="true"></i> <span>user</span>
+            </button>
+            <button class="sidebarButton">
+              <i class="fa fa-language" aria-hidden="true"></i>
+              <span>language</span>
+            </button>
+            <button class="sidebarButton">
+              <i class="fa fa-info-circle" aria-hidden="true"></i>
+              <span>help</span>
+            </button>
+            <a th:href="@{/logout}" style="width: 100%; text-decoration: none">
+              <button>
+                <i class="fa fa-sign-out" aria-hidden="true"></i
+                ><span>Logout</span>
+              </button>
+            </a>
+          </div>
         </div>
       </aside>
 
@@ -410,6 +415,7 @@
           <!-- added now end -->
         </div>
       </div>
+
       <div id="loader-verify">
         <div class="timer">
           <div class="controls">
@@ -688,9 +694,9 @@
       function showContainer(e) {
         const title = e.target.innerText;
         console.log(title);
-        console.log("---------------")
+        console.log("---------------");
         forms.forEach((item) => {
-          console.log(item.getAttribute("id"))
+          console.log(item.getAttribute("id"));
           if (item.getAttribute("id") === title) {
             item.style.display = "flex";
             item.classList.add("animation");

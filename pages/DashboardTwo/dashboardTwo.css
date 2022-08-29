@@ -153,6 +153,10 @@ input {
   height: 100%;
 }
 
+.mobile-sidebar-logo-container {
+  padding: 0.75rem;
+}
+
 .mobile-sidebar__logo-container {
   display: -webkit-box;
   display: -ms-flexbox;
