@@ -633,7 +633,7 @@ input {
 
 .dial {
   position: absolute;
-  bottom: 0%;
+  bottom: -1%;
   left: -24%;
   height: 700px;
   width: 700px;
