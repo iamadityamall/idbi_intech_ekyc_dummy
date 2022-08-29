@@ -88,7 +88,8 @@ input[type="email"] {
 input::placeholder{
   text-transform: capitalize;
   font-size: 0.75rem !important; 
-  letter-spacing: 1px !important;
+  letter-spacing: 0.75px ;
+  font-family: "Arial", "Helvetica", sans-serif;
 }
 
 input[type="text"],
