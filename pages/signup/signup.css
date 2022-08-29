@@ -26,6 +26,7 @@
   --padding-regular-2: 1rem;
   --padding-regular-3: 0.75rem;
   --padding-regular-4: 0.25rem;
+   --white-shade-1: #f0f0f0;
 }
 
 body {
@@ -149,7 +150,7 @@ input[type="checkbox"] {
   width: 14px;
   height: 14px;
   border-radius: 0;
-}json
+}
 
 input:focus {
   border-bottom: 3px solid var(--secondary-color);
@@ -235,7 +236,7 @@ input:focus-within {
 .hero-form__container {
   margin-top: 8vh;
   width: 90%;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: var(--white-shade-1);
   padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -633,7 +634,7 @@ input:focus-within {
   .hero-form__container {
     margin: 0;
     width: initial;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: var(--white-shade-1);
     padding: 2.5rem;
     display: -ms-grid;
     display: grid;
@@ -644,8 +645,8 @@ input:focus-within {
     -ms-flex-pack: center;
     justify-content: center;
     border-radius: 10px;
-    -webkit-box-shadow: 2px 2px 30px 10px rgba(0, 0, 0, 0.1);
-    box-shadow: 2px 2px 30px 10px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 7px -10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px -10px rgba(0, 0, 0, 0.8);
     -webkit-animation: fade-left 1s ease-in-out;
     animation: fade-left 1s ease-in-out;
   }
