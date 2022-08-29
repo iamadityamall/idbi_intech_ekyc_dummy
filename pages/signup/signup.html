@@ -259,6 +259,20 @@
                 <img src="../../assests/logo/lock.svg" alt="" />
               </div>
               <input type="password" placeholder="Password" id="password" />
+              <button
+                type="button"
+                id="passwordeyefirst"
+                style="
+                  position: absolute;
+                  right: 5%;
+                  background: transparent;
+                  border: none;
+                  width: 2rem;
+                  color: black;
+                "
+              >
+                <i class="fa-solid fa-eye" style="font-size: 1rem"></i>
+              </button>
             </div>
             <div class="fail-retypepassword">
               <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
@@ -347,6 +361,24 @@
       const passwordInput = document.getElementById("password");
       const retypepasswordInput = document.getElementById("retypepassword");
       const passwordeye = document.getElementById("passwordeye");
+      const passwordeyefirst = document.getElementById("passwordeyefirst");
+
+      passwordeyefirst.addEventListener("click", function () {
+        const result =
+          passwordInput.getAttribute("type") === "password"
+            ? "text"
+            : "password";
+        passwordInput.setAttribute("type", result);
+        if (result === "text") {
+          this.style.fontSize = "1rem";
+          this.innerHTML =
+            '<i class="fa-solid fa-eye-slash style="font-size: 1rem"></i>';
+        } else {
+          this.style.fontSize = "1rem";
+          this.innerHTML =
+            '<i class="fa-solid fa-eye" style="font-size: 1rem"></i>';
+        }
+      });
 
       passwordeye.addEventListener("click", function () {
         const result =

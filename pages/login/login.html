@@ -77,6 +77,19 @@
                 <img src="../../assests/logo/lock.svg" alt="" />
               </div>
               <input type="password" placeholder="Password" id="password-input"/>
+              <button
+                type="button"
+                id="passwordeyefirst"
+                style="
+                  position: absolute;
+                  right: 5%;
+                  background: transparent;
+                  border: none;
+                  width: 2rem;
+                  color: black;
+                "
+              >
+                <i class="fa-solid fa-eye" style="font-size: 1rem"></i>
             </div>
             <div class="fail-username">
                 <i class="fa fa-exclamation-circle" aria-hidden="true" ></i>
@@ -117,7 +130,24 @@
       const failPassword = document.querySelector(".fail-password");
       const usernameInput = document.getElementById("username-input");
       const passwordInput = document.getElementById("password-input")
+      const passwordeyefirst = document.getElementById("passwordeyefirst");
 
+      passwordeyefirst.addEventListener("click", function () {
+        const result =
+          passwordInput.getAttribute("type") === "password"
+            ? "text"
+            : "password";
+        passwordInput.setAttribute("type", result);
+        if (result === "text") {
+          this.style.fontSize = "1rem";
+          this.innerHTML =
+            '<i class="fa-solid fa-eye-slash style="font-size: 1rem"></i>';
+        } else {
+          this.style.fontSize = "1rem";
+          this.innerHTML =
+            '<i class="fa-solid fa-eye" style="font-size: 1rem"></i>';
+        }
+      });
 
       // functions for each event listners
       function checkDetails(e) {
