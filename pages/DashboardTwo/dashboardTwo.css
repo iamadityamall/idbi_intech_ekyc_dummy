@@ -80,10 +80,10 @@ input {
 }
 
 #sidebar-button {
-  position: absolute;
-  bottom: 35%;
+  position: fixed;
+  top: 3.5%;
   right: 5%;
-  z-index: 1000;
+  z-index: 10000;
   background: transparent;
   border: none;
 }
@@ -321,6 +321,7 @@ input {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  display: none;
 }
 .animation {
   -webkit-animation: fade-in 700ms ease-in-out;
@@ -1156,7 +1157,7 @@ input {
     min-height: calc(100vh - 10vh);
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    display: none;
     -webkit-box-pack: flex-start;
     -ms-flex-pack: flex-start;
     justify-content: flex-start;
@@ -1266,7 +1267,7 @@ input {
   }
 
   .forms form label {
-     width: 10rem;
+    width: 10rem;
     margin-right: 2rem;
     font-weight: bold;
     -ms-flex-item-align: center;
@@ -1275,7 +1276,7 @@ input {
   }
 
   .forms form input {
-   /* height: 1.75rem; */
+    /* height: 1.75rem; */
     width: 100%;
     padding: 1.15rem;
     background-color: var(--white-shade-1);
@@ -1681,5 +1682,36 @@ input {
   .disabled {
     background: rgba(255, 255, 255, 0.8);
     cursor: none;
+  }
+  #loader-verify {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.75);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .sidebar {
+    width: 15vw;
+  }
+
+  .tabs-container {
+    width: 85vw;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+    background-color: var(--white-shade-1);
+  }
+
+  .tabs-container-active {
+    width: 95vw;
   }
 }

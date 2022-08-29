@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Status</title>
-<link rel="stylesheet" th:href="@{css/dashboardTwo.css}" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Status</title>
+    <link rel="stylesheet" th:href="@{css/dashboardTwo.css}" />
 
-<link rel="stylesheet" href="./dashboardTwo.css">
+    <link rel="stylesheet" href="./dashboardTwo.css" />
 
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-	<link
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
@@ -35,689 +37,801 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/solid.min.css"
     />
-</head>
-<body>
-	<section class="dashboard-section">
-		<!-- ======================================== -->
-		<!-- mobile version -->
-		<nav id="mobile-navbar">
-			<figure class="mobile-navbar__logo">
-				<img th:src="@{assests/logo/idbi-bank-logo.svg}" alt="" />
-			</figure>
-		</nav>
+  </head>
+  <body>
+    <section class="dashboard-section">
+      <!-- ======================================== -->
+      <!-- mobile version -->
+      <nav id="mobile-navbar">
+        <figure class="mobile-navbar__logo">
+          <img src="../../assests/logo/idbi-bank-logo.svg" alt="" />
+        </figure>
+      </nav>
 
-		<aside id="mobile-sidebar" class="mobile-sidebar">
-			<div class="mobile-sidebar__logo-container">
-				<figure class="mobile-sidebar__logo-container__logo">
-					<img th:src="@{assests/logo/logo2.png}" alt="" />
-				</figure>
-			
-			</div>
-			<div class="sidebar-buttons-container">
-				<!-- <button class="sidebarButton ">
+      <aside id="mobile-sidebar" class="mobile-sidebar">
+        <div class="mobile-sidebar__logo-container">
+          <figure class="mobile-sidebar__logo-container__logo">
+            <img src="../../assests/logo/logo2.png" alt="" />
+          </figure>
+          <h1>Aditya Harendra Mall</h1>
+        </div>
+        <div class="sidebar-buttons-container">
+          <!-- <button class="sidebarButton ">
 					<i class="fa fa-home"></i> <span>Dashboard</span>
 				</button> -->
-				
-				<a th:href="@{/productPage}"
-					style="width: 100%; text-decoration: none">
-					<button class="sidebarButton">
-						<i class="fa-solid fa-circle-left"></i><span>Back to
-							Dashboard</span>
-					</button>
-				</a>
-				<button class="sidebarButton sidebar-button-active">
-					<i class="fa fa-home"></i> <span>i-Pan</span>
-				</button>
-				<!-- <button class="sidebarButton">
+
+          <a
+            th:href="@{/productPage}"
+            style="width: 100%; text-decoration: none"
+          >
+            <button class="sidebarButton">
+              <i class="fa-solid fa-circle-left"></i
+              ><span>Back to Dashboard</span>
+            </button>
+          </a>
+          <button class="sidebarButton sidebar-button-active">
+            <i class="fa fa-home"></i> <span>i-Pan</span>
+          </button>
+          <!-- <button class="sidebarButton">
 					<i class="fa fa-user"> </i> <span>profile</span>
 				</button> -->
-				<button class="sidebarButton">
-					<i class="fa fa-user"> </i> <span>i-eAadhar</span>
-				</button>
-				<button class="sidebarButton">
-					<i class="fa fa-gear"></i> <span>settings</span>
-				</button>
-				<button class="sidebarButton">
-					<i class="fa fa-user" aria-hidden="true"></i> <span>user</span>
-				</button>
-				<button class="sidebarButton">
-					<i class="fa fa-language" aria-hidden="true"></i> <span>language</span>
-				</button>
-				<button class="sidebarButton">
-					<i class="fa fa-info-circle" aria-hidden="true"></i> <span>help</span>
-				</button>
-				<a th:href="@{/logout}" style="width: 100%; text-decoration: none">
-							<button>
-								<i class="fa fa-sign-out" aria-hidden="true"></i><span>Logout</span>
-							</button>
-						</a>
-			</div>
-		</aside>
+          <button class="sidebarButton">
+            <i class="fa fa-user"> </i> <span>i-eAadhaar</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-gear"></i> <span>settings</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-user" aria-hidden="true"></i> <span>user</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-language" aria-hidden="true"></i>
+            <span>language</span>
+          </button>
+          <button class="sidebarButton">
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+            <span>help</span>
+          </button>
+          <a th:href="@{/logout}" style="width: 100%; text-decoration: none">
+            <button>
+              <i class="fa fa-sign-out" aria-hidden="true"></i
+              ><span>Logout</span>
+            </button>
+          </a>
+        </div>
+      </aside>
 
-		<button id="sidebar-button">
-			<div class="sidebar-button__bar-one"></div>
-			<div class="sidebar-button__bar-two"></div>
-		</button>
+      <button id="sidebar-button">
+        <div class="sidebar-button__bar-one"></div>
+        <div class="sidebar-button__bar-two"></div>
+      </button>
 
-		<!-- mobile version end -->
-		<!-- ========================================== -->
-		<aside class="sidebar">
-			<nav class="sidebar-navbar">
-				<!-- <figure class="inactive" id="logo1">
+      <!-- mobile version end -->
+      <!-- ========================================== -->
+      <aside class="sidebar">
+        <nav class="sidebar-navbar">
+          <!-- <figure class="inactive" id="logo1">
             <img src="../../assests/logo/idbi-symbol.png" />
           </figure> -->
           <button>
-					<i class="fa fa-bars"></i>
-				</button>
-				<figure id="logo2">
-					<img th:src="@{assests/logo/idbi-bank-logo.svg}" alt="" />
-				</figure>
-				
-			</nav>
-			
-				<div class="sidebar-buttons-container">
-				<a th:href="@{/productPage}"
-					style="width: 100%; text-decoration: none">
-					<button class="sidebarButton">
-						<i class="fa-solid fa-circle-left"></i> <span>Back to
-							Dashboard</span>
-					</button>
-				</a>
-				<button class="sidebarButton sidebar-button-active">
-					<i class="fa fa-home"></i> <span>i-Pan</span>
-				</button>
-				<!-- <button class="sidebarButton">
+            <i class="fa fa-bars"></i>
+          </button>
+          <figure id="logo2">
+            <img th:src="@{assests/logo/idbi-bank-logo.svg}" alt="" />
+          </figure>
+        </nav>
+
+        <div class="sidebar-buttons-container">
+          <a
+            th:href="@{/productPage}"
+            style="width: 100%; text-decoration: none"
+          >
+            <button class="sidebarButton">
+              <i class="fa-solid fa-circle-left"></i>
+              <span>Back to Dashboard</span>
+            </button>
+          </a>
+          <button class="sidebarButton sidebar-button-active">
+            <i class="fa fa-home"></i> <span>i-Pan</span>
+          </button>
+          <!-- <button class="sidebarButton">
 					<i class="fa fa-user"> </i> <span>profile</span>
 				</button> -->
-				<button class="sidebarButton">
-					<i class="fa fa-user"> </i> <span>i-eAadhar</span>
-				</button>
-				
-			</div>
-					</aside>
-		<div class="tabs-container">
-			<nav class="tabs-navbar">
-				<div class="profile-container">
-					<div>
-						<h1>Welcome, [[${#httpServletRequest.remoteUser}]]</h1>
+          <button class="sidebarButton">
+            <i class="fa fa-user"> </i> <span>i-eAadhaar</span>
+          </button>
+        </div>
+      </aside>
 
-					</div>
-<div>
-						 
+      <div class="tabs-container">
+        <nav class="tabs-navbar">
+          <div class="profile-container">
+            <div>
+              <h1>Welcome, Aditya Harendra Mall</h1>
+            </div>
+            <div></div>
+            <figure>
+              <img src="assests/logo/logo2.png" alt="" />
+              <!-- <i class="fa fa-user"> </i> -->
+            </figure>
+            <div class="submenu">
+              <button><i class="fa fa-gear"></i><span>Settings</span></button>
+              <button>
+                <i class="fa fa-user" aria-hidden="true"></i><span>User</span>
+              </button>
+              <button>
+                <i class="fa fa-language" aria-hidden="true"></i
+                ><span>Language</span>
+              </button>
+              <button>
+                <i class="fa fa-info-circle" aria-hidden="true"></i
+                ><span>Help</span>
+              </button>
+              <a
+                th:href="@{/logout}"
+                style="width: 100%; text-decoration: none"
+              >
+                <button>
+                  <i class="fa fa-sign-out" aria-hidden="true"></i
+                  ><span>Logout</span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </nav>
+        <div class="tabs">
+          <div
+            id="i-Pan"
+            class="forms animation cibil-section"
+            style="
+              height: 100vh;
+              display: none;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              padding: 0;
+            "
+          >
+            <h1 style="color: #3ab4f2; font-size: 4rem; text-align: center">
+              PAN Verification
+            </h1>
+            <p style="font-size: 2rem">coming soon ....</p>
+          </div>
+          <!-- <div id="profile" class="forms"><h1 style="font-size: 3rem; text-align: center;">coming soon...</h1></div> -->
+          <!-- added now -->
+          <div id="i-eAadhaar" class="forms animation">
+            <p class="markedfields">* Marked fields are mandatory</p>
+            <form
+              th:action="@{/IDBI/API/redirect}"
+              method="post"
+              id="main-form"
+            >
+              <div class="name-fail">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>Name field cannot be empty</p>
+              </div>
+              <div class="name common">
+                <label for="name"
+                  >Name: <span style="color: red">*</span></label
+                >
+                <input
+                  type="text"
+                  id="nameMain"
+                  name="name"
+                  placeholder="Full Name"
+                  onpaste="return false;"
+                  ondrop="return false;"
+                  autocomplete="off"
+                />
+                <div class="name-fail">
+                  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                  <p>Name field cannot be empty</p>
+                </div>
+              </div>
+              <div class="dob-fail">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>Kindly select your date of birth</p>
+              </div>
+              <div class="dob common">
+                <label for="dob">DOB: <span style="color: red">*</span></label>
+                <input
+                  type="date"
+                  placeholder="Date of birth"
+                  id="dob"
+                  name="dob"
+                  onpaste="return false;"
+                  ondrop="return false;"
+                  autocomplete="off"
+                />
+                <div class="dob-fail">
+                  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                  <p>Kindly select your date of birth</p>
+                </div>
+              </div>
+              <div class="aadhar-fail">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>Aadhaar field cannot be empty</p>
+              </div>
+              <div class="aadhar common">
+                <label for="aadhar"
+                  >Aadhaar Number: <span style="color: red">*</span></label
+                >
+                <div class="aadhar-inputs">
+                  <input
+                    type="tel"
+                    placeholder="XXXX"
+                    id="aadhar-1"
+                    name="t1"
+                    maxlength="4"
+                    onpaste="return false;"
+                    ondrop="return false;"
+                    autocomplete="off"
+                    pattern="[0-9]+"
+                  /><span>-</span>
+                  <input
+                    type="tel"
+                    placeholder="XXXX"
+                    id="aadhar-2"
+                    name="t2"
+                    maxlength="4"
+                    onpaste="return false;"
+                    ondrop="return false;"
+                    autocomplete="off"
+                    pattern="[0-9]+"
+                  /><span>-</span>
+                  <input
+                    type="tel"
+                    placeholder="XXXX"
+                    id="aadhar-3"
+                    maxlength="4"
+                    name="t3"
+                    onpaste="return false;"
+                    ondrop="return false;"
+                    autocomplete="off"
+                    pattern="[0-9]+"
+                  />
+                </div>
+                <div class="aadhar-fail">
+                  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                  <p>Aadhaar field cannot be empty</p>
+                </div>
+              </div>
+              <div class="address-fail">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>Address field cannot be empty</p>
+              </div>
+              <div class="address common">
+                <label for="address"
+                  >Address: <span style="color: red">*</span></label
+                >
+                <div class="address-container">
+                  <input
+                    type="text"
+                    id="address1"
+                    placeholder="Address 1"
+                    onpaste="return false;"
+                    ondrop="return false;"
+                    autocomplete="off"
+                    maxlength="128"
+                  />
+                  <input
+                    type="text"
+                    id="address2"
+                    placeholder="Address 2"
+                    onpaste="return false;"
+                    ondrop="return false;"
+                    autocomplete="off"
+                    maxlength="128"
+                  />
+                  <input
+                    type="text"
+                    id="address3"
+                    placeholder="Address 3"
+                    onpaste="return false;"
+                    ondrop="return false;"
+                    autocomplete="off"
+                    maxlength="128"
+                  />
+                </div>
+                <div class="address-fail">
+                  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                  <p>address field cannot be empty</p>
+                </div>
+              </div>
+              <!-- added now -->
+              <div class="fail">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>Mobile number must be of 10-digits</p>
+              </div>
+              <div class="success">
+                <i class="fa fa-check" aria-hidden="true"></i>
+                <p>Mobile number verified successfully. Click Submit</p>
+              </div>
+              <!-- added now end -->
+              <div class="mobile common">
+                <label for="mobile"
+                  >Mobile Number: <span style="color: red">*</span></label
+                >
+                <input
+                  type="tel"
+                  id="mobile"
+                  name="mobileNo"
+                  placeholder="mobile number"
+                  maxlength="10"
+                  onpaste="return false;"
+                  ondrop="return false;"
+                  autocomplete="off"
+                />
+                <div class="preloader-container">
+                  <!-- added now mobile validation errors -->
+                  <div class="fail">
+                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    <p>Mobile number must be of 10-digits</p>
+                  </div>
 
-					</div>
-					<figure>
-						<img th:src="@{assests/logo/logo2.png}" alt="" />
-						<!-- <i class="fa fa-user"> </i> -->
-					</figure>
-					<div class="submenu">
-						<button>
-							<i class="fa fa-gear"></i><span>Settings</span>
-						</button>
-						<button>
-							<i class="fa fa-user" aria-hidden="true"></i><span>User</span>
-						</button>
-						<button>
-							<i class="fa fa-language" aria-hidden="true"></i><span>Language</span>
-						</button>
-						<button>
-							<i class="fa fa-info-circle" aria-hidden="true"></i><span>Help</span>
-						</button>
-						<a th:href="@{/logout}" style="width: 100%; text-decoration: none">
-							<button>
-								<i class="fa fa-sign-out" aria-hidden="true"></i><span>Logout</span>
-							</button>
-						</a>
-					</div>
-				</div>
-			</nav>
-			<div class="tabs">
-				<div id="i-Pan" class="forms animation cibil-section"
-					style="display: none; justify-content: center; align-items: center; flex-direction: column; padding: 0;">
-					<h1 style="color: #3ab4f2; font-size: 4rem; text-align: center;">PAN Verification</h1>
-					<p style="font-size: 2rem">coming soon ....</p>
-				</div>
-				<!-- <div id="profile" class="forms"><h1 style="font-size: 3rem; text-align: center;">coming soon...</h1></div> -->
-				<!-- added now -->
-				<div id="i-eAadhar" class="forms animation">
-					<form th:action="@{/IDBI/API/redirect}" method="post"
-						id="main-form">
-						<div class="name-fail">
-							<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-							<p>Name field cannot be empty</p>
-						</div>
-						<div class="name common">
-							<label for="name">Name: <span
-								style="color: red; margin-left: 10px">*</span></label> <input
-								type="text" id="name" name="name" placeholder="Full Name" />
-							<div class="name-fail">
-								<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-								<p>Name field cannot be empty</p>
-							</div>
-						</div>
-						<div class="dob-fail">
-							<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-							<p>Kindly select your date of birth</p>
-						</div>
-						<div class="dob common">
-							<label for="dob">DOB: <span
-								style="color: red; margin-left: 10px">*</span></label> <input
-								type="date" placeholder="Date of birth" id="dob" name="dob" />
-							<div class="dob-fail">
-								<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-								<p>Kindly select your date of birth</p>
-							</div>
-						</div>
-						<div class="aadhar-fail">
-							<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-							<p>aadhar field cannot be empty</p>
-						</div>
-						<div class="aadhar common">
-							<label for="aadhar">Aadhar Number: <span
-								style="color: red; margin-left: 10px">*</span></label>
-							<div class="aadhar-inputs">
-								<input type="text" placeholder="XXXX" id="aadhar-1" name="t1"
-									maxlength="4" /><span>-</span> <input type="text"
-									placeholder="XXXX" id="aadhar-2" name="t2" maxlength="4" /><span>-</span>
-								<input type="text" placeholder="XXXX" id="aadhar-3"
-									maxlength="4" name="t3" />
-							</div>
-							<div class="aadhar-fail">
-								<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-								<p>aadhar field cannot be empty</p>
-							</div>
-						</div>
-						<div class="address-fail">
-							<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-							<p>address field cannot be empty</p>
-						</div>
-						<div class="address common">
-							<label for="address">Address:</label>
-							<div class="address-container">
-								<input type="text" id="address1" placeholder="address 1" /> <input
-									type="text" id="address2" placeholder="address 2" /> <input
-									type="text" id="address3" placeholder="address 3" />
-							</div>
-							<div class="address-fail">
-								<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-								<p>address field cannot be empty</p>
-							</div>
-						</div>
-						<!-- added now -->
-						<div class="fail">
-							<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-							<p>Mobile number must be of 10-digits</p>
-						</div>
-						<div class="success">
-							<i class="fa fa-check" aria-hidden="true"></i>
-							<p>Mobile number verified successfully. Click Submit</p>
-						</div>
-						<!-- added now end -->
-						<div class="mobile common">
-							<label for="mobile">Mobile Number: <span
-								style="color: red">*</span></label> <input type="text" id="mobile"
-								name="mobileNo" placeholder="mobile number" maxlength="10" />
-							<div class="preloader-container">
-								<!-- added now mobile validation errors -->
-								<div class="fail">
-									<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-									<p>Mobile number must be of 10-digits</p>
-								</div>
-
-
-								<!-- <div class="preloader-tub">
+                  <!-- <div class="preloader-tub">
                     <div class="preloader"></div>
                     <p>waiting for verification</p>
                   </div> -->
-								<div class="success">
-									<i class="fa fa-check" aria-hidden="true"></i>
-									<p>Mobile number verified successfully. Click Submit</p>
-								</div>
-								<!-- <div class="fail">
+                  <div class="success">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                    <p>Mobile number verified successfully. Click Submit</p>
+                  </div>
+                  <!-- <div class="fail">
                     <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
                     <p>failed to verify your mobile number.</p>
                   </div> -->
-								<!-- added now mobile verification end -->
+                  <!-- added now mobile verification end -->
+                </div>
+              </div>
 
-							</div>
-						</div>
+              <div class="notes">
+                <h3>Note:</h3>
+                <ul>
+                  <li>Enter name as mentioned in your aadhaar card.</li>
+                  <li>
+                    If mobile verification fails, try again by pressing the
+                    reset button.
+                  </li>
+                  <li>Input fields with the asterisk must be filled.</li>
+                  <li>
+                    Enter proper Aadhaar number without the hyphen eg:-
+                    1234567891 <strike>1234-2345-12345</strike>
+                  </li>
+                </ul>
+              </div>
 
-						<div class="notes">
-							<h3>Note:</h3>
-							<ul>
-								<li>Enter your name as mentioned in aadhar card.</li>
-								<li>If mobile verification fails, try again by pressing the
-									reset button.</li>
-								<li>Input fields with the astrik are must to be filled.</li>
-								<li>Enter proper Aadhar number without the hiphon eg:-
-									1234567891 <strike>1234-2345-12345</strike>
-								</li>
-							</ul>
-						</div>
-
-						<div class="buttons">
-							<button type="submit" id="main-submit">Submit</button>
-							<button type="reset" id="reset">Reset</button>
-						</div>
-					</form>
-				</div>
-				<!-- added now end -->
-			</div>
-		</div>
-		<div id="loader-verify">
-			<div class="timer">
-				<div class="controls">
-					<input id="duration" value="3" />
-					<div>
-						<button id="start">
-							<i class="fas fa-play"></i>
-						</button>
-						<button id="pause">
-							<i class="fas fa-pause"></i>
-						</button>
-					</div>
-				</div>
-				<div class="infoo">
-					<h1 th:text="${finalMsg}" style="color: green"></h1>
-					<!-- <div data-title=".dot-flashing" style="margin-left: 1.5rem">
+              <div class="buttons">
+                <button type="submit" id="main-submit">Submit</button>
+                <button type="reset" id="reset">Reset</button>
+              </div>
+            </form>
+          </div>
+          <!-- added now end -->
+        </div>
+      </div>
+      <div id="loader-verify">
+        <div class="timer">
+          <div class="controls">
+            <input id="duration" value="3" />
+            <div>
+              <button id="start">
+                <i class="fas fa-play"></i>
+              </button>
+              <button id="pause">
+                <i class="fas fa-pause"></i>
+              </button>
+            </div>
+          </div>
+          <div class="infoo">
+            <h1 th:text="${finalMsg}" style="color: green"></h1>
+            <!-- <div data-title=".dot-flashing" style="margin-left: 1.5rem">
               <div class="stage">
                 <div class="dot-flashing"></div>
               </div>
             </div> -->
-				</div>
-				<svg class="dial">
+          </div>
+          <svg class="dial">
             <defs>
               <filter id="f1" x="0" y="0" width="200%" height="200%">
-                <feOffset result="offOut" in="SourceGraphic" dx="20"
-						dy="20" />
+                <feOffset result="offOut" in="SourceGraphic" dx="20" dy="20" />
                 <feBlend in="SourceGraphic" in2="offOut" mode="normal" />
               </filter>
             </defs>
-            <circle fill="transparent" stroke="#01684F"
-						stroke-width="10" r="250" cx="-110" cy="300"
-						transform="rotate(-90 100 100)" />
+            <circle
+              fill="transparent"
+              stroke="#01684F"
+              stroke-width="10"
+              r="250"
+              cx="-110"
+              cy="300"
+              transform="rotate(-90 100 100)"
+            />
           </svg>
-			</div>
-		</div>
-	</section>
+        </div>
+      </div>
+    </section>
 
-	<script>
-	// fail validation (added now)
-    const name = document.getElementById("name");
-    const dob = document.getElementById("dob");
-    const aadhar = document.getElementById("aadhar");
-    const mobileNumber = document.querySelector("#mobile");
-    const address1 = document.getElementById("address1");
-    const address2 = document.getElementById("address2");
-    const address3 = document.getElementById("address3");
-    const reset = document.querySelector("#i-eAadhar form .buttons #reset");
-    const mainSubmit = document.getElementById("main-submit");
-    const inputs = document.querySelectorAll(".forms input");
-    const aadharInputs = document.querySelectorAll(".aadhar-inputs input");
-    const nameFailAlert = document.querySelector(".name-fail");
-    const dobFailAlert = document.querySelector(".dob-fail");
-    const aadharFailAlert = document.querySelector(".aadhar-fail");
-    const addressFailAlert = document.querySelector(".address-fail");
-    const state = document.getElementById("state");
-    const dashboard = document.getElementById("dashboard");
-    const aadhar1 = document.querySelector("#aadhar-1");
-    const aadhar2 = document.querySelector("#aadhar-2");
-    const aadhar3 = document.querySelector("#aadhar-3");
-    const preloader = document.querySelector(".preloader-container");
-    const preloaderFail = document.querySelector("#main-form .fail");
-    const preloaderSuccess = document.querySelector("#main-form .success");
+    <script>
+      // fail validation (added now)
+      const name = document.getElementById("nameMain");
+      const dob = document.getElementById("dob");
+      const aadhar = document.getElementById("aadhar");
+      const mobileNumber = document.querySelector("#mobile");
+      const address1 = document.getElementById("address1");
+      const address2 = document.getElementById("address2");
+      const address3 = document.getElementById("address3");
+      const reset = document.querySelector("#i-eAadhaar form .buttons #reset");
+      const mainSubmit = document.getElementById("main-submit");
+      const inputs = document.querySelectorAll(".forms input");
+      const aadharInputs = document.querySelectorAll(".aadhar-inputs input");
+      const nameFailAlert = document.querySelector(".name-fail");
+      const dobFailAlert = document.querySelector(".dob-fail");
+      const aadharFailAlert = document.querySelector(".aadhar-fail");
+      const addressFailAlert = document.querySelector(".address-fail");
+      const state = document.getElementById("state");
+      const dashboard = document.getElementById("dashboard");
+      const aadhar1 = document.querySelector("#aadhar-1");
+      const aadhar2 = document.querySelector("#aadhar-2");
+      const aadhar3 = document.querySelector("#aadhar-3");
+      const preloader = document.querySelector(".preloader-container");
+      const preloaderFail = document.querySelector("#main-form .fail");
+      const preloaderSuccess = document.querySelector("#main-form .success");
 
-    // (added now)
-    inputs.forEach((input) => {
-      input.addEventListener("keydown", () => {
-        input.setAttribute(
-          "oninput",
-          "this.value = this.value.toUpperCase()"
-        );
+      // // (added now)
+      // inputs.forEach((input) => {
+      //   input.addEventListener("keydown", () => {
+      //     input.setAttribute(
+      //       "oninput",
+      //       "this.value = this.value.toUpperCase()"
+      //     );
+      //   });
+      // });
+
+      aadharInputs.forEach((input) => {
+        input.addEventListener("keypress", function (e) {
+          var char = String.fromCharCode(e.which);
+          if (!/[0-9]/.test(char)) {
+            e.preventDefault();
+          }
+        });
       });
-    });
 
-    aadharInputs.forEach((input) => {
-      input.addEventListener("keypress", function (e) {
+      dob.addEventListener("click", () => {
+        dobFailAlert.style.display = "none";
+        dob.style.border = "none";
+      });
+
+      name.addEventListener("click", () => {
+        nameFailAlert.style.display = "none";
+        name.style.border = "none";
+      });
+
+      aadhar1.addEventListener("click", () => {
+        aadhar1.style.border = "none";
+        aadhar2.style.border = "none";
+        aadhar3.style.border = "none";
+        aadharFailAlert.style.display = "none";
+      });
+
+      aadhar1.addEventListener("keyup", function (e) {
+        const length = e.target.value.length;
+        const maxlength = parseInt(this.getAttribute("maxlength"));
+        if (length === maxlength) {
+          aadhar2.focus();
+        }
+      });
+
+      aadhar2.addEventListener("keyup", function (e) {
+        const length = e.target.value.length;
+        const maxlength = parseInt(this.getAttribute("maxlength"));
+        if (length === maxlength) {
+          aadhar3.focus();
+        }
+      });
+
+      aadhar3.addEventListener("keyup", function (e) {
+        const length = e.target.value.length;
+        const maxlength = parseInt(this.getAttribute("maxlength"));
+        if (length === maxlength) {
+          address1.focus();
+        }
+      });
+
+      address1.addEventListener("click", function (e) {
+        address1.style.border = "none";
+        addressFailAlert.style.display = "none";
+        address3.style.border = "none";
+        address2.style.border = "none";
+      });
+
+      mobileNumber.addEventListener("click", () => {
+        if (name.value === "") {
+          name.style.border = "2px solid red";
+          nameFailAlert.style.display = "flex";
+        }
+        if (dob.value === "") {
+          dob.style.border = "2px solid red";
+          dobFailAlert.style.display = "flex";
+        }
+        if (!aadhar1.value || !aadhar2.value || !aadhar3) {
+          aadhar1.style.border = "2px solid red";
+          aadhar2.style.border = "2px solid red";
+          aadhar3.style.border = "2px solid red";
+          aadharFailAlert.style.display = "flex";
+        }
+        if (!address1.value && !address2.value && !address3.value) {
+          address1.style.border = "2px solid red";
+          address2.style.border = "2px solid red";
+          address3.style.border = "2px solid red";
+          addressFailAlert.style.display = "flex";
+        }
+      });
+
+      mobileNumber.addEventListener("keypress", function (e) {
         var char = String.fromCharCode(e.which);
         if (!/[0-9]/.test(char)) {
           e.preventDefault();
         }
+        if (mobileNumber.value.length < 9) {
+          preloaderSuccess.querySelector("p").innerText =
+            "Mobile Number must be of 10-digits";
+          preloaderSuccess.style.display = "flex";
+          preloaderSuccess.style.color = "green";
+          mobileNumber.style.border = "2px solid green";
+        }
+        if (mobileNumber.value.length === 9) {
+          preloaderSuccess.style.display = "none";
+        }
       });
-    });
 
-    dob.addEventListener("click", () => {
-      dobFailAlert.style.display = "none";
-      dob.style.border = "none";
-    });
+      //(added now end)
 
-    name.addEventListener("click", () => {
-      nameFailAlert.style.display = "none";
-      name.style.border = "none";
-    });
-
-    aadhar1.addEventListener("click", () => {
-      aadhar1.style.border = "none";
-      aadhar2.style.border = "none";
-      aadhar3.style.border = "none";
-      aadharFailAlert.style.display = "none";
-    });
-
-    aadhar1.addEventListener("keyup", function (e) {
-      const length = e.target.value.length;
-      const maxlength = parseInt(this.getAttribute("maxlength"));
-      if (length === maxlength) {
-        aadhar2.focus();
-      }
-    });
-
-    aadhar2.addEventListener("keyup", function (e) {
-      const length = e.target.value.length;
-      const maxlength = parseInt(this.getAttribute("maxlength"));
-      if (length === maxlength) {
-        aadhar3.focus();
-      }
-    });
-
-    aadhar3.addEventListener("keyup", function (e) {
-      const length = e.target.value.length;
-      const maxlength = parseInt(this.getAttribute("maxlength"));
-      if (length === maxlength) {
-        address1.focus();
-      }
-    });
-
-    address1.addEventListener("click", function (e) {
-      address1.style.border = "none";
-      addressFailAlert.style.display = "none";
-      address3.style.border = "none";
-      address2.style.border = "none";
-    });
-
-    mobileNumber.addEventListener("click", () => {
-      if (name.value === "") {
-        name.style.border = "2px solid red";
-        nameFailAlert.style.display = "flex";
-      }
-      if (dob.value === "") {
-        dob.style.border = "2px solid red";
-        dobFailAlert.style.display = "flex";
-      }
-      if (!aadhar1.value || !aadhar2.value || !aadhar3) {
-        aadhar1.style.border = "2px solid red";
-        aadhar2.style.border = "2px solid red";
-        aadhar3.style.border = "2px solid red";
-        aadharFailAlert.style.display = "flex";
-      }
-      if (!address1.value && !address2.value && !address3.value) {
-        address1.style.border = "2px solid red";
-        address2.style.border = "2px solid red";
-        address3.style.border = "2px solid red";
-        addressFailAlert.style.display = "flex";
-      }
-    });
-
-    mobileNumber.addEventListener("keypress", function (e) {
-      var char = String.fromCharCode(e.which);
-      if (!/[0-9]/.test(char)) {
-        e.preventDefault();
-      }
-      if (mobileNumber.value.length < 9) {
-        preloaderSuccess.querySelector("p").innerText =
-          "Mobile Number must be of 10-digits";
-        preloaderSuccess.style.display = "flex";
-        preloaderSuccess.style.color = "green";
-        mobileNumber.style.border = "2px solid green";
-      }
-      if (mobileNumber.value.length === 9) {
+      // (added now start)
+      reset.addEventListener("click", () => {
+        // preloaderTube.style.display = "none";
+        preloaderFail.style.display = "none";
         preloaderSuccess.style.display = "none";
+        // preloader2.style.display = "none";
+        mobileNumber.removeAttribute("disabled");
+        // otpMessages.querySelector(".success").style.display = "none";
+        // otpMessages.querySelector(".fail").style.display = "none";
+        // otpBox.value = "";
+        inputs.forEach((button) => button.removeAttribute("disabled"));
+        nameFailAlert.style.display = "none";
+        addressFailAlert.style.display = "none";
+        aadharFailAlert.style.display = "none";
+        dobFailAlert.style.display = "none";
+        mobileNumber.style.border = "none";
+        name.style.border = "none";
+        dob.style.border = "none";
+        address1.style.border = "none";
+        address2.style.border = "none";
+        address3.style.border = "none";
+        aadhar1.style.border = "none";
+        aadhar2.style.border = "none";
+        aadhar3.style.border = "none";
+      });
+
+      mainSubmit.addEventListener("click", (e) => {
+        // added now
+        if (mobileNumber.value === "") {
+          preloaderFail.querySelector("p").innerText =
+            "Mobile field cannot be empty";
+          mobileNumber.style.border = "2px solid red";
+          preloaderFail.style.display = "flex";
+          preloaderSuccess.style.display = "none";
+          e.preventDefault();
+        }
+        // added now (end)
+
+        if (name.value === "") {
+          name.style.border = "2px solid red";
+          nameFailAlert.style.display = "flex";
+          // mobileNumber.setAttribute("disabled", true);
+          e.preventDefault();
+        }
+        if (dob.value === "") {
+          dob.style.border = "2px solid red";
+          dobFailAlert.style.display = "flex";
+          // mobileNumber.setAttribute("disabled", true);
+          e.preventDefault();
+        }
+        if (!aadhar1.value || !aadhar2.value || !aadhar3) {
+          aadhar1.style.border = "2px solid red";
+          aadhar2.style.border = "2px solid red";
+          aadhar3.style.border = "2px solid red";
+          aadharFailAlert.style.display = "flex";
+          // mobileNumber.setAttribute("disabled", true);
+          e.preventDefault();
+        }
+        if (!address1.value && !address2.value && !address3.value) {
+          address1.style.border = "2px solid red";
+          address2.style.border = "2px solid red";
+          address3.style.border = "2px solid red";
+          addressFailAlert.style.display = "flex";
+          // mobileNumber.setAttribute("disabled", true);
+          e.preventDefault();
+        }
+      });
+
+      mobileNumber.addEventListener("click", () => {
+        preloaderFail.style.display = "none";
+        mobileNumber.style.border = "none";
+      });
+
+      // (added now end)
+
+      // sidebar
+      const sidebutton = document.querySelector(".sidebar-navbar button");
+      const sidebarButtons = document.querySelectorAll(".sidebarButton");
+      const sidebarNavbarIcons = document.querySelectorAll(
+        ".sidebar-navbar img"
+      );
+
+      // const logo1 = document.querySelector("#logo1");
+      const logo2 = document.querySelector("#logo2");
+
+      // Tabcontainer
+      const tabsContainer = document.querySelector(".tabs-container");
+
+      // Tabcontainer Header
+      const profilePicture = document.querySelector(
+        ".profile-container figure"
+      );
+      const submenu = document.querySelector(".profile-container .submenu");
+      const forms = document.querySelectorAll(".forms");
+
+      // Functions declaration
+
+      // 1. Show and hide sidebar with button click
+      function showContainer(e) {
+        const title = e.target.innerText;
+        console.log(title);
+        console.log("---------------")
+        forms.forEach((item) => {
+          console.log(item.getAttribute("id"))
+          if (item.getAttribute("id") === title) {
+            item.style.display = "flex";
+            item.classList.add("animation");
+            this.classList.add("sidebar-button-active");
+          } else {
+            item.style.display = "none";
+            sidebarButtons.forEach((button) => {
+              if (button !== this) {
+                button.classList.remove("sidebar-button-active");
+              }
+            });
+          }
+        });
       }
-    });
 
-    //(added now end)
+      // 1. adding evenetlisteners to sidebar buttons
+      sidebarButtons.forEach((button) => {
+        button.addEventListener("click", showContainer);
+      });
 
-    // (added now start)
-    reset.addEventListener("click", () => {
-      // preloaderTube.style.display = "none";
-      preloaderFail.style.display = "none";
-      preloaderSuccess.style.display = "none";
-      // preloader2.style.display = "none";
-      mobileNumber.removeAttribute("disabled");
-      // otpMessages.querySelector(".success").style.display = "none";
-      // otpMessages.querySelector(".fail").style.display = "none";
-      // otpBox.value = "";
-      inputs.forEach((button) => button.removeAttribute("disabled"));
-      nameFailAlert.style.display = "none";
-      addressFailAlert.style.display = "none";
-      aadharFailAlert.style.display = "none";
-      dobFailAlert.style.display = "none";
-      mobileNumber.style.border = "none";
-      name.style.border = "none";
-      dob.style.border = "none";
-      address1.style.border = "none";
-      address2.style.border = "none";
-      address3.style.border = "none";
-      aadhar1.style.border = "none";
-      aadhar2.style.border = "none";
-      aadhar3.style.border = "none";
-    });
+      // sidebar button icon
+      sidebutton.addEventListener("click", () => {
+        tabsContainer.classList.toggle("tabs-container-active");
+        logo2.classList.toggle("inactive");
+      });
 
-    mainSubmit.addEventListener("click", (e) => {
-      // added now
-      if (mobileNumber.value === "") {
-        preloaderFail.querySelector("p").innerText =
-          "Mobile field cannot be empty";
-        mobileNumber.style.border = "2px solid red";
-        preloaderFail.style.display = "flex";
-        preloaderSuccess.style.display = "none";
-        e.preventDefault();
-      }
-      // added now (end)
+      // loader
+      class Timer {
+        constructor(durationInput, startButton, pauseButton, callbacks) {
+          this.durationInput = durationInput;
+          this.startButton = startButton;
+          this.pauseButton = pauseButton;
+          if (callbacks) {
+            this.onStart = callbacks.onStart;
+            this.onTick = callbacks.onTick;
+            this.onComplete = callbacks.onComplete;
+          }
+        }
 
-      if (name.value === "") {
-        name.style.border = "2px solid red";
-        nameFailAlert.style.display = "flex";
-        // mobileNumber.setAttribute("disabled", true);
-        e.preventDefault();
-      }
-      if (dob.value === "") {
-        dob.style.border = "2px solid red";
-        dobFailAlert.style.display = "flex";
-        // mobileNumber.setAttribute("disabled", true);
-        e.preventDefault();
-      }
-      if (!aadhar1.value || !aadhar2.value || !aadhar3) {
-        aadhar1.style.border = "2px solid red";
-        aadhar2.style.border = "2px solid red";
-        aadhar3.style.border = "2px solid red";
-        aadharFailAlert.style.display = "flex";
-        // mobileNumber.setAttribute("disabled", true);
-        e.preventDefault();
-      }
-      if (!address1.value && !address2.value && !address3.value) {
-        address1.style.border = "2px solid red";
-        address2.style.border = "2px solid red";
-        address3.style.border = "2px solid red";
-        addressFailAlert.style.display = "flex";
-        // mobileNumber.setAttribute("disabled", true);
-        e.preventDefault();
-      }
-    });
+        start = () => {
+          if (this.onStart) {
+            this.onStart(this.timeRemaining);
+          }
+          this.tick();
+          this.interval = setInterval(this.tick, 10);
+        };
 
-    mobileNumber.addEventListener("click", () => {
-      preloaderFail.style.display = "none";
-      mobileNumber.style.border = "none";
-    });
+        pause = () => {
+          clearInterval(this.interval);
+        };
 
-    // (added now end)
-
-    // sidebar
-    const sidebutton = document.querySelector(".sidebar-navbar button");
-    const sidebarButtons = document.querySelectorAll(".sidebarButton");
-    const sidebarNavbarIcons = document.querySelectorAll(
-      ".sidebar-navbar img"
-    );
-
-    // const logo1 = document.querySelector("#logo1");
-    const logo2 = document.querySelector("#logo2");
-
-    // Tabcontainer
-    const tabsContainer = document.querySelector(".tabs-container");
-
-    // Tabcontainer Header
-    const profilePicture = document.querySelector(
-      ".profile-container figure"
-    );
-    const submenu = document.querySelector(".profile-container .submenu");
-    const forms = document.querySelectorAll(".forms");
-
-    // Functions declaration
-
-    // 1. Show and hide sidebar with button click
-    function showContainer(e) {
-      const title = e.target.innerText;
-      forms.forEach((item) => {
-        if (item.getAttribute("id") === title) {
-          item.style.display = "flex";
-          item.classList.add("animation");
-          this.classList.add("sidebar-button-active");
-        } else {
-          item.style.display = "none";
-          sidebarButtons.forEach((button) => {
-            if (button !== this) {
-              button.classList.remove("sidebar-button-active");
+        tick = () => {
+          if (this.timeRemaining <= 0) {
+            this.pause();
+            if (this.onComplete) {
+              this.onComplete();
             }
-          });
+            this.timeRemaining = 1;
+          } else {
+            this.timeRemaining = this.timeRemaining - 0.01;
+            if (this.onTick) {
+              this.onTick(this.timeRemaining);
+            }
+          }
+        };
+
+        get timeRemaining() {
+          return parseFloat(this.durationInput.value);
+        }
+        set timeRemaining(time) {
+          this.durationInput.value = time.toFixed(2);
+        }
+      }
+
+      const loaderVerifyContainer = document.getElementById("loader-verify");
+      const durationInput = document.getElementById("duration");
+      const startButton = document.getElementById("start");
+      const pauseButton = document.getElementById("pause");
+      const circle = document.querySelector("circle");
+
+      const perimeter = circle.getAttribute("r") * 2 * Math.PI;
+      circle.setAttribute("stroke-dasharray", perimeter);
+
+      const cibilSection = document.querySelector(".cibil-section");
+
+      let currentOffset = 0;
+      let duration;
+      const timer = new Timer(durationInput, startButton, pauseButton, {
+        onStart(totalDuration) {
+          duration = totalDuration;
+        },
+        onTick(timeRemaining) {
+          circle.setAttribute(
+            "stroke-dashoffset",
+            (perimeter * timeRemaining) / duration - perimeter
+          );
+        },
+        onComplete() {
+          loaderVerifyContainer.style.display = "none";
+          cibilSection.style.display = "flex";
+        },
+      });
+      timer.start();
+
+      //=================================================
+
+      // mobile responsive
+
+      const sidebarButton = document.getElementById("sidebar-button");
+      const sidebar = document.getElementById("mobile-sidebar");
+      const sidebarBarOne = document.querySelector(".sidebar-button__bar-one");
+      const sidebarBarTwo = document.querySelector(".sidebar-button__bar-two");
+      const allButtons = document.querySelectorAll(
+        ".sidebar-buttons-container button"
+      );
+
+      allButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          if (this.innerText !== "Logout") {
+            sidebar.classList.remove("active-sidebar");
+          }
+          this.classList.add("sidebar-button-active");
+
+          sidebarBarOne.classList.toggle("sidebar-button__bar-one-active");
+          sidebarBarTwo.classList.toggle("sidebar-button__bar-two-active");
+        });
+        if (
+          !button.innerText === "dashboard" ||
+          button.innerText === "logout"
+        ) {
+          button.classList.remove("sidebar-button-active");
         }
       });
-    }
 
-    // 1. adding evenetlisteners to sidebar buttons
-    sidebarButtons.forEach((button) => {
-      button.addEventListener("click", showContainer);
-    });
-
-    // sidebar button icon
-    sidebutton.addEventListener("click", () => {
-      tabsContainer.classList.toggle("tabs-container-active");
-      logo2.classList.toggle("inactive");
-    });
-
-    // loader
-    class Timer {
-      constructor(durationInput, startButton, pauseButton, callbacks) {
-        this.durationInput = durationInput;
-        this.startButton = startButton;
-        this.pauseButton = pauseButton;
-        if (callbacks) {
-          this.onStart = callbacks.onStart;
-          this.onTick = callbacks.onTick;
-          this.onComplete = callbacks.onComplete;
-        }
-      }
-
-      start = () => {
-        if (this.onStart) {
-          this.onStart(this.timeRemaining);
-        }
-        this.tick();
-        this.interval = setInterval(this.tick, 10);
-      };
-
-      pause = () => {
-        clearInterval(this.interval);
-      };
-
-      tick = () => {
-        if (this.timeRemaining <= 0) {
-          this.pause();
-          if (this.onComplete) {
-            this.onComplete();
-          }
-          this.timeRemaining = 1;
-        } else {
-          this.timeRemaining = this.timeRemaining - 0.01;
-          if (this.onTick) {
-            this.onTick(this.timeRemaining);
-          }
-        }
-      };
-
-      get timeRemaining() {
-        return parseFloat(this.durationInput.value);
-      }
-      set timeRemaining(time) {
-        this.durationInput.value = time.toFixed(2);
-      }
-    }
-
-    const loaderVerifyContainer = document.getElementById("loader-verify");
-    const durationInput = document.getElementById("duration");
-    const startButton = document.getElementById("start");
-    const pauseButton = document.getElementById("pause");
-    const circle = document.querySelector("circle");
-
-    const perimeter = circle.getAttribute("r") * 2 * Math.PI;
-    circle.setAttribute("stroke-dasharray", perimeter);
-
-    const cibilSection = document.querySelector(".cibil-section");
-
-    let currentOffset = 0;
-    let duration;
-    const timer = new Timer(durationInput, startButton, pauseButton, {
-      onStart(totalDuration) {
-        duration = totalDuration;
-      },
-      onTick(timeRemaining) {
-        circle.setAttribute(
-          "stroke-dashoffset",
-          (perimeter * timeRemaining) / duration - perimeter
-        );
-      },
-      onComplete() {
-        loaderVerifyContainer.style.display = "none";
-        cibilSection.style.display = "flex";
-      },
-    });
-    timer.start();
-
-    //=================================================
-
-    // mobile responsive
-
-    const sidebarButton = document.getElementById("sidebar-button");
-    const sidebar = document.getElementById("mobile-sidebar");
-    const sidebarBarOne = document.querySelector(".sidebar-button__bar-one");
-    const sidebarBarTwo = document.querySelector(".sidebar-button__bar-two");
-    const allButtons = document.querySelectorAll(
-      ".sidebar-buttons-container button"
-    );
-
-    allButtons.forEach((button) => {
-      button.addEventListener("click", function () {
-        if (this.innerText !== "Logout") {
-          sidebar.classList.remove("active-sidebar");
-        }
-        this.classList.add("sidebar-button-active");
-
+      sidebarButton.addEventListener("click", () => {
+        sidebar.classList.toggle("active-sidebar");
         sidebarBarOne.classList.toggle("sidebar-button__bar-one-active");
         sidebarBarTwo.classList.toggle("sidebar-button__bar-two-active");
       });
-      if (
-        !button.innerText === "dashboard" ||
-        button.innerText === "logout"
-      ) {
-        button.classList.remove("sidebar-button-active");
-      }
-    });
 
-    sidebarButton.addEventListener("click", () => {
-      sidebar.classList.toggle("active-sidebar");
-      sidebarBarOne.classList.toggle("sidebar-button__bar-one-active");
-      sidebarBarTwo.classList.toggle("sidebar-button__bar-two-active");
-    });
-
-    // mobile responsive end
+      // mobile responsive end
     </script>
-</body>
+  </body>
 </html>
