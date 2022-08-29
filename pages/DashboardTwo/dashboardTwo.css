@@ -633,8 +633,8 @@ input {
 
 .dial {
   position: absolute;
-  bottom: 1%;
-  left: -30%;
+  bottom: 0%;
+  left: -29%;
   height: 700px;
   width: 700px;
   -webkit-filter: drop-shadow(5px 5px 0.5px rgba(245, 130, 32, 0.85));
