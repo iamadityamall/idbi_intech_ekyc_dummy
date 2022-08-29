@@ -688,7 +688,7 @@ input {
 }
 
 .infoo {
-  width: 100%;
+  width: 80%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1732,7 +1732,7 @@ input {
 
   .dial {
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     left: 50%;
     transform: translate(-50%, 0);
     height: 600px;
@@ -1801,7 +1801,7 @@ input {
   }
 
   .infoo h1 {
-    width: 100%;
+    width: 70%;
     display: inline;
     letter-spacing: 1px;
     text-shadow: 0 0 2px 1px rgb(245, 130, 32);
