@@ -16,7 +16,7 @@
     <!-- header -->
     <header class="hero__header">
       <figure class="hero__header__logo">
-        <img th:src="@{assests/logo/idbi-bank-logo.svg}" alt="idbi-bank-logo" />
+        <img src="../../assests/logo/idbi-bank-logo.svg" alt="idbi-bank-logo" />
       </figure>
     </header>
 
@@ -31,15 +31,15 @@
           </div>
           <div style="display: flex; flex-direction: column; margin-left: 1rem">
             <div class="hero-left__container__steps step-one">
-              <img th:src="@{assests/logo/Aadhaar_Logo.svg.webp}" alt="" />
+              <img src="../../assests/logo/Aadhaar_Logo.svg.webp" alt="" />
               <p>Enter your Aadhaar Number</p>
             </div>
             <div class="hero-left__container__steps step-two" id="step-two">
-              <img th:src="@{assests/logo/message.svg}" alt="" />
+              <img src="../../assests/logo/message.svg" alt="" />
               <p>Verify your OTP</p>
             </div>
             <div class="hero-left__container__steps step-three" id="step-three">
-              <img th:src="@{assests/logo/verified.webp}" alt="" />
+              <img src="../../assests/logo/verified.webp" alt="" />
               <p>eKYC done</p>
             </div>
           </div>
@@ -47,7 +47,7 @@
       </div>
       </div>
       <div class="hero-right__container">
-        <form class="hero-form__container" th:action="@{/login}" method="post">
+        <form class="hero-form__container">
           <div class="hero-form__container__heading">
             <h1>
               Welcome to IDBI
@@ -60,18 +60,7 @@
                   letter-spacing: 0.5px;
                   color: #01684f;
                 "
-                >eKYC Portal   <br>
-                <div th:if="${param.error}">
-            <h5 style="color:red">Invalid username or password.</h5>
-        </div>
-        <h5 th:text="${msg}" style="color:green"></h5>
-        <div th:if="${param.logout}">
-        
-               <h5  style="color:green">You have successfully logged out </h5>
-        </div>
-    
-    
-        </span
+                >eKYC Portal</span
               >
             </h1>
           </div>
@@ -79,13 +68,13 @@
           <div class="hero-form__container__input">
             <div class="input__container">
               <div class="icon">
-                <img th:src="@{assests/logo/user.svg}" alt="" />
+                <img src="../../assests/logo/user.svg" alt="" />
               </div>
-              <input type="text" placeholder="username" name="username"  id="username-input"/>
+              <input type="text" placeholder="username" id="username-input"/>
             </div>
             <div class="input__container">
               <div class="icon">
-                <img th:src="@{assests/logo/lock.svg}" alt="" />
+                <img src="../../assests/logo/lock.svg" alt="" />
               </div>
               <input type="password" placeholder="Password" id="password-input" style="text-transform: none"/>
               <button
@@ -123,12 +112,12 @@
           </div>
 
           <div class="hero-form__container__button">
-            <button type="submit"  id="login-button">Login</button>
+            <button id="login-button">Login</button>
           </div>
 
           <footer class="hero-form__container__footer">
             <p>Not registered yet ?</p>
-            <a th:href="@{signup}">signup</a>
+            <a href="../signup/signup.html">signup</a>
           </footer>
         </form>
       </div>
@@ -188,6 +177,6 @@
       })
 
     </script>
-<script src="@{js/login.js}" />
+
   </body>
 </html>

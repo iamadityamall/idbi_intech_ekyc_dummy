@@ -7,16 +7,26 @@
     <title>Document</title>
     <link rel="stylesheet" href="./styles.css" />
     <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
       section {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        place-items: center;
         width: 100vw;
-        height: 100vh;
+        min-height: 100vh;
+        display: grid;
+        padding: 3rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 1rem;
       }
       a {
         background-color: #f58220;
         border-radius: 10px;
+        padding: 1rem;
+        text-align: center;
+        color: white;
       }
     </style>
   </head>
