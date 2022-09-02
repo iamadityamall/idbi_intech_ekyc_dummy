@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eKYC-iPan</title>
+    <link rel="stylesheet" href="./panDashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/brands.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/regular.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/solid.min.css"
+    />
+  </head>
+  <body>
+    <!-- dashboard one section -->
+    <section class="dashboard-section">
+      <!-- ======================================== -->
+      <!-- mobile version -->
+      <nav id="mobile-navbar">
+        <figure class="mobile-navbar__logo">
+          <img src="../../assests/logo/idbi-bank-logo.svg" alt="" />
+        </figure>
+        <button id="sidebar-button">
+          <div class="sidebar-button__bar-one"></div>
+          <div class="sidebar-button__bar-two"></div>
+        </button>
+      </nav>
+
+      <aside id="mobile-sidebar" class="mobile-sidebar">
+        <div class="mobile-sidebar-logo-container">
+          <div class="mobile-sidebar__logo-container">
+            <figure class="mobile-sidebar__logo-container__logo">
+              <img src="../../assests/logo/logo2.png" alt="" />
+            </figure>
+            <h1>Welcome, [[${#httpServletRequest.remoteUser}]]</h1>
+          </div>
+        </div>
+
+        <div class="mobile-sidebar-sidebar-container">
+          <div class="sidebar-buttons-container">
+            <a
+              th:href="@{/productPage}"
+              style="width: 100%; text-decoration: none"
+            >
+              <button class="sidebarButton">
+                <i class="fa-solid fa-circle-left"></i>
+                <span>Back to Dashboard</span>
+              </button>
+            </a>
+            <button class="sidebarButton sidebar-button-active">
+              <i class="fa fa-home"></i> <span>i-Pan</span>
+            </button>
+            <!-- <button class="sidebarButton">
+					<i class="fa fa-user"> </i> <span>profile</span>
+				</button> -->
+
+            <button class="sidebarButton">
+              <i class="fa fa-gear"></i> <span>settings</span>
+            </button>
+            <button class="sidebarButton">
+              <i class="fa fa-user" aria-hidden="true"></i> <span>user</span>
+            </button>
+            <button class="sidebarButton">
+              <i class="fa fa-language" aria-hidden="true"></i>
+              <span>language</span>
+            </button>
+            <button class="sidebarButton">
+              <i class="fa fa-info-circle" aria-hidden="true"></i>
+              <span>help</span>
+            </button>
+            <a th:href="@{/logout}" style="width: 100%; text-decoration: none">
+              <button>
+                <i class="fa fa-sign-out" aria-hidden="true"></i
+                ><span>Logout</span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- mobile version end -->
+      <!-- ========================================== -->
+
+      <aside class="sidebar">
+        <nav class="sidebar-navbar">
+          <!-- <figure class="inactive" id="logo1">
+            <img src="../../assests/logo/idbi-symbol.png" />
+          </figure> -->
+          <button>
+            <i class="fa fa-bars"></i>
+          </button>
+          <figure id="logo2">
+            <img th:src="@{assests/logo/idbi-bank-logo.svg}" alt="" />
+          </figure>
+        </nav>
+        <div class="sidebar-buttons-container">
+          <a
+            th:href="@{/productPage}"
+            style="width: 100%; text-decoration: none"
+          >
+            <button class="sidebarButton">
+              <i class="fa-solid fa-circle-left"></i>
+              <span>Back to Dashboard</span>
+            </button>
+          </a>
+          <button class="sidebarButton sidebar-button-active">
+            <i class="fa fa-home"></i> <span>i-Pan</span>
+          </button>
+          <!-- <button class="sidebarButton">
+					<i class="fa fa-user"> </i> <span>profile</span>
+				</button> -->
+        </div>
+      </aside>
+
+      <div class="tabs-container">
+        <nav class="tabs-navbar">
+          <div class="profile-container">
+            <div>
+              <h1>Welcome, [[${#httpServletRequest.remoteUser}]]</h1>
+            </div>
+
+            <figure>
+              <img th:src="@{assests/logo/logo2.png}" alt="" />
+            </figure>
+            <div class="submenu">
+              <button><i class="fa fa-gear"></i><span>Settings</span></button>
+              <button>
+                <i class="fa fa-user" aria-hidden="true"></i><span>User</span>
+              </button>
+              <button>
+                <i class="fa fa-language" aria-hidden="true"></i
+                ><span>Language</span>
+              </button>
+              <button>
+                <i class="fa fa-info-circle" aria-hidden="true"></i
+                ><span>Help</span>
+              </button>
+              <a
+                th:href="@{/logout}"
+                style="width: 100%; text-decoration: none"
+              >
+                <button>
+                  <i class="fa fa-sign-out" aria-hidden="true"></i
+                  ><span>Logout</span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </nav>
+        <div class="tabs">
+          <div id="i-Pan" class="forms animation">
+            <form id="i-Pan__form">
+              <div class="i-Pan__form--container">
+                <div class="i-Pan__form__pancard" id="pancard">
+                  <div class="i-Pan__form__pancard--info">
+                    <h1>Enter your pan number</h1>
+                    <p id="panvalidation"></p>
+                    <input
+                      type="text"
+                      name="pannumber"
+                      id="pannumber"
+                      maxlength="10"
+                      placeholder="enter your pan number"
+                    />
+                    <button type="button" id="nextButton">next</button>
+                  </div>
+                </div>
+
+                <div class="i-Pan__form__name" id="name">
+                  <div class="i-Pan__form__name--info">
+                    <h1>Enter your name</h1>
+                    <p id="namevalidation"></p>
+                    <input
+                      type="text"
+                      name="name"
+                      id="nameInput"
+                      placeholder="enter your name"
+                    />
+                    <button type="submit" id="submitButton">submit</button>
+                  </div>
+                </div>
+              </div>
+              <figure class="i-Pan__form--figure">
+                <img src="../../assests/pancard.png" alt="" />
+              </figure>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="loader-verify">
+        <div class="timer">
+          <div class="controls">
+            <input id="duration" value="5" />
+            <div>
+              <button id="start">
+                <i class="fas fa-play"></i>
+              </button>
+              <button id="pause">
+                <i class="fas fa-pause"></i>
+              </button>
+            </div>
+          </div>
+          <div class="infoo">
+            <h1 th:text="${finalMsg}" id="msg">
+              Ekyc verified successfully.eKYC Failed, Mobile Number is not
+              Matching with Aadhar Mobile Number
+            </h1>
+            <!-- <div data-title=".dot-flashing" style="margin-left: 1.5rem">
+              <div class="stage">
+                <div class="dot-flashing"></div>
+              </div>
+            </div> -->
+          </div>
+          <svg class="dial">
+            <defs>
+              <filter id="f1" x="0" y="0" width="200%" height="200%">
+                <feOffset result="offOut" in="SourceGraphic" dx="20" dy="20" />
+                <feBlend in="SourceGraphic" in2="offOut" mode="normal" />
+              </filter>
+            </defs>
+            <circle
+              fill="transparent"
+              stroke="#01684F"
+              stroke-width="9"
+              r="170.5"
+              cx="-110"
+              cy="300"
+              transform="rotate(-90 100 100)"
+            />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const panvalidation = document.getElementById("panvalidation");
+      const namevalidation = document.getElementById("namevalidation");
+      const pannumberContainer = document.querySelector(
+        ".i-Pan__form__pancard"
+      );
+      const nameContainer = document.querySelector(".i-Pan__form__name");
+      const nextButton = document.getElementById("nextButton");
+      const submitButton = document.getElementById("submitButton");
+      const paninput = document.getElementById("pannumber");
+      const nameinput = document.getElementById("nameInput");
+      // pan number
+      paninput.addEventListener("keypress", function (e) {
+        panvalidation.innerText = "";
+        var char = String.fromCharCode(e.which);
+        if (!/[a-zA-Z0-9]/.test(char)) {
+          e.preventDefault();
+          console.log("special Char");
+          panvalidation.style.opacity = "1";
+        }
+      });
+      //   pan name
+      nameinput.addEventListener("keypress", function (e) {
+        panvalidation.innerText = "";
+        var char = String.fromCharCode(e.which);
+        if (!/[a-zA-Z ]/.test(char)) {
+          e.preventDefault();
+          console.log("special Char");
+          panvalidation.style.opacity = "1";
+        }
+      });
+
+      nameinput.addEventListener("keypress", function () {
+        namevalidation.innerText = "";
+      });
+
+      nextButton.addEventListener("click", function (e) {
+        e.preventDefault();
+        //console.log(paninput.value);
+        if (!paninput.value) {
+          panvalidation.style.color = "red";
+          panvalidation.innerText = "! field cannot be empty";
+        } else if (paninput.value.length > 0 && paninput.value.length < 10) {
+          e.preventDefault();
+          panvalidation.style.color = "red";
+          panvalidation.innerText = "! Please enter 10 digit pan number";
+        } else {
+          nameContainer.style.display = "flex";
+          pannumberContainer.style.display = "none";
+        }
+      });
+
+      submitButton.addEventListener("click", function (e) {
+        if (!nameinput.value) {
+          e.preventDefault();
+          namevalidation.style.color = "red";
+          namevalidation.innerText = "! field cannot be empty";
+        }
+      });
+
+      // sidebar
+      const sidebutton = document.querySelector(".sidebar-navbar button");
+      const sidebarButtons = document.querySelectorAll(".sidebarButton");
+      const sidebarNavbarIcons = document.querySelectorAll(
+        ".sidebar-navbar img"
+      );
+
+      // const logo1 = document.querySelector("#logo1");
+      const logo2 = document.querySelector("#logo2");
+
+      // Tabcontainer
+      const tabsContainer = document.querySelector(".tabs-container");
+
+      // Tabcontainer Header
+      const profilePicture = document.querySelector(
+        ".profile-container figure"
+      );
+      const submenu = document.querySelector(".profile-container .submenu");
+
+      // Forms
+      const forms = document.querySelectorAll(".forms");
+      const preloader = document.querySelector(".preloader-container");
+      const preloaderTube = document.querySelector(
+        ".preloader-container .preloader-tub"
+      );
+
+      // new changes
+      const preloaderSuccess = document.querySelector("#main-form .success");
+      const preloaderFail = document.querySelector("#main-form .fail");
+      const aadhaarForm = document.getElementById("main-form");
+      // new changes
+
+      const name = document.getElementById("nameMain");
+      const dob = document.getElementById("dob");
+      const aadhar = document.getElementById("aadhar");
+      const mobileNumber = document.querySelector("#mobile");
+      const address1 = document.getElementById("address1");
+      const address2 = document.getElementById("address2");
+      const address3 = document.getElementById("address3");
+      const reset = document.querySelector("#i-Pan form .buttons #reset");
+      const mainSubmit = document.getElementById("main-submit");
+      const inputs = document.querySelectorAll(".forms input");
+      const aadharInputs = document.querySelectorAll(".aadhar-inputs input");
+      const nameFailAlert = document.querySelector(".name-fail");
+      const dobFailAlert = document.querySelector(".dob-fail");
+      const aadharFailAlert = document.querySelector(".aadhar-fail");
+      const addressFailAlert = document.querySelector(".address-fail");
+      const state = document.getElementById("state");
+      const dashboard = document.getElementById("i-eaadhar");
+
+      // Otp Container
+      const verify = document.querySelector("#verify");
+      const aadhar1 = document.querySelector("#aadhar-1");
+      const aadhar2 = document.querySelector("#aadhar-2");
+      const aadhar3 = document.querySelector("#aadhar-3");
+
+      // Functions declaration
+
+      // 1. Show and hide sidebar with button click
+      function showContainer(e) {
+        const title = e.target.innerText;
+        console.log(title);
+        forms.forEach((item) => {
+          if (item.getAttribute("id") === title) {
+            item.style.display = "flex";
+            item.classList.add("animation");
+            this.classList.add("sidebar-button-active");
+          } else {
+            item.style.display = "none";
+            sidebarButtons.forEach((button) => {
+              if (button !== this) {
+                button.classList.remove("sidebar-button-active");
+              }
+            });
+          }
+        });
+      }
+
+      // Adding Eventlisteners
+
+      // 1. adding evenetlisteners to sidebar buttons
+      sidebarButtons.forEach((button) => {
+        button.addEventListener("click", showContainer);
+      });
+
+      // sidebar button icon
+      sidebutton.addEventListener("click", () => {
+        tabsContainer.classList.toggle("tabs-container-active");
+        logo2.classList.toggle("inactive");
+      });
+
+      //=================================================
+
+      // mobile responsive
+
+      const sidebarButton = document.getElementById("sidebar-button");
+      const sidebar = document.getElementById("mobile-sidebar");
+      const sidebarBarOne = document.querySelector(".sidebar-button__bar-one");
+      const sidebarBarTwo = document.querySelector(".sidebar-button__bar-two");
+      const allButtons = document.querySelectorAll(
+        ".sidebar-buttons-container button"
+      );
+
+      allButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          console.log(this.innerText);
+          if (this.innerText !== "Logout") {
+            sidebar.classList.remove("active-sidebar");
+          }
+          this.classList.add("sidebar-button-active");
+          sidebarBarOne.classList.toggle("sidebar-button__bar-one-active");
+          sidebarBarTwo.classList.toggle("sidebar-button__bar-two-active");
+        });
+      });
+
+      sidebarButton.addEventListener("click", () => {
+        console.log(sidebarBarOne);
+        console.log(sidebarBarTwo);
+        sidebar.classList.toggle("active-sidebar");
+        sidebarBarOne.classList.toggle("sidebar-button__bar-one-active");
+        sidebarBarTwo.classList.toggle("sidebar-button__bar-two-active");
+      });
+
+      // mobile responsive end
+
+      // loader
+      class Timer {
+        constructor(durationInput, startButton, pauseButton, callbacks) {
+          this.durationInput = durationInput;
+          this.startButton = startButton;
+          this.pauseButton = pauseButton;
+          if (callbacks) {
+            this.onStart = callbacks.onStart;
+            this.onTick = callbacks.onTick;
+            this.onComplete = callbacks.onComplete;
+          }
+        }
+
+        start = () => {
+          if (this.onStart) {
+            this.onStart(this.timeRemaining);
+          }
+          this.tick();
+          this.interval = setInterval(this.tick, 10);
+        };
+
+        pause = () => {
+          clearInterval(this.interval);
+        };
+
+        tick = () => {
+          if (this.timeRemaining <= 0) {
+            this.pause();
+            if (this.onComplete) {
+              this.onComplete();
+            }
+            this.timeRemaining = 1;
+          } else {
+            this.timeRemaining = this.timeRemaining - 0.01;
+            if (this.onTick) {
+              this.onTick(this.timeRemaining);
+            }
+          }
+        };
+
+        get timeRemaining() {
+          return parseFloat(this.durationInput.value);
+        }
+        set timeRemaining(time) {
+          this.durationInput.value = time.toFixed(2);
+        }
+      }
+
+      const loaderVerifyContainer = document.getElementById("loader-verify");
+      const durationInput = document.getElementById("duration");
+      const startButton = document.getElementById("start");
+      const pauseButton = document.getElementById("pause");
+      const circle = document.querySelector("circle");
+
+      const perimeter = circle.getAttribute("r") * 2 * Math.PI;
+      circle.setAttribute("stroke-dasharray", perimeter);
+
+      const cibilSection = document.querySelector(".cibil-section");
+
+      let currentOffset = 0;
+      let duration;
+      const timer = new Timer(durationInput, startButton, pauseButton, {
+        onStart(totalDuration) {
+          duration = totalDuration;
+        },
+        onTick(timeRemaining) {
+          circle.setAttribute(
+            "stroke-dashoffset",
+            (perimeter * timeRemaining) / duration - perimeter
+          );
+        },
+        onComplete() {
+          loaderVerifyContainer.style.display = "none";
+          cibilSection.style.display = "flex";
+        },
+      });
+      timer.start();
+    </script>
+  </body>
+</html>

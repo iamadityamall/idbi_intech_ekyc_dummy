@@ -420,8 +420,9 @@
             </div>
           </div>
           <div class="infoo">
-            <h1 th:text="${finalMsg}" style="color: green">
-              Ekyc verified successfully.eKYC Failed, Mobile Number is not Matching with Aadhar Mobile Number
+            <h1 th:text="${finalMsg}" id="msg">
+              Ekyc verified successfully.eKYC Failed, Mobile Number is not
+              Matching with Aadhar Mobile Number
             </h1>
             <!-- <div data-title=".dot-flashing" style="margin-left: 1.5rem">
               <div class="stage">
@@ -476,6 +477,14 @@
       const preloaderFail = document.querySelector("#main-form .fail");
       const preloaderSuccess = document.querySelector("#main-form .success");
       const aadhaarForm = document.querySelector(".aadharForm");
+      const msg = document.getElementById("msg");
+      console.log(msg.innerText);
+      if (msg.innerText.includes("Not")) {
+        console.log(msg);
+        msg.style.color = "red";
+      } else {
+        msg.style.color = "green";
+      }
 
       aadhaarForm.addEventListener("keypress", function (e) {
         if (e.key === "Enter") {
